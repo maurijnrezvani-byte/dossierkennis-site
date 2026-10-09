@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dossierkennis</title>
+<meta name="description" content="Elke week de stand van jouw dossier in de Amsterdamse gemeenteraad, met uitleg wat het betekent. Doe mee aan de test.">
+<style>
+  :root {
+    --accent: #0008B8;
+    --inkt: #141414;
+    --grijs: #5F6368;
+    --labeltekst: #3C4043;
+    --haarlijn: #E3E5E8;
+    --vlak: #F3F4F6;
+    --band: #F5F6F8;
+    --wit: #FFFFFF;
+    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --serif: Georgia, "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--wit);
+    color: var(--inkt);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .kolom { max-width: 680px; margin: 0 auto; padding: 0 16px; }
+  a { color: var(--accent); }
+
+  header .kolom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 28px; padding-bottom: 20px;
+    border-bottom: 1px solid var(--haarlijn);
+  }
+  .woordmerk { font-family: var(--sans); font-weight: 700; font-size: 15px; }
+  .woordmerk span { color: var(--grijs); font-weight: 400; }
+  .label {
+    font-family: var(--sans); font-weight: 700; font-size: 11px;
+    letter-spacing: .08em; text-transform: uppercase;
+    color: var(--accent); border: 1px solid var(--accent); padding: 3px 7px;
+  }
+
+  .opening { padding-top: 64px; padding-bottom: 56px; }
+  .bovenregel {
+    font-family: var(--sans); font-weight: 700; font-size: 13px;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+    margin: 0 0 16px;
+  }
+  h1 {
+    font-family: var(--sans); font-weight: 700; font-size: 52px;
+    line-height: 1.08; letter-spacing: -.01em; margin: 0 0 24px;
+  }
+  .intro { font-size: 20px; color: var(--labeltekst); margin: 0 0 32px; }
+  .knop {
+    display: inline-block; font-family: var(--sans); font-weight: 700; font-size: 16px;
+    background: var(--accent); color: var(--wit); text-decoration: none;
+    padding: 14px 22px;
+  }
+  .knop:hover { background: #1B2E9C; }
+  .gratis { font-family: var(--sans); font-size: 14px; color: var(--grijs); margin: 14px 0 0; }
+
+  section { padding-bottom: 64px; }
+  h2 {
+    font-family: var(--sans); font-weight: 700; font-size: 30px;
+    margin: 0 0 24px; padding-top: 16px; border-top: 4px solid var(--inkt);
+  }
+
+  ol.punten { list-style: none; padding: 0; margin: 0; counter-reset: p; }
+  ol.punten li {
+    counter-increment: p; display: grid; grid-template-columns: 48px 1fr;
+    padding: 20px 0; border-bottom: 1px solid var(--haarlijn);
+  }
+  ol.punten li::before {
+    content: counter(p); font-family: var(--sans); font-weight: 700;
+    font-size: 32px; line-height: 1; color: var(--accent);
+  }
+  ol.punten strong { font-family: var(--sans); display: block; margin-bottom: 4px; }
+
+  .betekenis { background: var(--vlak); padding: 20px 24px; margin-top: 28px; }
+  .betekenis .bovenregel { color: var(--labeltekst); margin-bottom: 8px; font-size: 11px; }
+  .betekenis p { margin: 0; }
+
+
+  .aanmelden { background: var(--band); padding-top: 64px; }
+  .aanmelden h2 { border-top-color: var(--accent); }
+  .formulier { background: var(--wit); padding: 8px 16px; margin: 8px 0 24px; }
+  .formulier iframe { width: 100%; border: 0; min-height: 520px; }
+  .nog-geen-formulier { font-family: var(--sans); color: var(--grijs); padding: 24px 8px; }
+  .privacy { font-size: 15px; color: var(--grijs); }
+
+  footer { text-align: center; padding: 48px 16px 64px; font-size: 14px; color: var(--grijs); }
+  footer .streep { width: 32px; height: 3px; background: var(--accent); margin: 0 auto 16px; }
+  footer .woordmerk { color: var(--inkt); margin-bottom: 6px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 38px; }
+    .intro { font-size: 18px; }
+    h2 { font-size: 26px; }
+    .opening { padding-top: 44px; padding-bottom: 40px; }
+    section { padding-bottom: 48px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kolom">
+    <div class="woordmerk">Dossierkennis <span>· Amsterdam</span></div>
+    <div class="label">Testversie</div>
+  </div>
+</header>
+
+<main>
+  <div class="kolom opening">
+    <p class="bovenregel">Wekelijks overzicht van de gemeenteraad</p>
+    <h1>Weet elke week hoe jouw dossier ervoor staat.</h1>
+    <p class="intro">Dossierkennis zet alles wat er in de Amsterdamse gemeenteraad over jouw onderwerp gebeurt op een rij: moties, raadsvragen, besluiten en wat eraan komt. Met bij elk punt een korte uitleg wat het betekent.</p>
+    <a class="knop" href="#aanmelden">Doe mee aan de test</a>
+    <p class="gratis">Dit is een testversie. Meedoen is gratis en je zit nergens aan vast.</p>
+  </div>
+
+  <section class="kolom">
+    <h2>Wat je krijgt</h2>
+    <ol class="punten">
+      <li><div><strong>Eén mail per week, per dossier</strong>Geen zoeken in het raadsinformatiesysteem. Alleen wat over jouw onderwerp gaat.</div></li>
+      <li><div><strong>De stand van zaken in één oogopslag</strong>Wat is aangenomen, wat is verworpen, wat is aangehouden en wat staat nog open.</div></li>
+      <li><div><strong>Wat het betekent</strong>Bij elk punt een korte uitleg in gewone taal: waarom het ertoe doet en wat je ermee kunt.</div></li>
+      <li><div><strong>Wat eraan komt</strong>De vergaderingen en agendapunten van de komende weken, zodat je niet verrast wordt.</div></li>
+    </ol>
+    <div class="betekenis">
+      <p class="bovenregel">Bronnen</p>
+      <p>Alles is gebaseerd op openbare raadsinformatie. Nieuws uit de media staat er apart bij, duidelijk gescheiden van de officiële stukken.</p>
+    </div>
+  </section>
+
+  <section class="aanmelden" id="aanmelden">
+    <div class="kolom">
+      <h2>Aanmelden</h2>
+      <p>Vul je naam, je e-mailadres en de dossiers die je wilt volgen in. Je krijgt de editie van deze week nog dezelfde dag, daarna elke maandagochtend een nieuwe.</p>
+      <div class="formulier" id="formulier"></div>
+      <p class="privacy">Je gegevens gebruik ik alleen om je de testedities te sturen en je te vragen naar je ervaring. Ik deel ze met niemand. Na de testperiode verwijder ik ze. Afmelden kan altijd, met één mailtje.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="streep"></div>
+  <div class="woordmerk">Dossierkennis</div>
+  <div>Gebaseerd op openbare informatie van de gemeenteraad van Amsterdam.</div>
+  <div><a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a></div>
+</footer>
+
+<script>
+  // Zet hier de code van je Tally-formulier neer (het stukje na tally.so/r/).
+  var TALLY_ID = "lboqG6";
+
+  var vak = document.getElementById("formulier");
+  if (TALLY_ID) {
+    var iframe = document.createElement("iframe");
+    iframe.src = "https://tally.so/embed/" + TALLY_ID + "?hideTitle=1&transparentBackground=1&dynamicHeight=1";
+    iframe.title = "Aanmelden voor de test";
+    iframe.loading = "lazy";
+    vak.appendChild(iframe);
+    var s = document.createElement("script");
+    s.src = "https://tally.so/widgets/embed.js";
+    s.onload = function () { if (window.Tally) Tally.loadEmbeds(); };
+    document.body.appendChild(s);
+  } else {
+    vak.innerHTML = '<p class="nog-geen-formulier">Het aanmeldformulier komt hier binnenkort. Wil je nu al meedoen? Mail naar <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a>.</p>';
+  }
+</script>
+</body>
+</html>
