@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Over Dossierkennis</title>
+<meta name="description" content="Wie Dossierkennis maakt, hoe je contact opneemt en wat er met je gegevens gebeurt.">
+<style>
+  :root {
+    --accent: #0008B8;
+    --inkt: #141414;
+    --grijs: #5F6368;
+    --labeltekst: #3C4043;
+    --haarlijn: #E3E5E8;
+    --vlak: #F3F4F6;
+    --band: #F5F6F8;
+    --wit: #FFFFFF;
+    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --serif: Georgia, "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--wit);
+    color: var(--inkt);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .kolom { max-width: 680px; margin: 0 auto; padding: 0 16px; }
+  a { color: var(--accent); }
+
+  header .kolom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 28px; padding-bottom: 20px;
+    border-bottom: 1px solid var(--haarlijn);
+  }
+  .woordmerk { font-family: var(--sans); font-weight: 700; font-size: 15px; }
+  .woordmerk span { color: var(--grijs); font-weight: 400; }
+  .label {
+    font-family: var(--sans); font-weight: 700; font-size: 11px;
+    letter-spacing: .08em; text-transform: uppercase;
+    color: var(--accent); border: 1px solid var(--accent); padding: 3px 7px;
+  }
+
+  .opening { padding-top: 64px; padding-bottom: 56px; }
+  .bovenregel {
+    font-family: var(--sans); font-weight: 700; font-size: 13px;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+    margin: 0 0 16px;
+  }
+  h1 {
+    font-family: var(--sans); font-weight: 700; font-size: 52px;
+    line-height: 1.08; letter-spacing: -.01em; margin: 0 0 24px;
+  }
+  .intro { font-size: 20px; color: var(--labeltekst); margin: 0 0 32px; }
+  .knop {
+    display: inline-block; font-family: var(--sans); font-weight: 700; font-size: 16px;
+    background: var(--accent); color: var(--wit); text-decoration: none;
+    padding: 14px 22px;
+  }
+  .knop:hover { background: #1B2E9C; }
+  .gratis { font-family: var(--sans); font-size: 14px; color: var(--grijs); margin: 14px 0 0; }
+
+  section { padding-bottom: 64px; }
+  h2 {
+    font-family: var(--sans); font-weight: 700; font-size: 30px;
+    margin: 0 0 24px; padding-top: 16px; border-top: 4px solid var(--inkt);
+  }
+
+  ol.punten { list-style: none; padding: 0; margin: 0; counter-reset: p; }
+  ol.punten li {
+    counter-increment: p; display: grid; grid-template-columns: 48px 1fr;
+    padding: 20px 0; border-bottom: 1px solid var(--haarlijn);
+  }
+  ol.punten li::before {
+    content: counter(p); font-family: var(--sans); font-weight: 700;
+    font-size: 32px; line-height: 1; color: var(--accent);
+  }
+  ol.punten strong { font-family: var(--sans); display: block; margin-bottom: 4px; }
+
+  .betekenis { background: var(--vlak); padding: 20px 24px; margin-top: 28px; }
+  .betekenis .bovenregel { color: var(--labeltekst); margin-bottom: 8px; font-size: 11px; }
+  .betekenis p { margin: 0; }
+
+
+  .aanmelden { background: var(--band); padding-top: 64px; }
+  .aanmelden h2 { border-top-color: var(--accent); }
+  .formulier { background: var(--wit); padding: 8px 16px; margin: 8px 0 24px; }
+  .formulier iframe { width: 100%; border: 0; min-height: 520px; }
+  .nog-geen-formulier { font-family: var(--sans); color: var(--grijs); padding: 24px 8px; }
+  .privacy { font-size: 15px; color: var(--grijs); }
+
+  footer { text-align: center; padding: 48px 16px 64px; font-size: 14px; color: var(--grijs); }
+  footer .streep { width: 32px; height: 3px; background: var(--accent); margin: 0 auto 16px; }
+  footer .woordmerk { color: var(--inkt); margin-bottom: 6px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 38px; }
+    .intro { font-size: 18px; }
+    h2 { font-size: 26px; }
+    .opening { padding-top: 44px; padding-bottom: 40px; }
+    section { padding-bottom: 48px; }
+  }
+  .woordmerk a { color: inherit; text-decoration: none; }
+  .tekst { padding-top: 56px; }
+  .tekst h1 { font-size: 44px; }
+  .tekst h2 { font-size: 24px; margin-top: 16px; }
+  .tekst section { padding-bottom: 40px; }
+  .tekst ul { padding-left: 20px; }
+  .tekst li { margin-bottom: 6px; }
+  .bijgewerkt { font-family: var(--sans); font-size: 14px; color: var(--grijs); }
+  @media (max-width: 600px) { .tekst h1 { font-size: 34px; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kolom">
+    <div class="woordmerk"><a href="./">Dossierkennis <span>· Amsterdam</span></a></div>
+    <div class="label">Testversie</div>
+  </div>
+</header>
+
+<main class="kolom tekst">
+  <p class="bovenregel">Over Dossierkennis</p>
+  <h1>Wie, wat en je gegevens</h1>
+
+  <section>
+    <h2>Wie maakt dit</h2>
+    <p>Dossierkennis is een project van Maurijn Rezvani. Het is een test: ik wil weten of een wekelijks overzicht per dossier mensen helpt die de Amsterdamse gemeenteraad volgen.</p>
+    <p>De nieuwsbrief is gebaseerd op openbare informatie van de gemeenteraad van Amsterdam en op nieuws uit lokale en landelijke media. Bij elk punt staat een link naar de bron.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Vragen, opmerkingen of afmelden? Mail naar <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a>. Je kunt je ook afmelden via de link onderaan elke mail.</p>
+  </section>
+
+  <section>
+    <h2>Welke gegevens en waarvoor</h2>
+    <p>Als je je aanmeldt, krijg ik je naam, je e-mailadres en de dossiers die je wilt volgen. Die gebruik ik alleen om:</p>
+    <ul>
+      <li>je de testedities te sturen;</li>
+      <li>je te vragen naar je ervaring met de nieuwsbrief.</li>
+    </ul>
+    <p>Ik gebruik je gegevens omdat je daar toestemming voor geeft door je aan te melden. Je kunt die toestemming altijd intrekken door je af te melden.</p>
+    <p>Ik verkoop je gegevens niet en deel ze met niemand anders dan de diensten hieronder.</p>
+  </section>
+
+  <section>
+    <h2>Welke diensten ik gebruik</h2>
+    <ul>
+      <li><strong>Tally</strong> (België): het aanmeldformulier.</li>
+      <li><strong>Brevo</strong> (Frankrijk): het versturen van de mail. Brevo telt hoe vaak de mails geopend en aangeklikt worden. Ik kijk alleen naar de totalen, om te zien of de nieuwsbrief werkt.</li>
+      <li><strong>GitHub Pages</strong>: deze website. GitHub kan voor de beveiliging technische gegevens van bezoekers bijhouden, zoals het IP-adres. Ik zie die gegevens niet.</li>
+    </ul>
+    <p>Tally en Brevo verwerken je gegevens alleen in mijn opdracht.</p>
+  </section>
+
+  <section>
+    <h2>Hoe lang ik je gegevens bewaar</h2>
+    <p>Tot het einde van de testperiode. Daarna verwijder ik ze, tenzij je zelf aangeeft dat je door wilt gaan. Meld je je eerder af, dan verwijder ik ze dan.</p>
+  </section>
+
+  <section>
+    <h2>Jouw rechten</h2>
+    <p>Je mag altijd vragen welke gegevens ik van je heb, en ze laten aanpassen of verwijderen. Stuur een mail naar <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a>; ik reageer binnen een maand.</p>
+    <p>Een klacht over hoe ik met je gegevens omga, kun je indienen bij de <a href="https://www.autoriteitpersoonsgegevens.nl">Autoriteit Persoonsgegevens</a>.</p>
+    <p class="bijgewerkt">Laatst bijgewerkt: 10 oktober 2026</p>
+  </section>
+</main>
+
+<footer>
+  <div class="streep"></div>
+  <div class="woordmerk">Dossierkennis</div>
+  <div>Gebaseerd op openbare informatie van de gemeenteraad van Amsterdam en op nieuws uit lokale en landelijke media.</div>
+  <div><a href="./">Naar de voorpagina</a> · <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a></div>
+</footer>
+
+</body>
+</html>
