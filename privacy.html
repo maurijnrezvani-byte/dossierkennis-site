@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy · Dossierkennis</title>
+<meta name="description" content="Welke gegevens Dossierkennis van je heeft, waarvoor, hoe lang, en wat je rechten zijn.">
+<style>
+  :root {
+    --accent: #0008B8;
+    --inkt: #141414;
+    --grijs: #5F6368;
+    --labeltekst: #3C4043;
+    --haarlijn: #E3E5E8;
+    --vlak: #F3F4F6;
+    --band: #F5F6F8;
+    --wit: #FFFFFF;
+    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --serif: Georgia, "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--wit);
+    color: var(--inkt);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .kolom { max-width: 680px; margin: 0 auto; padding: 0 16px; }
+  a { color: var(--accent); }
+
+  header .kolom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 28px; padding-bottom: 20px;
+    border-bottom: 1px solid var(--haarlijn);
+  }
+  .woordmerk { font-family: var(--sans); font-weight: 700; font-size: 15px; }
+  .woordmerk span { color: var(--grijs); font-weight: 400; }
+  .label {
+    font-family: var(--sans); font-weight: 700; font-size: 11px;
+    letter-spacing: .08em; text-transform: uppercase;
+    color: var(--accent); border: 1px solid var(--accent); padding: 3px 7px;
+  }
+
+  .opening { padding-top: 64px; padding-bottom: 56px; }
+  .bovenregel {
+    font-family: var(--sans); font-weight: 700; font-size: 13px;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+    margin: 0 0 16px;
+  }
+  h1 {
+    font-family: var(--sans); font-weight: 700; font-size: 52px;
+    line-height: 1.08; letter-spacing: -.01em; margin: 0 0 24px;
+  }
+  .intro { font-size: 20px; color: var(--labeltekst); margin: 0 0 32px; }
+  .knop {
+    display: inline-block; font-family: var(--sans); font-weight: 700; font-size: 16px;
+    background: var(--accent); color: var(--wit); text-decoration: none;
+    padding: 14px 22px;
+  }
+  .knop:hover { background: #1B2E9C; }
+  .gratis { font-family: var(--sans); font-size: 14px; color: var(--grijs); margin: 14px 0 0; }
+
+  section { padding-bottom: 64px; }
+  h2 {
+    font-family: var(--sans); font-weight: 700; font-size: 30px;
+    margin: 0 0 24px; padding-top: 16px; border-top: 4px solid var(--inkt);
+  }
+
+  ol.punten { list-style: none; padding: 0; margin: 0; counter-reset: p; }
+  ol.punten li {
+    counter-increment: p; display: grid; grid-template-columns: 48px 1fr;
+    padding: 20px 0; border-bottom: 1px solid var(--haarlijn);
+  }
+  ol.punten li::before {
+    content: counter(p); font-family: var(--sans); font-weight: 700;
+    font-size: 32px; line-height: 1; color: var(--accent);
+  }
+  ol.punten strong { font-family: var(--sans); display: block; margin-bottom: 4px; }
+
+  .betekenis { background: var(--vlak); padding: 20px 24px; margin-top: 28px; }
+  .betekenis .bovenregel { color: var(--labeltekst); margin-bottom: 8px; font-size: 11px; }
+  .betekenis p { margin: 0; }
+
+
+  .aanmelden { background: var(--band); padding-top: 64px; }
+  .aanmelden h2 { border-top-color: var(--accent); }
+  .formulier { background: var(--wit); padding: 8px 16px; margin: 8px 0 24px; }
+  .formulier iframe { width: 100%; border: 0; min-height: 520px; }
+  .nog-geen-formulier { font-family: var(--sans); color: var(--grijs); padding: 24px 8px; }
+  .privacy { font-size: 15px; color: var(--grijs); }
+
+  footer { text-align: center; padding: 48px 16px 64px; font-size: 14px; color: var(--grijs); }
+  footer .streep { width: 32px; height: 3px; background: var(--accent); margin: 0 auto 16px; }
+  footer .woordmerk { color: var(--inkt); margin-bottom: 6px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 38px; }
+    .intro { font-size: 18px; }
+    h2 { font-size: 26px; }
+    .opening { padding-top: 44px; padding-bottom: 40px; }
+    section { padding-bottom: 48px; }
+  }
+  .woordmerk a { color: inherit; text-decoration: none; }
+  .tekst { padding-top: 56px; }
+  .tekst h1 { font-size: 44px; }
+  .tekst h2 { font-size: 24px; margin-top: 16px; }
+  .tekst section { padding-bottom: 40px; }
+  .tekst ul { padding-left: 20px; }
+  .tekst li { margin-bottom: 6px; }
+  .bijgewerkt { font-family: var(--sans); font-size: 14px; color: var(--grijs); }
+  @media (max-width: 600px) { .tekst h1 { font-size: 34px; } }
+
+  .tekst ol { padding-left: 22px; }
+  .vwo { border-collapse: collapse; width: 100%; font-size: 16px; }
+  .vwo th, .vwo td { text-align: left; vertical-align: top; padding: 10px 0; border-bottom: 1px solid var(--haarlijn); }
+  .vwo th { font-family: var(--sans); font-size: 14px; width: 120px; padding-right: 16px; }
+  @media (max-width: 600px) { .vwo th, .vwo td { display: block; width: auto; padding: 4px 0; } .vwo th { padding-top: 12px; border-bottom: 0; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kolom">
+    <div class="woordmerk"><a href="./">Dossierkennis <span>· Privacy</span></a></div>
+  </div>
+</header>
+
+<main class="kolom tekst">
+  <p class="bovenregel">Privacy</p>
+  <h1>Wat er met je gegevens gebeurt</h1>
+
+  <section>
+    <h2>Wie is verantwoordelijk</h2>
+    <p>Dossierkennis is een dienst van Dieplood, de eenmanszaak van Maurijn Rezvani. Ik ben verantwoordelijk voor je gegevens.</p>
+    <ul>
+      <li>KvK-nummer: 42185519</li>
+      <li>Adres: Vierde Vogelstraat 5, 1022 XH Amsterdam</li>
+      <li>Mail: <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Welke gegevens en waarvoor</h2>
+    <p><strong>Als je je aanmeldt</strong>, krijg ik je e-mailadres, je naam, je gemeente en de onderwerpen die je kiest. Als je ze invult ook je organisatie of team en hoe je van Dossierkennis hoorde. Die gegevens gebruik ik om je elke maandag de nieuwsbrief te sturen, en om bij te houden wanneer je gratis periode afloopt. De grondslag is de overeenkomst met jou: zonder deze gegevens kan ik de nieuwsbrief niet sturen.</p>
+    <p><strong>Als je betaalt</strong>, krijg ik van Mollie te horen of de betaling gelukt is, welk abonnement je hebt en tot wanneer het loopt. Je bankgegevens zie ik niet; die blijven bij Mollie. Voor elke betaling maak ik een betaalbewijs met je naam en e-mailadres. Dat moet van de wet: de Belastingdienst wil die administratie zeven jaar kunnen zien.</p>
+    <p><strong>Mail over het aanbod</strong> stuur ik alleen als je daar bij het aanmelden een vinkje voor hebt gezet. Dat is bijvoorbeeld één herinnering als je na de gratis periode niet doorging. Je kunt die toestemming altijd intrekken, met de afmeldlink of een mail.</p>
+    <p><strong>Wat ik niet doe:</strong> je gegevens verkopen, ze gebruiken voor advertenties, of profielen van je maken. De samenvattingen worden geschreven met Claude, een AI-dienst van Anthropic, maar daar gaan alleen openbare raadsstukken en nieuwsberichten heen. Gegevens van lezers gaan er niet heen.</p>
+  </section>
+
+  <section>
+    <h2>Welke diensten ik gebruik</h2>
+    <p>Deze diensten verwerken gegevens in mijn opdracht. Ze mogen die alleen gebruiken voor wat ik ze vraag.</p>
+    <ul>
+      <li><strong>Tally</strong> (België): het aanmeldformulier.</li>
+      <li><strong>Brevo</strong> (Frankrijk): het versturen van de nieuwsbrief. Brevo telt of een mail geopend is en of er op een link geklikt is. Ik kijk alleen naar de totalen, om te zien of de nieuwsbrief werkt.</li>
+      <li><strong>Mollie</strong> (Nederland): de betalingen en de automatische incasso. Mollie is een betaalinstelling onder toezicht van De Nederlandsche Bank en bewaart je betaalgegevens zelf, volgens de eigen regels.</li>
+      <li><strong>TransIP</strong> (Nederland): de mailbox info@dossierkennis.com.</li>
+      <li><strong>GitHub Pages</strong> (Verenigde Staten): deze website. GitHub kan voor de beveiliging technische gegevens van bezoekers bijhouden, zoals het IP-adres. Ik zie die gegevens niet. Deze site zet geen cookies en meet geen bezoekers.</li>
+    </ul>
+    <p>Het lezersbestand zelf staat op mijn eigen computer, niet bij een van deze diensten.</p>
+  </section>
+
+  <section>
+    <h2>Hoe lang ik je gegevens bewaar</h2>
+    <ul>
+      <li><strong>Zolang je de nieuwsbrief krijgt:</strong> alles wat hierboven staat.</li>
+      <li><strong>Ga je na de gratis periode niet door:</strong> dan verwijder ik je gegevens na drie maanden. Heb je toestemming gegeven voor mail over het aanbod, dan na vier maanden, zodat ik je één keer kan vragen of je toch wilt.</li>
+      <li><strong>Meld je je af:</strong> dan bewaar ik alleen je e-mailadres met de aantekening "afgemeld", zodat je niet per ongeluk opnieuw mail krijgt. De rest verwijder ik.</li>
+      <li><strong>Betaalbewijzen:</strong> zeven jaar, omdat de wet dat eist.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Jouw rechten</h2>
+    <p>Je mag altijd vragen welke gegevens ik van je heb. Je mag ze laten aanpassen of verwijderen, en je mag ze in een bestand meekrijgen. Stuur een mail naar <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a>; ik reageer binnen een maand.</p>
+    <p>Een klacht over hoe ik met je gegevens omga, kun je indienen bij de <a href="https://www.autoriteitpersoonsgegevens.nl">Autoriteit Persoonsgegevens</a>. Ik hoor het liever eerst zelf.</p>
+  </section>
+
+  <section>
+    <h2>Teams</h2>
+    <p>Neemt een organisatie Dossierkennis af voor een team, dan bepaalt die organisatie wie de nieuwsbrief krijgt. Ik verwerk de gegevens van de teamleden dan in opdracht van de organisatie, volgens de <a href="verwerkersovereenkomst.html">verwerkersovereenkomst</a>.</p>
+    <p class="bijgewerkt">Laatst bijgewerkt: 6 november 2026</p>
+  </section>
+</main>
+
+<footer>
+  <div class="streep"></div>
+  <div class="woordmerk">Dossierkennis</div>
+  <div><a href="./">Voorpagina</a> · <a href="over.html">Over</a> · <a href="privacy.html">Privacy</a> · <a href="voorwaarden.html">Voorwaarden</a> · <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a></div>
+</footer>
+
+</body>
+</html>

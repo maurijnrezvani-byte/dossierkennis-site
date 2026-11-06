@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verwerkersovereenkomst · Dossierkennis</title>
+<meta name="description" content="Het model van de verwerkersovereenkomst voor teams die Dossierkennis afnemen.">
+<style>
+  :root {
+    --accent: #0008B8;
+    --inkt: #141414;
+    --grijs: #5F6368;
+    --labeltekst: #3C4043;
+    --haarlijn: #E3E5E8;
+    --vlak: #F3F4F6;
+    --band: #F5F6F8;
+    --wit: #FFFFFF;
+    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --serif: Georgia, "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--wit);
+    color: var(--inkt);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .kolom { max-width: 680px; margin: 0 auto; padding: 0 16px; }
+  a { color: var(--accent); }
+
+  header .kolom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 28px; padding-bottom: 20px;
+    border-bottom: 1px solid var(--haarlijn);
+  }
+  .woordmerk { font-family: var(--sans); font-weight: 700; font-size: 15px; }
+  .woordmerk span { color: var(--grijs); font-weight: 400; }
+  .label {
+    font-family: var(--sans); font-weight: 700; font-size: 11px;
+    letter-spacing: .08em; text-transform: uppercase;
+    color: var(--accent); border: 1px solid var(--accent); padding: 3px 7px;
+  }
+
+  .opening { padding-top: 64px; padding-bottom: 56px; }
+  .bovenregel {
+    font-family: var(--sans); font-weight: 700; font-size: 13px;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+    margin: 0 0 16px;
+  }
+  h1 {
+    font-family: var(--sans); font-weight: 700; font-size: 52px;
+    line-height: 1.08; letter-spacing: -.01em; margin: 0 0 24px;
+  }
+  .intro { font-size: 20px; color: var(--labeltekst); margin: 0 0 32px; }
+  .knop {
+    display: inline-block; font-family: var(--sans); font-weight: 700; font-size: 16px;
+    background: var(--accent); color: var(--wit); text-decoration: none;
+    padding: 14px 22px;
+  }
+  .knop:hover { background: #1B2E9C; }
+  .gratis { font-family: var(--sans); font-size: 14px; color: var(--grijs); margin: 14px 0 0; }
+
+  section { padding-bottom: 64px; }
+  h2 {
+    font-family: var(--sans); font-weight: 700; font-size: 30px;
+    margin: 0 0 24px; padding-top: 16px; border-top: 4px solid var(--inkt);
+  }
+
+  ol.punten { list-style: none; padding: 0; margin: 0; counter-reset: p; }
+  ol.punten li {
+    counter-increment: p; display: grid; grid-template-columns: 48px 1fr;
+    padding: 20px 0; border-bottom: 1px solid var(--haarlijn);
+  }
+  ol.punten li::before {
+    content: counter(p); font-family: var(--sans); font-weight: 700;
+    font-size: 32px; line-height: 1; color: var(--accent);
+  }
+  ol.punten strong { font-family: var(--sans); display: block; margin-bottom: 4px; }
+
+  .betekenis { background: var(--vlak); padding: 20px 24px; margin-top: 28px; }
+  .betekenis .bovenregel { color: var(--labeltekst); margin-bottom: 8px; font-size: 11px; }
+  .betekenis p { margin: 0; }
+
+
+  .aanmelden { background: var(--band); padding-top: 64px; }
+  .aanmelden h2 { border-top-color: var(--accent); }
+  .formulier { background: var(--wit); padding: 8px 16px; margin: 8px 0 24px; }
+  .formulier iframe { width: 100%; border: 0; min-height: 520px; }
+  .nog-geen-formulier { font-family: var(--sans); color: var(--grijs); padding: 24px 8px; }
+  .privacy { font-size: 15px; color: var(--grijs); }
+
+  footer { text-align: center; padding: 48px 16px 64px; font-size: 14px; color: var(--grijs); }
+  footer .streep { width: 32px; height: 3px; background: var(--accent); margin: 0 auto 16px; }
+  footer .woordmerk { color: var(--inkt); margin-bottom: 6px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 38px; }
+    .intro { font-size: 18px; }
+    h2 { font-size: 26px; }
+    .opening { padding-top: 44px; padding-bottom: 40px; }
+    section { padding-bottom: 48px; }
+  }
+  .woordmerk a { color: inherit; text-decoration: none; }
+  .tekst { padding-top: 56px; }
+  .tekst h1 { font-size: 44px; }
+  .tekst h2 { font-size: 24px; margin-top: 16px; }
+  .tekst section { padding-bottom: 40px; }
+  .tekst ul { padding-left: 20px; }
+  .tekst li { margin-bottom: 6px; }
+  .bijgewerkt { font-family: var(--sans); font-size: 14px; color: var(--grijs); }
+  @media (max-width: 600px) { .tekst h1 { font-size: 34px; } }
+
+  .tekst ol { padding-left: 22px; }
+  .vwo { border-collapse: collapse; width: 100%; font-size: 16px; }
+  .vwo th, .vwo td { text-align: left; vertical-align: top; padding: 10px 0; border-bottom: 1px solid var(--haarlijn); }
+  .vwo th { font-family: var(--sans); font-size: 14px; width: 120px; padding-right: 16px; }
+  @media (max-width: 600px) { .vwo th, .vwo td { display: block; width: auto; padding: 4px 0; } .vwo th { padding-top: 12px; border-bottom: 0; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kolom">
+    <div class="woordmerk"><a href="./">Dossierkennis <span>· Teams</span></a></div>
+  </div>
+</header>
+
+<main class="kolom tekst">
+  <p class="bovenregel">Voor teams</p>
+  <h1>Verwerkersovereenkomst</h1>
+  <p class="intro">Neemt jullie organisatie Dossierkennis af voor een team, dan verwerk ik de gegevens van de teamleden in jullie opdracht. Deze overeenkomst regelt hoe, zoals artikel 28 van de AVG eist.</p>
+  <p>Wil je hem ondertekenen? Mail naar <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a>, dan stuur ik een versie op naam van jullie organisatie. Gebruiken jullie liever je eigen model, dan kijk ik daar graag naar.</p>
+
+  <section>
+    <h2>1. Partijen</h2>
+    <ul>
+      <li><strong>De organisatie</strong> die het teamabonnement afneemt: de verwerkingsverantwoordelijke.</li>
+      <li><strong>Dieplood</strong>, de eenmanszaak van Maurijn Rezvani, handelend onder de naam Dossierkennis, KvK 42185519, Vierde Vogelstraat 5, 1022 XH Amsterdam: de verwerker.</li>
+    </ul>
+    <p>Deze overeenkomst hoort bij het teamabonnement en loopt even lang.</p>
+  </section>
+
+  <section>
+    <h2>2. Wat er verwerkt wordt</h2>
+    <table class="vwo">
+      <tr><th>Doel</th><td>De wekelijkse nieuwsbrief sturen aan de teamleden die de organisatie aanwijst, en bij Team Plus de teameditie afstemmen op de wensen van het team.</td></tr>
+      <tr><th>Betrokkenen</th><td>Medewerkers van de organisatie, en de contactpersoon.</td></tr>
+      <tr><th>Gegevens</th><td>Naam, zakelijk e-mailadres, team of afdeling, gekozen onderwerpen. Brevo houdt per mail bij of hij geopend is en of er op een link geklikt is. Bij Team Plus ook de teamwensen: onderwerpen, projecten, commissies. Geen bijzondere persoonsgegevens.</td></tr>
+      <tr><th>Waar</th><td>Het lezersbestand staat op de computer van de verwerker. Mail gaat via Brevo. Alles binnen de EU.</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>3. Afspraken</h2>
+    <ol>
+      <li>De verwerker gebruikt de gegevens alleen voor het doel hierboven, en alleen op schriftelijke instructie van de organisatie. Hij verkoopt ze niet en gebruikt ze niet voor iets anders, ook niet om eigen aanbiedingen te sturen.</li>
+      <li>Alleen Maurijn Rezvani heeft toegang tot de gegevens. Hij houdt ze geheim.</li>
+      <li>De verwerker beveiligt de gegevens passend, met in elk geval: een versleutelde schijf, tweestapsverificatie op alle accounts van de gebruikte diensten, en geen persoonsgegevens in openbare of gedeelde mappen of in de code van de nieuwsbrief.</li>
+      <li>De verwerker helpt de organisatie als een teamlid zijn rechten gebruikt: inzage, correctie of verwijdering. Komt zo'n verzoek bij de verwerker binnen, dan stuurt hij het binnen vijf werkdagen door.</li>
+      <li>De verwerker geeft de organisatie op verzoek de informatie die nodig is om te laten zien dat deze afspraken nageleefd worden.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>4. Subverwerkers</h2>
+    <p>De organisatie geeft toestemming voor deze subverwerkers:</p>
+    <ul>
+      <li><strong>Brevo</strong> (Sendinblue SAS, Frankrijk): het versturen van de mail.</li>
+      <li><strong>Tally</strong> (Tally BV, België): het aanmeld- en wijzigformulier, als teamleden zich daar zelf aanmelden.</li>
+      <li><strong>TransIP</strong> (Nederland): de mailbox info@dossierkennis.com.</li>
+    </ul>
+    <p>Met elke subverwerker geldt een verwerkersovereenkomst met minstens dezelfde verplichtingen. Een nieuwe subverwerker meldt de verwerker een maand van tevoren. De organisatie mag daar bezwaar tegen maken; komen partijen er niet uit, dan mag de organisatie het abonnement kosteloos beëindigen.</p>
+    <p>De samenvattingen worden geschreven met Claude, een AI-dienst van Anthropic. Daar gaan alleen openbare stukken en nieuws heen, geen gegevens van teamleden. Anthropic is daarom geen subverwerker.</p>
+  </section>
+
+  <section>
+    <h2>5. Datalekken</h2>
+    <p>Ontdekt de verwerker een datalek waarbij gegevens van teamleden betrokken zijn, dan meldt hij dat binnen 48 uur aan de contactpersoon van de organisatie. Hij vertelt wat er gebeurd is, welke gegevens het betreft, wat hij gedaan heeft om het te stoppen, en wat er nog gebeurt. De organisatie beslist of het lek gemeld wordt bij de Autoriteit Persoonsgegevens of bij de teamleden.</p>
+  </section>
+
+  <section>
+    <h2>6. Einde</h2>
+    <p>Stopt het teamabonnement, dan verwijdert de verwerker binnen vier weken de gegevens van de teamleden, ook bij de subverwerkers. Op verzoek stuurt hij ze eerst terug. Daarna bevestigt hij per mail dat ze verwijderd zijn. Gegevens die hij volgens de wet moet bewaren, zoals facturen, blijven bewaard zolang dat moet.</p>
+  </section>
+
+  <section>
+    <h2>7. Aansprakelijkheid</h2>
+    <p>Voor de aansprakelijkheid geldt wat in de <a href="voorwaarden.html">algemene voorwaarden</a> staat, behalve bij schade door het niet naleven van deze overeenkomst door opzet of grove nalatigheid.</p>
+    <p class="bijgewerkt">Model, versie 1, 6 november 2026</p>
+  </section>
+</main>
+
+<footer>
+  <div class="streep"></div>
+  <div class="woordmerk">Dossierkennis</div>
+  <div><a href="./">Voorpagina</a> · <a href="over.html">Over</a> · <a href="privacy.html">Privacy</a> · <a href="voorwaarden.html">Voorwaarden</a> · <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a></div>
+</footer>
+
+</body>
+</html>

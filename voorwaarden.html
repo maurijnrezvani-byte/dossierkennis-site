@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voorwaarden · Dossierkennis</title>
+<meta name="description" content="De algemene voorwaarden van Dossierkennis: gratis periode, betalen, bedenktijd en opzeggen.">
+<style>
+  :root {
+    --accent: #0008B8;
+    --inkt: #141414;
+    --grijs: #5F6368;
+    --labeltekst: #3C4043;
+    --haarlijn: #E3E5E8;
+    --vlak: #F3F4F6;
+    --band: #F5F6F8;
+    --wit: #FFFFFF;
+    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --serif: Georgia, "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--wit);
+    color: var(--inkt);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .kolom { max-width: 680px; margin: 0 auto; padding: 0 16px; }
+  a { color: var(--accent); }
+
+  header .kolom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 28px; padding-bottom: 20px;
+    border-bottom: 1px solid var(--haarlijn);
+  }
+  .woordmerk { font-family: var(--sans); font-weight: 700; font-size: 15px; }
+  .woordmerk span { color: var(--grijs); font-weight: 400; }
+  .label {
+    font-family: var(--sans); font-weight: 700; font-size: 11px;
+    letter-spacing: .08em; text-transform: uppercase;
+    color: var(--accent); border: 1px solid var(--accent); padding: 3px 7px;
+  }
+
+  .opening { padding-top: 64px; padding-bottom: 56px; }
+  .bovenregel {
+    font-family: var(--sans); font-weight: 700; font-size: 13px;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+    margin: 0 0 16px;
+  }
+  h1 {
+    font-family: var(--sans); font-weight: 700; font-size: 52px;
+    line-height: 1.08; letter-spacing: -.01em; margin: 0 0 24px;
+  }
+  .intro { font-size: 20px; color: var(--labeltekst); margin: 0 0 32px; }
+  .knop {
+    display: inline-block; font-family: var(--sans); font-weight: 700; font-size: 16px;
+    background: var(--accent); color: var(--wit); text-decoration: none;
+    padding: 14px 22px;
+  }
+  .knop:hover { background: #1B2E9C; }
+  .gratis { font-family: var(--sans); font-size: 14px; color: var(--grijs); margin: 14px 0 0; }
+
+  section { padding-bottom: 64px; }
+  h2 {
+    font-family: var(--sans); font-weight: 700; font-size: 30px;
+    margin: 0 0 24px; padding-top: 16px; border-top: 4px solid var(--inkt);
+  }
+
+  ol.punten { list-style: none; padding: 0; margin: 0; counter-reset: p; }
+  ol.punten li {
+    counter-increment: p; display: grid; grid-template-columns: 48px 1fr;
+    padding: 20px 0; border-bottom: 1px solid var(--haarlijn);
+  }
+  ol.punten li::before {
+    content: counter(p); font-family: var(--sans); font-weight: 700;
+    font-size: 32px; line-height: 1; color: var(--accent);
+  }
+  ol.punten strong { font-family: var(--sans); display: block; margin-bottom: 4px; }
+
+  .betekenis { background: var(--vlak); padding: 20px 24px; margin-top: 28px; }
+  .betekenis .bovenregel { color: var(--labeltekst); margin-bottom: 8px; font-size: 11px; }
+  .betekenis p { margin: 0; }
+
+
+  .aanmelden { background: var(--band); padding-top: 64px; }
+  .aanmelden h2 { border-top-color: var(--accent); }
+  .formulier { background: var(--wit); padding: 8px 16px; margin: 8px 0 24px; }
+  .formulier iframe { width: 100%; border: 0; min-height: 520px; }
+  .nog-geen-formulier { font-family: var(--sans); color: var(--grijs); padding: 24px 8px; }
+  .privacy { font-size: 15px; color: var(--grijs); }
+
+  footer { text-align: center; padding: 48px 16px 64px; font-size: 14px; color: var(--grijs); }
+  footer .streep { width: 32px; height: 3px; background: var(--accent); margin: 0 auto 16px; }
+  footer .woordmerk { color: var(--inkt); margin-bottom: 6px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 38px; }
+    .intro { font-size: 18px; }
+    h2 { font-size: 26px; }
+    .opening { padding-top: 44px; padding-bottom: 40px; }
+    section { padding-bottom: 48px; }
+  }
+  .woordmerk a { color: inherit; text-decoration: none; }
+  .tekst { padding-top: 56px; }
+  .tekst h1 { font-size: 44px; }
+  .tekst h2 { font-size: 24px; margin-top: 16px; }
+  .tekst section { padding-bottom: 40px; }
+  .tekst ul { padding-left: 20px; }
+  .tekst li { margin-bottom: 6px; }
+  .bijgewerkt { font-family: var(--sans); font-size: 14px; color: var(--grijs); }
+  @media (max-width: 600px) { .tekst h1 { font-size: 34px; } }
+
+  .tekst ol { padding-left: 22px; }
+  .vwo { border-collapse: collapse; width: 100%; font-size: 16px; }
+  .vwo th, .vwo td { text-align: left; vertical-align: top; padding: 10px 0; border-bottom: 1px solid var(--haarlijn); }
+  .vwo th { font-family: var(--sans); font-size: 14px; width: 120px; padding-right: 16px; }
+  @media (max-width: 600px) { .vwo th, .vwo td { display: block; width: auto; padding: 4px 0; } .vwo th { padding-top: 12px; border-bottom: 0; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kolom">
+    <div class="woordmerk"><a href="./">Dossierkennis <span>· Voorwaarden</span></a></div>
+  </div>
+</header>
+
+<main class="kolom tekst">
+  <p class="bovenregel">Voorwaarden</p>
+  <h1>Algemene voorwaarden</h1>
+  <p class="intro">Wat je van Dossierkennis mag verwachten, en wat ik van jou vraag. Zo kort mogelijk gehouden.</p>
+
+  <section>
+    <h2>1. Wie</h2>
+    <p>Dossierkennis is een dienst van Dieplood, de eenmanszaak van Maurijn Rezvani.</p>
+    <ul>
+      <li>KvK-nummer: 42185519</li>
+      <li>Btw-nummer: NL005564870B59</li>
+      <li>Adres: Vierde Vogelstraat 5, 1022 XH Amsterdam</li>
+      <li>Mail: <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a></li>
+    </ul>
+    <p>Deze voorwaarden gelden voor elk abonnement op Dossierkennis. Voor teams gelden ook de afspraken onder 9.</p>
+  </section>
+
+  <section>
+    <h2>2. Wat je krijgt</h2>
+    <p>Elke maandag een nieuwsbrief per mail over de gemeenteraad van de gemeente die je kiest: per onderwerp wat er de afgelopen week besloten, gestuurd en geschreven is, en wat er de komende weken op de agenda staat. Je kiest tot 3 onderwerpen, of het overzicht van alle onderwerpen.</p>
+    <p>In een week zonder raadsvergaderingen of stukken kan een editie kort zijn. Rond de zomer- en kerstvakantie van de raad kan er een week uitvallen; dat meld ik vooraf. Je abonnement wordt daardoor niet duurder of korter.</p>
+  </section>
+
+  <section>
+    <h2>3. Hoe de nieuwsbrief gemaakt wordt</h2>
+    <p>De samenvattingen worden geschreven met AI, op basis van openbare stukken van de gemeente en nieuws uit lokale en landelijke media. Een controle zoekt citaten en getallen terug in de bron. Toch kan er een fout in staan. Bij elk punt staat daarom een link naar de bron: <strong>de bron is leidend</strong>, niet de samenvatting.</p>
+    <p>Dossierkennis is geen juridisch of beleidsadvies. Neem je een besluit op basis van de nieuwsbrief, kijk dan eerst in de bron. Zie je een fout? Mail me, dan verbeter ik het.</p>
+  </section>
+
+  <section>
+    <h2>4. De gratis periode</h2>
+    <p>Je begint met 6 weken gratis. Daar zijn geen betaalgegevens voor nodig. In week 5 krijg je een knop om door te gaan. Betaal je niet, dan stopt de nieuwsbrief vanzelf na de zesde editie. Je zit nergens aan vast.</p>
+    <p>De gratis periode geldt één keer per persoon en per gemeente.</p>
+  </section>
+
+  <section>
+    <h2>5. Prijs en betalen</h2>
+    <ul>
+      <li>De prijzen staan op de <a href="prijzen.html">prijzenpagina</a>. Ze zijn inclusief btw.</li>
+      <li>Je betaalt de eerste keer met iDEAL, via Mollie. Daarmee geef je ook toestemming voor automatische incasso. Daarna schrijf ik automatisch af aan het begin van elke periode: elke maand, of elk jaar.</li>
+      <li>Je abonnement gaat in na je laatste gratis editie. Betaal je eerder, dan verlies je geen gratis week.</li>
+      <li>Bij elke betaling krijg je een betaalbewijs per mail.</li>
+      <li>Lukt een afschrijving niet, dan krijg je een mail. Lukt het binnen 14 dagen nog steeds niet, dan stopt de nieuwsbrief tot er betaald is.</li>
+      <li>Gaat de prijs omhoog, dan hoor je dat minstens een maand van tevoren. De nieuwe prijs geldt pas vanaf je volgende periode, en je mag tot die tijd kosteloos opzeggen.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. Bedenktijd</h2>
+    <p>Spijt van je eerste betaling? Mail binnen 14 dagen na die betaling naar <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a>. Dan krijg je het hele bedrag terug en stopt je abonnement. Je hoeft geen reden te geven.</p>
+  </section>
+
+  <section>
+    <h2>7. Opzeggen</h2>
+    <ul>
+      <li><strong>Maandabonnement:</strong> altijd opzegbaar. Je houdt de nieuwsbrief tot het einde van de maand waarvoor je betaald hebt.</li>
+      <li><strong>Jaarabonnement, eerste jaar:</strong> je kunt altijd opzeggen; je houdt de nieuwsbrief tot het einde van dat jaar. Het abonnement wordt dan niet verlengd.</li>
+      <li><strong>Jaarabonnement, na het eerste jaar:</strong> zeg je je abonnement niet op, dan wordt het verlengd. Daarna kun je het op elk moment opzeggen, met een opzegtermijn van één maand. Je krijgt dan het deel van het jaar terug dat je niet meer gebruikt.</li>
+    </ul>
+    <p>Opzeggen doe je met een mail naar <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a>, vanaf het adres waarop je de nieuwsbrief krijgt. Je krijgt binnen twee werkdagen een bevestiging. De afmeldlink onderaan elke mail stopt de nieuwsbrief, maar stopt niet de betaling. Daarvoor is de mail nodig.</p>
+  </section>
+
+  <section>
+    <h2>8. Gebruik van de nieuwsbrief</h2>
+    <p>De nieuwsbrief is voor jou. Een editie af en toe doorsturen naar een collega die er iets aan heeft, is prima. De nieuwsbrief vast doorsturen naar een team, op een intranet zetten of verder verkopen, is niet de bedoeling. Daar is het teamabonnement voor.</p>
+    <p>De raadsstukken en het nieuws waar de nieuwsbrief naar linkt, zijn van de gemeente en de media zelf.</p>
+  </section>
+
+  <section>
+    <h2>9. Teams</h2>
+    <p>Voor een teamabonnement, op factuur, gelden deze afspraken in plaats van 5, 6 en 7:</p>
+    <ul>
+      <li>Het abonnement loopt een jaar en gaat in na de gratis proefmaand.</li>
+      <li>De factuur komt aan het begin van het jaar; de betaaltermijn is 30 dagen.</li>
+      <li>Het abonnement wordt elk jaar verlengd, tenzij je uiterlijk een maand voor het einde opzegt.</li>
+      <li>Ik verwerk de gegevens van de teamleden in opdracht van de organisatie. Daarvoor sluiten we de <a href="verwerkersovereenkomst.html">verwerkersovereenkomst</a>.</li>
+      <li>Wie in het team de nieuwsbrief krijgt, regelt de contactpersoon van de organisatie met mij.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>10. Aansprakelijkheid</h2>
+    <p>Ik doe mijn best om de nieuwsbrief elke maandag op tijd en zonder fouten te sturen. Lukt dat een keer niet, dan krijg je die editie zo snel mogelijk alsnog. Valt een editie helemaal uit door mijn fout, dan schuift je abonnement een week op.</p>
+    <p>Ben ik toch aansprakelijk voor schade, dan is dat voor zakelijke klanten beperkt tot wat er in de twaalf maanden daarvoor voor het abonnement is betaald. Dat geldt niet bij opzet of grove nalatigheid.</p>
+  </section>
+
+  <section>
+    <h2>11. Klachten en geschillen</h2>
+    <p>Een klacht? Mail naar <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a>. Je krijgt binnen 14 dagen een inhoudelijk antwoord.</p>
+    <p>Op deze voorwaarden is Nederlands recht van toepassing. Komen we er samen niet uit, dan beslist de rechter in het arrondissement waar je woont, of, bij een zakelijke klant, de rechtbank Amsterdam.</p>
+  </section>
+
+  <section>
+    <h2>12. Wijzigen van deze voorwaarden</h2>
+    <p>Verander ik iets in deze voorwaarden dat voor jou nadelig is, dan krijg je dat minstens een maand van tevoren per mail. Je mag dan kosteloos opzeggen.</p>
+    <p class="bijgewerkt">Versie 1, 6 november 2026</p>
+  </section>
+</main>
+
+<footer>
+  <div class="streep"></div>
+  <div class="woordmerk">Dossierkennis</div>
+  <div><a href="./">Voorpagina</a> · <a href="over.html">Over</a> · <a href="privacy.html">Privacy</a> · <a href="voorwaarden.html">Voorwaarden</a> · <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a></div>
+</footer>
+
+</body>
+</html>
