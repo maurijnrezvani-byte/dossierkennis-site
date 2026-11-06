@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prijzen · Dossierkennis</title>
+<meta name="description" content="Wat Dossierkennis kost: per gemeente, met eerst 6 weken gratis.">
+<style>
+  :root {
+    --accent: #0008B8;
+    --inkt: #141414;
+    --grijs: #5F6368;
+    --labeltekst: #3C4043;
+    --haarlijn: #E3E5E8;
+    --vlak: #F3F4F6;
+    --band: #F5F6F8;
+    --wit: #FFFFFF;
+    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --serif: Georgia, "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--wit);
+    color: var(--inkt);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .kolom { max-width: 680px; margin: 0 auto; padding: 0 16px; }
+  a { color: var(--accent); }
+
+  header .kolom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 28px; padding-bottom: 20px;
+    border-bottom: 1px solid var(--haarlijn);
+  }
+  .woordmerk { font-family: var(--sans); font-weight: 700; font-size: 15px; }
+  .woordmerk span { color: var(--grijs); font-weight: 400; }
+  .label {
+    font-family: var(--sans); font-weight: 700; font-size: 11px;
+    letter-spacing: .08em; text-transform: uppercase;
+    color: var(--accent); border: 1px solid var(--accent); padding: 3px 7px;
+  }
+
+  .opening { padding-top: 64px; padding-bottom: 56px; }
+  .bovenregel {
+    font-family: var(--sans); font-weight: 700; font-size: 13px;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+    margin: 0 0 16px;
+  }
+  h1 {
+    font-family: var(--sans); font-weight: 700; font-size: 52px;
+    line-height: 1.08; letter-spacing: -.01em; margin: 0 0 24px;
+  }
+  .intro { font-size: 20px; color: var(--labeltekst); margin: 0 0 32px; }
+  .knop {
+    display: inline-block; font-family: var(--sans); font-weight: 700; font-size: 16px;
+    background: var(--accent); color: var(--wit); text-decoration: none;
+    padding: 14px 22px;
+  }
+  .knop:hover { background: #1B2E9C; }
+  .gratis { font-family: var(--sans); font-size: 14px; color: var(--grijs); margin: 14px 0 0; }
+
+  section { padding-bottom: 64px; }
+  h2 {
+    font-family: var(--sans); font-weight: 700; font-size: 30px;
+    margin: 0 0 24px; padding-top: 16px; border-top: 4px solid var(--inkt);
+  }
+
+  ol.punten { list-style: none; padding: 0; margin: 0; counter-reset: p; }
+  ol.punten li {
+    counter-increment: p; display: grid; grid-template-columns: 48px 1fr;
+    padding: 20px 0; border-bottom: 1px solid var(--haarlijn);
+  }
+  ol.punten li::before {
+    content: counter(p); font-family: var(--sans); font-weight: 700;
+    font-size: 32px; line-height: 1; color: var(--accent);
+  }
+  ol.punten strong { font-family: var(--sans); display: block; margin-bottom: 4px; }
+
+  .betekenis { background: var(--vlak); padding: 20px 24px; margin-top: 28px; }
+  .betekenis .bovenregel { color: var(--labeltekst); margin-bottom: 8px; font-size: 11px; }
+  .betekenis p { margin: 0; }
+
+
+  .aanmelden { background: var(--band); padding-top: 64px; }
+  .aanmelden h2 { border-top-color: var(--accent); }
+  .formulier { background: var(--wit); padding: 8px 16px; margin: 8px 0 24px; }
+  .formulier iframe { width: 100%; border: 0; min-height: 520px; }
+  .nog-geen-formulier { font-family: var(--sans); color: var(--grijs); padding: 24px 8px; }
+  .privacy { font-size: 15px; color: var(--grijs); }
+
+  footer { text-align: center; padding: 48px 16px 64px; font-size: 14px; color: var(--grijs); }
+  footer .streep { width: 32px; height: 3px; background: var(--accent); margin: 0 auto 16px; }
+  footer .woordmerk { color: var(--inkt); margin-bottom: 6px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 38px; }
+    .intro { font-size: 18px; }
+    h2 { font-size: 26px; }
+    .opening { padding-top: 44px; padding-bottom: 40px; }
+    section { padding-bottom: 48px; }
+  }
+  .woordmerk a { color: inherit; text-decoration: none; }
+  .tekst { padding-top: 56px; }
+  .tekst h1 { font-size: 44px; }
+  .tekst h2 { font-size: 24px; margin-top: 16px; }
+  .tekst section { padding-bottom: 40px; }
+  .tekst ul { padding-left: 20px; }
+  .tekst li { margin-bottom: 6px; }
+  .bijgewerkt { font-family: var(--sans); font-size: 14px; color: var(--grijs); }
+  @media (max-width: 600px) { .tekst h1 { font-size: 34px; } }
+
+  .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+  .tabs button { font-family: var(--sans); font-size: 14px; font-weight: 700; cursor: pointer;
+    background: var(--wit); color: var(--inkt); border: 1px solid var(--haarlijn); padding: 8px 12px; }
+  .tabs button[aria-selected="true"] { background: var(--accent); color: var(--wit); border-color: var(--accent); }
+  .venster { border: 1px solid var(--haarlijn); background: var(--wit); }
+  .venster iframe { display: block; width: 100%; height: 820px; border: 0; }
+  .uitleg { font-family: var(--sans); font-size: 14px; color: var(--grijs); margin: 0 0 16px; }
+  .prijzen { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .prijs { background: var(--vlak); padding: 20px; }
+  .prijs h3 { font-family: var(--sans); font-size: 18px; margin: 0 0 6px; }
+  .prijs .bedrag { font-family: var(--sans); font-weight: 700; font-size: 28px; margin: 0 0 8px; color: var(--inkt); }
+  .prijs p { font-size: 15px; margin: 0; }
+</style>
+</head>
+<body>
+<header>
+  <div class="kolom">
+    <div class="woordmerk"><a href="./">Dossierkennis <span>· Prijzen</span></a></div>
+  </div>
+</header>
+<main class="kolom tekst">
+  <p class="bovenregel">Prijzen</p>
+  <h1>Eén prijs per gemeente</h1>
+  <section>
+    <p>Je begint met 6 weken gratis, zonder betaalgegevens. Wil je daarna door, dan kies je een abonnement. Zo niet, dan stopt het vanzelf.</p>
+    <div class="prijzen">
+      <div class="prijs"><h3>Persoonlijk, per maand</h3><p class="bedrag">€ 3</p><p>Eén gemeente, tot 3 onderwerpen of het overzicht. Maandelijks opzegbaar.</p></div>
+      <div class="prijs"><h3>Persoonlijk, per jaar</h3><p class="bedrag">€ 30</p><p>Hetzelfde, twee maanden goedkoper.</p></div>
+      <div class="prijs"><h3>Team</h3><p class="bedrag">€ 250 <span style="font-size:16px;font-weight:400;">per jaar</span></p><p>Voor een team of afdeling, op factuur. Mail ons voor de voorwaarden.</p></div>
+      <div class="prijs"><h3>Team Plus</h3><p class="bedrag">vanaf € 750</p><p>Een eigen teameditie, afgestemd op jullie projecten en commissies. Op aanvraag.</p></div>
+    </div>
+  </section>
+  <section>
+    <h2>Betalen en opzeggen</h2>
+    <ul>
+      <li>Alle prijzen zijn inclusief btw. Je krijgt bij elke betaling een betaalbewijs.</li>
+      <li>De eerste betaling gaat met iDEAL, via Mollie. Daarna schrijven we automatisch af, per maand of per jaar.</li>
+      <li>Opzeggen kan altijd: mail naar <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a>. Je houdt de nieuwsbrief tot het einde van de periode waarvoor je betaald hebt.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Teams</h2>
+    <p>Volg je met meer mensen dezelfde gemeente? Mail naar <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a>, dan stemmen we het af. Teams krijgen ook eerst een gratis proefmaand.</p>
+  </section>
+</main>
+<footer>
+  <div class="streep"></div>
+  <div class="woordmerk">Dossierkennis</div>
+  <div><a href="prijzen.html">Prijzen</a> · <a href="over.html">Over Dossierkennis</a> · <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a></div>
+</footer>
+
+</body>
+</html>
