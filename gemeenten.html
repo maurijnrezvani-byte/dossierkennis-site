@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gemeenten · Dossierkennis</title>
+<meta name="description" content="Alle gemeenten waarvoor Dossierkennis werkt.">
+<style>
+  :root {
+    --accent: #0008B8;
+    --inkt: #141414;
+    --grijs: #5F6368;
+    --labeltekst: #3C4043;
+    --haarlijn: #E3E5E8;
+    --vlak: #F3F4F6;
+    --band: #F5F6F8;
+    --wit: #FFFFFF;
+    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --serif: Georgia, "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--wit);
+    color: var(--inkt);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .kolom { max-width: 680px; margin: 0 auto; padding: 0 16px; }
+  a { color: var(--accent); }
+
+  header .kolom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 28px; padding-bottom: 20px;
+    border-bottom: 1px solid var(--haarlijn);
+  }
+  .woordmerk { font-family: var(--sans); font-weight: 700; font-size: 15px; }
+  .woordmerk span { color: var(--grijs); font-weight: 400; }
+  .label {
+    font-family: var(--sans); font-weight: 700; font-size: 11px;
+    letter-spacing: .08em; text-transform: uppercase;
+    color: var(--accent); border: 1px solid var(--accent); padding: 3px 7px;
+  }
+
+  .opening { padding-top: 64px; padding-bottom: 56px; }
+  .bovenregel {
+    font-family: var(--sans); font-weight: 700; font-size: 13px;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+    margin: 0 0 16px;
+  }
+  h1 {
+    font-family: var(--sans); font-weight: 700; font-size: 52px;
+    line-height: 1.08; letter-spacing: -.01em; margin: 0 0 24px;
+  }
+  .intro { font-size: 20px; color: var(--labeltekst); margin: 0 0 32px; }
+  .knop {
+    display: inline-block; font-family: var(--sans); font-weight: 700; font-size: 16px;
+    background: var(--accent); color: var(--wit); text-decoration: none;
+    padding: 14px 22px;
+  }
+  .knop:hover { background: #1B2E9C; }
+  .gratis { font-family: var(--sans); font-size: 14px; color: var(--grijs); margin: 14px 0 0; }
+
+  section { padding-bottom: 64px; }
+  h2 {
+    font-family: var(--sans); font-weight: 700; font-size: 30px;
+    margin: 0 0 24px; padding-top: 16px; border-top: 4px solid var(--inkt);
+  }
+
+  ol.punten { list-style: none; padding: 0; margin: 0; counter-reset: p; }
+  ol.punten li {
+    counter-increment: p; display: grid; grid-template-columns: 48px 1fr;
+    padding: 20px 0; border-bottom: 1px solid var(--haarlijn);
+  }
+  ol.punten li::before {
+    content: counter(p); font-family: var(--sans); font-weight: 700;
+    font-size: 32px; line-height: 1; color: var(--accent);
+  }
+  ol.punten strong { font-family: var(--sans); display: block; margin-bottom: 4px; }
+
+  .betekenis { background: var(--vlak); padding: 20px 24px; margin-top: 28px; }
+  .betekenis .bovenregel { color: var(--labeltekst); margin-bottom: 8px; font-size: 11px; }
+  .betekenis p { margin: 0; }
+
+
+  .aanmelden { background: var(--band); padding-top: 64px; }
+  .aanmelden h2 { border-top-color: var(--accent); }
+  .formulier { background: var(--wit); padding: 8px 16px; margin: 8px 0 24px; }
+  .formulier iframe { width: 100%; border: 0; min-height: 520px; }
+  .nog-geen-formulier { font-family: var(--sans); color: var(--grijs); padding: 24px 8px; }
+  .privacy { font-size: 15px; color: var(--grijs); }
+
+  footer { text-align: center; padding: 48px 16px 64px; font-size: 14px; color: var(--grijs); }
+  footer .streep { width: 32px; height: 3px; background: var(--accent); margin: 0 auto 16px; }
+  footer .woordmerk { color: var(--inkt); margin-bottom: 6px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 38px; }
+    .intro { font-size: 18px; }
+    h2 { font-size: 26px; }
+    .opening { padding-top: 44px; padding-bottom: 40px; }
+    section { padding-bottom: 48px; }
+  }
+  .woordmerk a { color: inherit; text-decoration: none; }
+  .tekst { padding-top: 56px; }
+  .tekst h1 { font-size: 44px; }
+  .tekst h2 { font-size: 24px; margin-top: 16px; }
+  .tekst section { padding-bottom: 40px; }
+  .tekst ul { padding-left: 20px; }
+  .tekst li { margin-bottom: 6px; }
+  .bijgewerkt { font-family: var(--sans); font-size: 14px; color: var(--grijs); }
+  @media (max-width: 600px) { .tekst h1 { font-size: 34px; } }
+
+  .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+  .tabs button { font-family: var(--sans); font-size: 14px; font-weight: 700; cursor: pointer;
+    background: var(--wit); color: var(--inkt); border: 1px solid var(--haarlijn); padding: 8px 12px; }
+  .tabs button[aria-selected="true"] { background: var(--accent); color: var(--wit); border-color: var(--accent); }
+  .venster { border: 1px solid var(--haarlijn); background: var(--wit); }
+  .venster iframe { display: block; width: 100%; height: 820px; border: 0; }
+  .uitleg { font-family: var(--sans); font-size: 14px; color: var(--grijs); margin: 0 0 16px; }
+  .prijzen { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .prijs { background: var(--vlak); padding: 20px; }
+  .prijs h3 { font-family: var(--sans); font-size: 18px; margin: 0 0 6px; }
+  .prijs .bedrag { font-family: var(--sans); font-weight: 700; font-size: 28px; margin: 0 0 8px; color: var(--inkt); }
+  .prijs p { font-size: 15px; margin: 0; }
+  .zoeklabel { display: block; font-family: var(--sans); font-size: 14px; font-weight: 700; margin: 24px 0 6px; }
+  .zoek { font: inherit; font-size: 17px; width: 100%; box-sizing: border-box; padding: 10px 12px;
+    border: 1px solid var(--haarlijn); background: var(--wit); color: var(--inkt); margin: 0 0 20px; }
+  .gemeentelijst { columns: 13em; column-gap: 24px; list-style: none; padding: 0; margin: 0; }
+  .gemeentelijst li { break-inside: avoid; padding: 4px 0; }
+  .gemeentelijst a { text-decoration: none; }
+  .gemeentelijst a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<header>
+  <div class="kolom">
+    <div class="woordmerk"><a href="./">Dossierkennis <span>· Gemeenten</span></a></div>
+  </div>
+</header>
+<main class="kolom tekst">
+  <p class="bovenregel">Gemeenten</p>
+  <h1>Kies je gemeente</h1>
+  <section>
+    <p>Dossierkennis werkt op dit moment voor 120 gemeenten. Staat die van jou er niet bij? Mail <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a>.</p>
+    <label for="zoek" class="zoeklabel">Zoek je gemeente</label>
+    <input id="zoek" class="zoek" type="search" placeholder="Bijvoorbeeld Tilburg" autocomplete="off">
+    <p id="geen" class="uitleg" hidden>Geen gemeente gevonden. Mail <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a>, dan kijken we of we hem kunnen toevoegen.</p>
+    <ul id="lijst" class="gemeentelijst"><li><a href="./">Amsterdam</a></li><li data-ook="den bosch"><a href="s-hertogenbosch.html">&#x27;s-Hertogenbosch</a></li><li data-ook=""><a href="alkmaar.html">Alkmaar</a></li><li data-ook=""><a href="almere.html">Almere</a></li><li data-ook=""><a href="alphen-chaam.html">Alphen-Chaam</a></li><li data-ook=""><a href="altena.html">Altena</a></li><li data-ook=""><a href="amersfoort.html">Amersfoort</a></li><li data-ook=""><a href="baarle-nassau.html">Baarle-Nassau</a></li><li data-ook=""><a href="baarn.html">Baarn</a></li><li data-ook=""><a href="barendrecht.html">Barendrecht</a></li><li data-ook=""><a href="bergen-lb.html">Bergen (LB)</a></li><li data-ook=""><a href="bergen-nh.html">Bergen (NH)</a></li><li data-ook=""><a href="best.html">Best</a></li><li data-ook=""><a href="blaricum.html">Blaricum</a></li><li data-ook=""><a href="borsele.html">Borsele</a></li><li data-ook=""><a href="breda.html">Breda</a></li><li data-ook=""><a href="brummen.html">Brummen</a></li><li data-ook=""><a href="bunschoten.html">Bunschoten</a></li><li data-ook=""><a href="capelle-aan-den-ijssel.html">Capelle aan den IJssel</a></li><li data-ook=""><a href="castricum.html">Castricum</a></li><li data-ook=""><a href="de-ronde-venen.html">De Ronde Venen</a></li><li data-ook=""><a href="de-wolden.html">De Wolden</a></li><li data-ook=""><a href="delft.html">Delft</a></li><li data-ook="s-gravenhage"><a href="den-haag.html">Den Haag</a></li><li data-ook=""><a href="doesburg.html">Doesburg</a></li><li data-ook=""><a href="drechterland.html">Drechterland</a></li><li data-ook=""><a href="ede.html">Ede</a></li><li data-ook=""><a href="eemnes.html">Eemnes</a></li><li data-ook=""><a href="eindhoven.html">Eindhoven</a></li><li data-ook=""><a href="enkhuizen.html">Enkhuizen</a></li><li data-ook=""><a href="epe.html">Epe</a></li><li data-ook=""><a href="ermelo.html">Ermelo</a></li><li data-ook=""><a href="gilze-en-rijen.html">Gilze en Rijen</a></li><li data-ook=""><a href="goeree-overflakkee.html">Goeree-Overflakkee</a></li><li data-ook=""><a href="goes.html">Goes</a></li><li data-ook=""><a href="goirle.html">Goirle</a></li><li data-ook=""><a href="haaksbergen.html">Haaksbergen</a></li><li data-ook=""><a href="haarlem.html">Haarlem</a></li><li data-ook=""><a href="hardenberg.html">Hardenberg</a></li><li data-ook=""><a href="hardinxveld-giessendam.html">Hardinxveld-Giessendam</a></li><li data-ook=""><a href="heemskerk.html">Heemskerk</a></li><li data-ook=""><a href="hellendoorn.html">Hellendoorn</a></li><li data-ook=""><a href="helmond.html">Helmond</a></li><li data-ook=""><a href="hendrik-ido-ambacht.html">Hendrik-Ido-Ambacht</a></li><li data-ook=""><a href="hengelo.html">Hengelo</a></li><li data-ook=""><a href="heumen.html">Heumen</a></li><li data-ook=""><a href="hilvarenbeek.html">Hilvarenbeek</a></li><li data-ook=""><a href="hoeksche-waard.html">Hoeksche Waard</a></li><li data-ook=""><a href="hoogeveen.html">Hoogeveen</a></li><li data-ook=""><a href="horst-aan-de-maas.html">Horst aan de Maas</a></li><li data-ook=""><a href="hulst.html">Hulst</a></li><li data-ook=""><a href="ijsselstein.html">IJsselstein</a></li><li data-ook=""><a href="kampen.html">Kampen</a></li><li data-ook=""><a href="kapelle.html">Kapelle</a></li><li data-ook=""><a href="katwijk.html">Katwijk</a></li><li data-ook=""><a href="krimpen-aan-den-ijssel.html">Krimpen aan den IJssel</a></li><li data-ook=""><a href="laren.html">Laren</a></li><li data-ook=""><a href="leusden.html">Leusden</a></li><li data-ook=""><a href="lisse.html">Lisse</a></li><li data-ook=""><a href="lochem.html">Lochem</a></li><li data-ook=""><a href="lopik.html">Lopik</a></li><li data-ook=""><a href="maasdriel.html">Maasdriel</a></li><li data-ook=""><a href="maassluis.html">Maassluis</a></li><li data-ook=""><a href="meerssen.html">Meerssen</a></li><li data-ook=""><a href="middelburg.html">Middelburg</a></li><li data-ook=""><a href="midden-groningen.html">Midden-Groningen</a></li><li data-ook=""><a href="montferland.html">Montferland</a></li><li data-ook=""><a href="neder-betuwe.html">Neder-Betuwe</a></li><li data-ook=""><a href="nissewaard.html">Nissewaard</a></li><li data-ook=""><a href="noord-beveland.html">Noord-Beveland</a></li><li data-ook=""><a href="noordenveld.html">Noordenveld</a></li><li data-ook=""><a href="nuenen.html">Nuenen</a></li><li data-ook=""><a href="nunspeet.html">Nunspeet</a></li><li data-ook=""><a href="oisterwijk.html">Oisterwijk</a></li><li data-ook=""><a href="oldenzaal.html">Oldenzaal</a></li><li data-ook=""><a href="ommen.html">Ommen</a></li><li data-ook=""><a href="oost-gelre.html">Oost Gelre</a></li><li data-ook=""><a href="oosterhout.html">Oosterhout</a></li><li data-ook=""><a href="pekela.html">Pekela</a></li><li data-ook=""><a href="pijnacker-nootdorp.html">Pijnacker-Nootdorp</a></li><li data-ook=""><a href="putten.html">Putten</a></li><li data-ook=""><a href="reimerswaal.html">Reimerswaal</a></li><li data-ook=""><a href="renswoude.html">Renswoude</a></li><li data-ook=""><a href="rhenen.html">Rhenen</a></li><li data-ook=""><a href="rucphen.html">Rucphen</a></li><li data-ook=""><a href="schagen.html">Schagen</a></li><li data-ook=""><a href="schiedam.html">Schiedam</a></li><li data-ook=""><a href="schouwen-duiveland.html">Schouwen-Duiveland</a></li><li data-ook=""><a href="smallingerland.html">Smallingerland</a></li><li data-ook=""><a href="someren.html">Someren</a></li><li data-ook=""><a href="son-en-breugel.html">Son en Breugel</a></li><li data-ook=""><a href="stede-broec.html">Stede Broec</a></li><li data-ook=""><a href="terneuzen.html">Terneuzen</a></li><li data-ook=""><a href="tilburg.html">Tilburg</a></li><li data-ook=""><a href="uitgeest.html">Uitgeest</a></li><li data-ook=""><a href="utrechtse-heuvelrug.html">Utrechtse Heuvelrug</a></li><li data-ook=""><a href="veendam.html">Veendam</a></li><li data-ook=""><a href="veenendaal.html">Veenendaal</a></li><li data-ook=""><a href="veere.html">Veere</a></li><li data-ook=""><a href="veldhoven.html">Veldhoven</a></li><li data-ook=""><a href="velsen.html">Velsen</a></li><li data-ook=""><a href="venlo.html">Venlo</a></li><li data-ook=""><a href="venray.html">Venray</a></li><li data-ook=""><a href="vlaardingen.html">Vlaardingen</a></li><li data-ook=""><a href="vlissingen.html">Vlissingen</a></li><li data-ook="brielle hellevoetsluis westvoorne"><a href="voorne-aan-zee.html">Voorne aan Zee</a></li><li data-ook=""><a href="voorst.html">Voorst</a></li><li data-ook=""><a href="waalre.html">Waalre</a></li><li data-ook=""><a href="waalwijk.html">Waalwijk</a></li><li data-ook=""><a href="waddinxveen.html">Waddinxveen</a></li><li data-ook=""><a href="wageningen.html">Wageningen</a></li><li data-ook=""><a href="west-maas-en-waal.html">West Maas en Waal</a></li><li data-ook=""><a href="wierden.html">Wierden</a></li><li data-ook=""><a href="wijdemeren.html">Wijdemeren</a></li><li data-ook=""><a href="zaltbommel.html">Zaltbommel</a></li><li data-ook=""><a href="zandvoort.html">Zandvoort</a></li><li data-ook=""><a href="zeist.html">Zeist</a></li><li data-ook=""><a href="zuidplas.html">Zuidplas</a></li><li data-ook=""><a href="zundert.html">Zundert</a></li><li data-ook=""><a href="zwartewaterland.html">Zwartewaterland</a></li></ul>
+  </section>
+</main>
+<footer>
+  <div class="streep"></div>
+  <div class="woordmerk">Dossierkennis</div>
+  <div><a href="prijzen.html">Prijzen</a> · <a href="over.html">Over</a> · <a href="privacy.html">Privacy</a> · <a href="voorwaarden.html">Voorwaarden</a> · <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a></div>
+</footer>
+<script>
+  var zoek = document.getElementById('zoek'), items = document.querySelectorAll('#lijst li');
+  zoek.addEventListener('input', function () {
+    var q = zoek.value.trim().toLowerCase(), n = 0;
+    items.forEach(function (li) {
+      var ja = (li.textContent + ' ' + (li.getAttribute('data-ook') || '')).toLowerCase().indexOf(q) !== -1;
+      li.hidden = !ja; if (ja) n++;
+    });
+    document.getElementById('geen').hidden = n > 0;
+  });
+</script>
+</body>
+</html>
