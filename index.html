@@ -4,18 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dossierkennis · Weet hoe jouw dossier ervoor staat</title>
-<meta name="description" content="Elke maandag de stand van jouw dossier in de Amsterdamse gemeenteraad en in het nieuws, met wat het voor jou betekent. Doe gratis mee aan de test.">
+<meta name="description" content="Elke maandag de stand van jouw dossier in de gemeenteraad en in het nieuws, met wat het voor jou betekent. Kies je gemeente en probeer het gratis.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Dossierkennis">
 <meta property="og:locale" content="nl_NL">
 <meta property="og:url" content="https://dossierkennis.com/">
 <meta property="og:title" content="Weet hoe jouw dossier ervoor staat">
-<meta property="og:description" content="Elke maandag de stand van jouw dossier in de Amsterdamse gemeenteraad en in het nieuws, met wat het voor jou betekent. Doe gratis mee aan de test.">
-<meta property="og:image" content="https://dossierkennis.com/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Dossierkennis Amsterdam: Weet hoe jouw dossier ervoor staat.">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:description" content="Elke maandag de stand van jouw dossier in de gemeenteraad en in het nieuws, met wat het voor jou betekent.">
 <style>
   :root {
     --accent: #0008B8;
@@ -47,12 +42,8 @@
     border-bottom: 1px solid var(--haarlijn);
   }
   .woordmerk { font-family: var(--sans); font-weight: 700; font-size: 15px; }
-  .woordmerk span { color: var(--grijs); font-weight: 400; }
-  .label {
-    font-family: var(--sans); font-weight: 700; font-size: 11px;
-    letter-spacing: .08em; text-transform: uppercase;
-    color: var(--accent); border: 1px solid var(--accent); padding: 3px 7px;
-  }
+  header nav a { font-family: var(--sans); font-size: 14px; color: var(--grijs); text-decoration: none; margin-left: 16px; }
+  header nav a:hover { color: var(--accent); }
 
   .opening { padding-top: 64px; padding-bottom: 56px; }
   .bovenregel {
@@ -71,7 +62,7 @@
     padding: 14px 22px;
   }
   .knop:hover { background: #1B2E9C; }
-  .gratis { font-family: var(--sans); font-size: 14px; color: var(--grijs); margin: 14px 0 0; }
+  .klein { font-family: var(--sans); font-size: 14px; color: var(--grijs); margin: 14px 0 0; }
 
   section { padding-bottom: 64px; }
   h2 {
@@ -88,19 +79,31 @@
     content: counter(p); font-family: var(--sans); font-weight: 700;
     font-size: 32px; line-height: 1; color: var(--accent);
   }
-  ol.punten strong { font-family: var(--sans); display: block; margin-bottom: 4px; }
+  ol.punten strong, .stappen strong { font-family: var(--sans); display: block; margin-bottom: 4px; }
+
+  .stappen { list-style: none; padding: 0; margin: 0; }
+  .stappen li { padding: 16px 0 16px 20px; border-left: 3px solid var(--haarlijn); margin-bottom: 4px; }
 
   .betekenis { background: var(--vlak); padding: 20px 24px; margin-top: 28px; }
   .betekenis .bovenregel { color: var(--labeltekst); margin-bottom: 8px; font-size: 11px; }
   .betekenis p { margin: 0; }
 
-
-  .aanmelden { background: var(--band); padding-top: 64px; }
-  .aanmelden h2 { border-top-color: var(--accent); }
-  .formulier { background: var(--wit); padding: 8px 16px; margin: 8px 0 24px; }
-  .formulier iframe { width: 100%; border: 0; min-height: 520px; }
-  .nog-geen-formulier { font-family: var(--sans); color: var(--grijs); padding: 24px 8px; }
-  .privacy { font-size: 15px; color: var(--grijs); }
+  .kiezen { background: var(--band); padding-top: 64px; }
+  .kiezen h2 { border-top-color: var(--accent); }
+  .zoeklabel { display: block; font-family: var(--sans); font-weight: 700; font-size: 14px; margin: 24px 0 8px; }
+  .zoek {
+    width: 100%; font-family: var(--sans); font-size: 17px; padding: 12px 14px;
+    border: 1px solid #B8BCC2; background: var(--wit); color: var(--inkt);
+  }
+  .zoek:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+  .gemeentelijst {
+    list-style: none; padding: 0; margin: 16px 0 0;
+    columns: 3 160px; column-gap: 24px; font-family: var(--sans); font-size: 15px;
+  }
+  .gemeentelijst li { padding: 4px 0; break-inside: avoid; }
+  .gemeentelijst a { text-decoration: none; }
+  .gemeentelijst a:hover { text-decoration: underline; }
+  .uitleg { font-family: var(--sans); font-size: 15px; color: var(--grijs); }
 
   footer { text-align: center; padding: 48px 16px 64px; font-size: 14px; color: var(--grijs); }
   footer .streep { width: 32px; height: 3px; background: var(--accent); margin: 0 auto 16px; }
@@ -112,6 +115,7 @@
     h2 { font-size: 26px; }
     .opening { padding-top: 44px; padding-bottom: 40px; }
     section { padding-bottom: 48px; }
+    header nav a { margin-left: 12px; }
   }
 </style>
 </head>
@@ -119,41 +123,57 @@
 
 <header>
   <div class="kolom">
-    <div class="woordmerk">Dossierkennis <span>· Amsterdam</span></div>
-    <div class="label">Testversie</div>
+    <div class="woordmerk">Dossierkennis</div>
+    <nav><a href="#hoe">Hoe het werkt</a><a href="#aanmelden">Gemeenten</a></nav>
   </div>
 </header>
 
 <main>
   <div class="kolom opening">
-    <p class="bovenregel">Wekelijks overzicht</p>
+    <p class="bovenregel">Wekelijks overzicht per dossier</p>
     <h1>Weet hoe jouw dossier ervoor staat.</h1>
-    <p class="intro">Dossierkennis zet alles wat er in de Amsterdamse gemeenteraad en in het nieuws gebeurt op een rij: moties, raadsvragen, besluiten en wat eraan komt. Het vat samen wat iedere ontwikkeling voor jou betekent.</p>
-    <a class="knop" href="#aanmelden">Doe mee aan de test</a>
-    <p class="gratis">Dit is een testversie. Meedoen is gratis en je zit nergens aan vast.</p>
+    <p class="intro">Dossierkennis zet elke maandag op een rij wat er in jouw gemeenteraad over jouw dossier gebeurde: besluiten, moties, raadsvragen, brieven van het college en wat eraan komt. Met het nieuws erbij, en bij elk punt wat het betekent.</p>
+    <a class="knop" href="#aanmelden">Kies je gemeente</a>
+    <p class="klein">Je kiest zelf je gemeente en je dossiers. Je begint gratis.</p>
   </div>
 
   <section class="kolom">
     <h2>Wat je krijgt</h2>
     <ol class="punten">
-      <li><div><strong>Eén mail per week, per dossier</strong>Alles wat er die week in de raad over jouw dossier is gebeurd, samengevat.</div></li>
-      <li><div><strong>Wat de raad besluit en het college stuurt</strong>Welke moties en voorstellen zijn aangenomen of verworpen, waar nog over gepraat wordt en wat het college naar de raad stuurt, zoals brieven en antwoorden op raadsvragen. Alles kort samengevat.</div></li>
-      <li><div><strong>Wat er in het nieuws was</strong>Lokaal nieuws van AT5 en Het Parool over jouw onderwerp, en landelijk nieuws van de NOS, de Rijksoverheid, de VNG en vakmedia als het gevolgen heeft voor jouw dossier in Amsterdam.</div></li>
+      <li><div><strong>Eén mail per week, per dossier</strong>Alles wat er die week in de raad over jouw dossier gebeurde, kort samengevat. Bijvoorbeeld Wonen, Armoede, Mobiliteit of Veiligheid.</div></li>
+      <li><div><strong>Wat de raad besluit en het college stuurt</strong>Welke moties en voorstellen zijn aangenomen of verworpen, waar nog over gepraat wordt, en welke brieven en antwoorden op raadsvragen het college naar de raad stuurt.</div></li>
+      <li><div><strong>Wat er in het nieuws was</strong>Lokaal en landelijk nieuws over jouw onderwerp, als het gevolgen heeft voor jouw gemeente.</div></li>
       <li><div><strong>Wat het voor jou betekent</strong>Bij elk punt staat in gewone taal waarom het ertoe doet.</div></li>
       <li><div><strong>Wat eraan komt</strong>De vergaderingen en agendapunten van de komende twee weken, zodat je niet verrast wordt.</div></li>
     </ol>
+    <p class="klein" style="margin-top:20px">Voor iedereen die voor zijn werk een dossier volgt: ambtenaren, raadsleden en fractiemedewerkers, en organisaties die met de gemeente samenwerken.</p>
+  </section>
+
+  <section class="kolom" id="hoe">
+    <h2>Hoe het werkt</h2>
+    <ul class="stappen">
+      <li><strong>Alleen openbare stukken</strong>De raadsinformatie komt uit het systeem waarin de gemeente haar stukken publiceert. Het nieuws komt van bekende media en officiële bronnen.</li>
+      <li><strong>Afgestemd op jouw gemeente</strong>Per gemeente zijn er tien dossiers, afgestemd op de commissies, de wethouders en de lokale namen van regelingen en organisaties.</li>
+      <li><strong>Samengevat door AI, gecontroleerd tegen de bron</strong>Het taalmodel Claude van Anthropic schrijft de samenvatting. Daarna zoekt een controlestap elk citaat en elk getal terug in de bron. Een editie wordt nagekeken voordat hij verstuurd wordt.</li>
+      <li><strong>Bij elk punt een link naar de bron</strong>Raad en nieuws staan in aparte blokken, zodat je altijd weet waar iets vandaan komt.</li>
+    </ul>
     <div class="betekenis">
-      <p class="bovenregel">Bronnen</p>
-      <p>De raadsinformatie komt uit de openbare stukken van de gemeente. Het nieuws komt alleen van bekende media en officiële bronnen. Raad en nieuws staan in aparte blokken, zodat je altijd weet waar iets vandaan komt. Bij elk punt staat een link naar de bron.</p>
+      <p class="bovenregel">Onafhankelijk</p>
+      <p>Dossierkennis hoort bij geen partij of organisatie, en er staat geen betaalde inhoud in. Een fout herstellen we in de volgende editie.</p>
     </div>
   </section>
 
-  <section class="aanmelden" id="aanmelden">
+  <section class="kiezen" id="aanmelden">
     <div class="kolom">
-      <h2>Aanmelden</h2>
-      <p>Vul je naam, je e-mailadres en de dossiers die je wilt volgen in. Je krijgt de editie van deze week nog dezelfde dag, daarna elke maandagochtend een nieuwe.</p>
-      <div class="formulier" id="formulier"></div>
-      <p class="privacy">Je naam, je e-mailadres en je dossierkeuze gebruik ik alleen om je de testedities te sturen en je te vragen naar je ervaring. Ik verkoop ze niet en deel ze alleen met de diensten die ik daarvoor nodig heb. Lees in de <a href="privacy.html">privacytekst</a> welke diensten dat zijn, hoe lang ik je gegevens bewaar en wat je rechten zijn.</p>
+      <h2>Kies je gemeente</h2>
+      <p>Op de pagina van je gemeente zie je een voorbeeldeditie en meld je je aan. <span id="aantal"></span></p>
+      <label for="zoek" class="zoeklabel">Zoek je gemeente</label>
+      <input id="zoek" class="zoek" type="search" placeholder="Bijvoorbeeld Haarlem" autocomplete="off">
+      <p id="geen" class="uitleg" hidden>Geen gemeente gevonden. Mail <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a>, dan kijken we of we hem kunnen toevoegen.</p>
+      <ul id="lijst" class="gemeentelijst">
+        <li><a href="amsterdam.html">Amsterdam</a></li>
+      </ul>
+      <p class="uitleg" id="allemaal"><a href="gemeenten.html">Bekijk alle gemeenten</a></p>
     </div>
   </section>
 </main>
@@ -161,28 +181,38 @@
 <footer>
   <div class="streep"></div>
   <div class="woordmerk">Dossierkennis</div>
-  <div>Gebaseerd op openbare informatie van de gemeenteraad van Amsterdam en op nieuws uit lokale en landelijke media.</div>
-  <div><a href="over.html">Over Dossierkennis</a> · <a href="gemeenten.html">Andere gemeenten</a> · <a href="privacy.html">Privacy</a> · <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a></div>
+  <div>Gebaseerd op openbare informatie van gemeenteraden en op nieuws uit lokale en landelijke media.</div>
+  <div><a href="over.html">Over</a> · <a href="gemeenten.html">Gemeenten</a> · <a href="privacy.html">Privacy</a> · <a href="voorwaarden.html">Voorwaarden</a> · <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a></div>
 </footer>
 
 <script>
-  // Zet hier de code van je Tally-formulier neer (het stukje na tally.so/r/).
-  var TALLY_ID = "lboqG6";
-
-  var vak = document.getElementById("formulier");
-  if (TALLY_ID) {
-    var iframe = document.createElement("iframe");
-    iframe.src = "https://tally.so/embed/" + TALLY_ID + "?hideTitle=1&transparentBackground=1&dynamicHeight=1";
-    iframe.title = "Aanmelden voor de test";
-    iframe.loading = "lazy";
-    vak.appendChild(iframe);
-    var s = document.createElement("script");
-    s.src = "https://tally.so/widgets/embed.js";
-    s.onload = function () { if (window.Tally) Tally.loadEmbeds(); };
-    document.body.appendChild(s);
-  } else {
-    vak.innerHTML = '<p class="nog-geen-formulier">Het aanmeldformulier komt hier binnenkort. Wil je nu al meedoen? Mail naar <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a>.</p>';
+  // De lijst komt uit gemeenten.html, zodat deze pagina vanzelf meegroeit
+  // als er een gemeente bijkomt. Lukt dat niet, dan blijft de link naar
+  // gemeenten.html staan.
+  var lijst = document.getElementById('lijst'), zoek = document.getElementById('zoek');
+  function filter() {
+    var q = zoek.value.trim().toLowerCase(), n = 0;
+    lijst.querySelectorAll('li').forEach(function (li) {
+      var ja = (li.textContent + ' ' + (li.getAttribute('data-ook') || '')).toLowerCase().indexOf(q) !== -1;
+      li.hidden = !ja; if (ja) n++;
+    });
+    document.getElementById('geen').hidden = n > 0;
   }
+  zoek.addEventListener('input', filter);
+  fetch('gemeenten.html').then(function (r) { return r.ok ? r.text() : Promise.reject(); }).then(function (html) {
+    var doc = new DOMParser().parseFromString(html, 'text/html');
+    var items = doc.querySelectorAll('#lijst li');
+    if (!items.length) return;
+    lijst.innerHTML = '';
+    items.forEach(function (li) {
+      var a = li.querySelector('a');
+      if (a && a.getAttribute('href') === './') a.setAttribute('href', 'amsterdam.html');
+      lijst.appendChild(document.importNode(li, true));
+    });
+    document.getElementById('aantal').textContent = 'Dossierkennis werkt nu voor ' + items.length + ' gemeenten.';
+    document.getElementById('allemaal').hidden = true;
+    filter();
+  }).catch(function () {});
 </script>
 </body>
 </html>
