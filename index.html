@@ -107,7 +107,19 @@
 
   /* Voorbeeld: compacte editie, gemaakt door maak_voorbeeld.py */
   .vb-uitleg { margin: 0 0 24px; }
-  .editie { position: relative; border: 1px solid var(--haarlijn); background: var(--wit); }
+  /* Elke editie staat in een eigen vak waarin je scrollt; het label 'Voorbeeld'
+     hangt aan het paneel, zodat het niet meescrolt of wordt afgesneden. */
+  .vb-paneel { position: relative; }
+  .editie {
+    border: 1px solid var(--haarlijn); background: var(--wit);
+    max-height: min(680px, 70vh); overflow-y: auto;
+  }
+  .editie::after {
+    content: ""; display: block; position: sticky; bottom: 0;
+    height: 36px; margin-top: -36px; pointer-events: none;
+    background: linear-gradient(rgba(255,255,255,0), var(--wit));
+  }
+  .editie:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   .vb-keuze { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; }
   .vb-keuze button {
     font-family: var(--sans); font-size: 14px; font-weight: 700; cursor: pointer;
@@ -295,7 +307,12 @@
       k.setAttribute('aria-selected', aan ? 'true' : 'false');
       document.getElementById(k.getAttribute('aria-controls')).hidden = !aan;
     });
+    // Nieuw gekozen dossier begint bovenaan in het scrollvak
+    var vak = document.querySelector('#vb-' + sleutel + ' .editie');
+    if (vak) vak.scrollTop = 0;
   }
+  // Scrollvakken ook met het toetsenbord te bedienen
+  document.querySelectorAll('.editie').forEach(function (v) { v.tabIndex = 0; });
   knoppen.forEach(function (k) {
     k.addEventListener('click', function () { toon(k.id.slice(5)); });
   });
