@@ -211,24 +211,113 @@
     .ed-nieuws { grid-template-columns: 1fr; }
     .ed-nieuws > div + div { margin-top: 18px; }
   }
+
+  /* ---- Opening over twee kolommen, dagbalk en zoekveld bovenaan ---- */
+  .breed { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+  /* Dun regeltje bovenaan */
+  .dagbalk { border-bottom: 1px solid var(--haarlijn); font-family: var(--sans); font-size: 13px; color: var(--grijs); }
+  .dagbalk .breed { display: flex; justify-content: space-between; gap: 16px; padding-top: 8px; padding-bottom: 8px; }
+  .dagbalk strong { color: var(--inkt); }
+
+  header .breed {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--haarlijn);
+  }
+  header .woordmerk { font-size: 17px; color: var(--inkt); text-decoration: none; }
+  header nav { display: flex; align-items: center; }
+  header nav .navknop {
+    font-weight: 700; color: var(--wit); background: var(--accent); padding: 8px 14px;
+  }
+  header nav .navknop:hover { background: #1B2E9C; color: var(--wit); }
+
+  /* Opening over twee kolommen */
+  .opening .breed { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: center; }
+  .opening h1 { font-size: 56px; }
+
+  /* Zoekveld in de opening */
+  .zoekvak { position: relative; max-width: 480px; }
+  .opening .zoeklabel { margin-top: 0; }
+  .zoekrij { display: flex; }
+  .zoekrij .zoek { flex: 1; min-width: 0; }
+  .zoekrij .knop { border: 0; cursor: pointer; }
+  .treffers {
+    position: absolute; left: 0; right: 0; top: 100%; z-index: 5; margin: 4px 0 0; padding: 4px 0;
+    list-style: none; background: var(--wit); border: 1px solid #B8BCC2;
+    box-shadow: 0 4px 16px rgba(0,0,0,.08); font-family: var(--sans); font-size: 16px;
+  }
+  .treffers li a { display: block; padding: 8px 14px; color: var(--inkt); text-decoration: none; }
+  .treffers li a:hover, .treffers li a:focus { background: var(--vlak); color: var(--accent); outline: none; }
+  .treffers .geen { padding: 8px 14px; color: var(--grijs); font-size: 15px; }
+
+  /* Editie als kaart rechts, in dezelfde stijl als het voorbeeld lager op de pagina */
+  .mailkaart { border: 1px solid var(--haarlijn); background: var(--wit); box-shadow: 0 2px 12px rgba(0,0,0,.06); }
+  .mail-binnen { position: relative; max-height: 430px; overflow: hidden; }
+  .mail-binnen::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 90px;
+    background: linear-gradient(rgba(255,255,255,0), var(--wit) 85%);
+  }
+  .mail-voet { position: relative; padding: 0 24px 20px; margin: -4px 0 0; font-family: var(--sans); font-size: 15px; font-weight: 700; }
+
+  @media (max-width: 900px) {
+    .opening .breed { grid-template-columns: 1fr; gap: 48px; }
+  }
+  @media (max-width: 600px) {
+    .opening h1 { font-size: 38px; }
+    .dagbalk .rechts, header nav .bijzaak { display: none; }
+    .mail-binnen { max-height: 380px; }
+    .mail-voet { padding: 0 16px 16px; }
+  }
 </style>
 </head>
 <body>
 
+<div class="dagbalk">
+  <div class="breed">
+    <span>Elke maandagochtend een nieuwe editie · Volgende: <strong id="volgende">maandag</strong></span>
+    <span class="rechts"><span id="aantal-kort">Gemeenten in heel Nederland</span> · 10 dossiers per gemeente</span>
+  </div>
+</div>
+
 <header>
-  <div class="kolom">
-    <div class="woordmerk">Dossierkennis</div>
-    <nav><a href="#voorbeeld">Voorbeeld</a><a href="#hoe">Hoe het werkt</a><a href="#aanmelden">Gemeenten</a></nav>
+  <div class="breed">
+    <a class="woordmerk" href="./">Dossierkennis</a>
+    <nav>
+      <a class="bijzaak" href="#voorbeeld">Voorbeeld</a>
+      <a class="bijzaak" href="#hoe">Hoe het werkt</a>
+      <a class="navknop" href="#aanmelden">Kies je gemeente</a>
+    </nav>
   </div>
 </header>
 
 <main>
-  <div class="kolom opening">
-    <p class="bovenregel">Wekelijks overzicht per dossier</p>
-    <h1>Weet hoe jouw dossier ervoor staat.</h1>
-    <p class="intro">Dossierkennis zet elke maandag op een rij wat er in jouw gemeenteraad over jouw dossier gebeurde: besluiten, moties, raadsvragen, brieven van het college en wat eraan komt. Met het nieuws erbij, en bij elk punt wat het betekent.</p>
-    <a class="knop" href="#aanmelden">Kies je gemeente</a>
-    <p class="klein">Je kiest zelf je gemeente en je dossiers. Je begint gratis. <a href="#voorbeeld">Bekijk eerst een voorbeeld</a></p>
+  <div class="opening">
+    <div class="breed">
+      <div>
+        <p class="bovenregel">Wekelijks overzicht per dossier</p>
+        <h1>Weet hoe jouw dossier ervoor staat.</h1>
+        <p class="intro">Dossierkennis zet elke maandag op een rij wat er in jouw gemeenteraad over jouw dossier gebeurde: besluiten, moties, raadsvragen, brieven van het college en wat eraan komt. Met het nieuws erbij, en bij elk punt wat het betekent.</p>
+        <form class="zoekvak" data-zoek role="search" onsubmit="return false">
+          <label for="zoek" class="zoeklabel">Zoek je gemeente</label>
+          <div class="zoekrij">
+            <input id="zoek" class="zoek" type="search" placeholder="Bijvoorbeeld Haarlem" autocomplete="off" aria-controls="treffers-boven">
+            <button class="knop" type="submit">Bekijk</button>
+          </div>
+          <ul class="treffers" id="treffers-boven" hidden></ul>
+        </form>
+        <p class="klein">Je kiest zelf je dossiers en je begint gratis. <a href="#voorbeeld">Bekijk eerst een voorbeeld</a></p>
+      </div>
+
+      <div class="vb-paneel">
+        <div class="mailkaart">
+          <div class="vb-label">Voorbeeld</div>
+          <div class="mail-binnen">
+            <!-- opening:begin --><div class="ed-kop"><p class="ed-merk">Dossierkennis <span>· Amsterdam</span></p><h3>Armoede, Werk &amp; Inkomen</h3><p class="ed-datum">Editie maandag 2 november 2026</p></div><div class="ed-blok"><h4>In één oogopslag</h4><ol class="ed-oog"><li><div>Wethouder Sumter verlengt de inkomensgrens van <strong style="white-space:nowrap;">150 procent</strong> voor de <strong style="white-space:nowrap;">kindregelingen</strong> eenmalig voor schooljaar 2027-2028. PRO Amsterdam, D66, Volt en DENK willen dat de grens blijft en kondigden een motie aan. De raad stelt de begroting op <strong style="white-space:nowrap;">11 november</strong> vast.</div></li><li><div>De pilot Asielzoekers aan het werk hielp <strong style="white-space:nowrap;">332 kandidaten</strong> aan betaald werk, maar <strong style="white-space:nowrap;">38 procent</strong> van hen stopte binnen drie maanden. Hoe het verder gaat met hetzelfde budget, hoort de raad <strong style="white-space:nowrap;">begin 2027</strong>.</div></li><li><div>De Rekenkamer wijst erop dat de raad in de nieuwe begroting alleen nog het totaal van <strong style="white-space:nowrap;">€ 1,4 miljard</strong> voor sociale zaken vaststelt. Het budget voor schuldhulpverlening daalt tot 2030 met <strong style="white-space:nowrap;">€ 22,9 miljoen</strong>, en de begroting legt niet goed uit waarom.</div></li></ol></div><!-- opening:eind -->
+          </div>
+          <p class="mail-voet"><a href="#voorbeeld">Lees de hele editie</a></p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <section class="kolom">
@@ -280,13 +369,15 @@
     <div class="kolom">
       <h2>Kies je gemeente</h2>
       <p>Op de pagina van je gemeente zie je een voorbeeldeditie en meld je je aan. <span id="aantal"></span></p>
-      <label for="zoek" class="zoeklabel">Zoek je gemeente</label>
-      <input id="zoek" class="zoek" type="search" placeholder="Bijvoorbeeld Haarlem" autocomplete="off">
-      <p id="geen" class="uitleg" hidden>Geen gemeente gevonden. Mail <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a>, dan kijken we of we hem kunnen toevoegen.</p>
-      <ul id="lijst" class="gemeentelijst">
-        <li><a href="amsterdam.html">Amsterdam</a></li>
-      </ul>
-      <p class="uitleg" id="allemaal">Of <a href="gemeenten.html">bekijk alle gemeenten</a> op een rij.</p>
+      <form class="zoekvak" data-zoek role="search" onsubmit="return false" style="margin-top:28px">
+        <label for="zoek2" class="zoeklabel">Zoek je gemeente</label>
+        <div class="zoekrij">
+          <input id="zoek2" class="zoek" type="search" placeholder="Bijvoorbeeld Haarlem" autocomplete="off" aria-controls="treffers-onder">
+          <button class="knop" type="submit">Bekijk</button>
+        </div>
+        <ul class="treffers" id="treffers-onder" hidden></ul>
+      </form>
+      <p class="uitleg" style="margin-top:24px">Of <a href="gemeenten.html">bekijk alle gemeenten</a> op een rij.</p>
       <p class="uitleg">Zit jouw gemeente er niet tussen, maar wil je je wel aanmelden? Mail naar <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a>. Dan kijken we of we je gemeente kunnen toevoegen.</p>
     </div>
   </section>
@@ -308,11 +399,9 @@
       k.setAttribute('aria-selected', aan ? 'true' : 'false');
       document.getElementById(k.getAttribute('aria-controls')).hidden = !aan;
     });
-    // Nieuw gekozen dossier begint bovenaan in het scrollvak
     var vak = document.querySelector('#vb-' + sleutel + ' .editie');
     if (vak) vak.scrollTop = 0;
   }
-  // Scrollvakken ook met het toetsenbord te bedienen
   document.querySelectorAll('.editie').forEach(function (v) { v.tabIndex = 0; });
   knoppen.forEach(function (k) {
     k.addEventListener('click', function () { toon(k.id.slice(5)); });
@@ -324,34 +413,48 @@
     });
   });
 
-  // De lijst komt uit gemeenten.html, zodat deze pagina vanzelf meegroeit
-  // als er een gemeente bijkomt. Lukt dat niet, dan blijft de link naar
-  // gemeenten.html staan.
-  var lijst = document.getElementById('lijst'), zoek = document.getElementById('zoek');
-  // De lijst blijft leeg tot je typt; dan hooguit 12 treffers
-  function filter() {
-    var q = zoek.value.trim().toLowerCase(), n = 0;
-    lijst.querySelectorAll('li').forEach(function (li) {
-      var ja = q !== '' && n < 12 &&
-        (li.textContent + ' ' + (li.getAttribute('data-ook') || '')).toLowerCase().indexOf(q) !== -1;
-      li.hidden = !ja; if (ja) n++;
+  // Dagbalk: datum van de volgende maandag
+  (function () {
+    var d = new Date(); d.setDate(d.getDate() + ((8 - d.getDay()) % 7 || 7));
+    var maanden = ['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
+    document.getElementById('volgende').textContent = 'maandag ' + d.getDate() + ' ' + maanden[d.getMonth()];
+  })();
+
+  // Gemeenten komen uit gemeenten.html, zodat deze pagina vanzelf meegroeit.
+  var gemeenten = [{ naam: 'Amsterdam', href: 'amsterdam.html', ook: '' }];
+  document.querySelectorAll('[data-zoek]').forEach(function (vak) {
+    var invoer = vak.querySelector('.zoek'), lijst = vak.querySelector('.treffers');
+    function filter() {
+      var q = invoer.value.trim().toLowerCase();
+      if (!q) { lijst.hidden = true; return []; }
+      var hits = gemeenten.filter(function (g) { return (g.naam + ' ' + g.ook).toLowerCase().indexOf(q) !== -1; })
+        .sort(function (a, b) { return (a.naam.toLowerCase().indexOf(q) === 0 ? 0 : 1) - (b.naam.toLowerCase().indexOf(q) === 0 ? 0 : 1); }).slice(0, 8);
+      lijst.innerHTML = hits.length
+        ? hits.map(function (g) { return '<li><a href="' + g.href + '">' + g.naam + '</a></li>'; }).join('')
+        : '<li class="geen">Geen gemeente gevonden. Mail <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a>.</li>';
+      lijst.hidden = false;
+      return hits;
+    }
+    invoer.addEventListener('input', filter);
+    vak.addEventListener('submit', function () {
+      var hits = filter();
+      if (hits.length) location.href = hits[0].href; else invoer.focus();
     });
-    document.getElementById('geen').hidden = q === '' || n > 0;
-  }
-  zoek.addEventListener('input', filter);
-  filter();
+    document.addEventListener('click', function (e) { if (!vak.contains(e.target)) lijst.hidden = true; });
+    invoer.addEventListener('focus', filter);
+  });
   fetch('gemeenten.html').then(function (r) { return r.ok ? r.text() : Promise.reject(); }).then(function (html) {
     var doc = new DOMParser().parseFromString(html, 'text/html');
     var items = doc.querySelectorAll('#lijst li');
     if (!items.length) return;
-    lijst.innerHTML = '';
+    gemeenten = [];
     items.forEach(function (li) {
-      var a = li.querySelector('a');
-      if (a && a.getAttribute('href') === './') a.setAttribute('href', 'amsterdam.html');
-      lijst.appendChild(document.importNode(li, true));
+      var a = li.querySelector('a'); if (!a) return;
+      var href = a.getAttribute('href') === './' ? 'amsterdam.html' : a.getAttribute('href');
+      gemeenten.push({ naam: a.textContent.trim(), href: href, ook: li.getAttribute('data-ook') || '' });
     });
-    document.getElementById('aantal').textContent = 'Dossierkennis werkt nu voor ' + items.length + ' gemeenten.';
-    filter();
+    document.getElementById('aantal').textContent = 'Dossierkennis werkt nu voor ' + gemeenten.length + ' gemeenten.';
+    document.getElementById('aantal-kort').textContent = gemeenten.length + ' gemeenten';
   }).catch(function () {});
 </script>
 </body>
