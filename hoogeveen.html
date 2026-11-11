@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dossierkennis Hoogeveen</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="description" content="Elke maandag een overzicht per onderwerp van wat er in de gemeenteraad van Hoogeveen gebeurde.">
 <style>
   /* IBM Plex, zelf gehost (fonts/, open licentie) */
@@ -138,12 +139,59 @@
   .gemeentelijst li { break-inside: avoid; padding: 4px 0; }
   .gemeentelijst a { text-decoration: none; }
   .gemeentelijst a:hover { text-decoration: underline; }
+
+/* huisstijl:begin */
+  :root { --hoek-s: 4px; --hoek: 6px; --hoek-l: 10px; --rand: #B8BCC2; }
+  .breed { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .logo { display: inline-flex; align-items: center; text-decoration: none; }
+  .logo img { display: block; width: 168px; height: 26px; }
+  header { position: sticky; top: 0; z-index: 20; background: var(--wit); border-bottom: 1px solid var(--haarlijn); }
+  header .breed { display: flex; justify-content: space-between; align-items: center; padding-top: 16px; padding-bottom: 16px; }
+  header nav { display: flex; align-items: center; gap: 28px; }
+  header nav a { font-family: var(--sans); font-size: 15px; color: var(--labeltekst); text-decoration: none; }
+  header nav a:hover { color: var(--accent); }
+  header nav .navknop { font-weight: 700; color: var(--wit); background: var(--accent); padding: 9px 16px; border-radius: var(--hoek); }
+  header nav .navknop:hover { background: #1B2E9C; color: var(--wit); }
+  .knop { border-radius: var(--hoek); }
+  .label { border-radius: var(--hoek-s); }
+  .betekenis { border-radius: var(--hoek); }
+  .formulier { border-radius: var(--hoek-l); }
+  .venster { border-radius: var(--hoek-l); overflow: hidden; }
+  .tabs button { border-radius: var(--hoek); }
+  .prijs { border-radius: var(--hoek-l); }
+  .zoek { border-radius: var(--hoek); }
+  footer { text-align: left; padding: 0; margin-top: 32px; border-top: 1px solid var(--inkt);
+    font-family: var(--sans); font-size: 14px; color: var(--labeltekst); }
+  footer .voetraster { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr); gap: 40px; padding-top: 40px; padding-bottom: 40px; }
+  footer .voetraster p { font-family: var(--serif); font-size: 15px; margin: 14px 0 0; max-width: 320px; }
+  footer h4 { font-size: 14px; margin: 0 0 10px; color: var(--inkt); }
+  footer ul { list-style: none; margin: 0; padding: 0; }
+  footer li { padding: 2px 0; }
+  footer li a { color: var(--labeltekst); text-decoration: none; }
+  footer li a:hover { color: var(--accent); }
+  footer .onder { border-top: 1px solid var(--haarlijn); }
+  footer .onder .breed { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 16px; padding-bottom: 24px;
+    font-family: "IBM Plex Mono", "Courier New", monospace; font-size: 12px; color: var(--grijs); }
+  @media (max-width: 600px) {
+    .breed { padding: 0 16px; }
+    .logo img { width: 142px; height: 22px; }
+    header nav .bijzaak { display: none; }
+    footer .voetraster { grid-template-columns: 1fr 1fr; }
+    footer .voetraster > div:first-child { grid-column: 1 / -1; }
+  }
+/* huisstijl:eind */
 </style>
 </head>
 <body>
 <header>
-  <div class="kolom">
-    <div class="woordmerk"><a href="./">Dossierkennis <span>· Hoogeveen</span></a></div>
+  <div class="breed">
+    <a class="logo" href="./"><img src="logo.svg" width="168" height="26" alt="Dossierkennis"></a>
+    <nav>
+      <a class="bijzaak" href="./#voorbeeld">Voorbeeld</a>
+      <a class="bijzaak" href="prijzen.html">Prijzen</a>
+      <a class="bijzaak" href="gemeenten.html">Gemeenten</a>
+      <a class="navknop" href="#aanmelden">Aanmelden</a>
+    </nav>
   </div>
 </header>
 <main>
@@ -178,9 +226,30 @@
 </section>
 </main>
 <footer>
-  <div class="streep"></div>
-  <div class="woordmerk">Dossierkennis</div>
-  <div><a href="prijzen.html">Prijzen</a> · <a href="over.html">Over</a> · <a href="privacy.html">Privacy</a> · <a href="voorwaarden.html">Voorwaarden</a> · <a href="mailto:info@dossierkennis.com">info@dossierkennis.com</a></div>
+  <div class="breed voetraster">
+    <div>
+      <a class="logo" href="./"><img src="logo.svg" width="168" height="26" alt="Dossierkennis"></a>
+      <p>Elke maandag op een rij wat er in jouw gemeenteraad over jouw dossier gebeurde. Gebaseerd op openbare informatie en nieuws uit lokale en landelijke media.</p>
+    </div>
+    <div>
+      <h4>Dossierkennis</h4>
+      <ul>
+        <li><a href="over.html">Over</a></li>
+        <li><a href="prijzen.html">Prijzen</a></li>
+        <li><a href="gemeenten.html">Gemeenten</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="voorwaarden.html">Voorwaarden</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul><li><a href="mailto:info@dossierkennis.com" style="color:var(--accent);text-decoration:underline">info@dossierkennis.com</a></li></ul>
+    </div>
+  </div>
+  <div class="onder">
+    <div class="breed"><span>Onafhankelijk · Alleen openbare stukken</span><span>info@dossierkennis.com</span></div>
+  </div>
+<script data-goatcounter="https://dossierkennis.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </footer>
 <script>
   document.querySelectorAll('.tabs button').forEach(function (b) {
