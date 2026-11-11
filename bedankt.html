@@ -6,11 +6,18 @@
 <meta name="robots" content="noindex">
 <title>Bedankt · Dossierkennis</title>
 <style>
+  /* IBM Plex, zelf gehost (fonts/, open licentie) */
+  @font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 100 700; font-display: swap; src: url("/fonts/plex-sans.woff2") format("woff2"); }
+  @font-face { font-family: "IBM Plex Serif"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/plex-serif-400.woff2") format("woff2"); }
+  @font-face { font-family: "IBM Plex Serif"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/plex-serif-700.woff2") format("woff2"); }
+  @font-face { font-family: "IBM Plex Serif"; font-style: italic; font-weight: 400; font-display: swap; src: url("/fonts/plex-serif-400-cursief.woff2") format("woff2"); }
+  @font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/plex-mono-400.woff2") format("woff2"); }
+
   :root {
     --accent: #0008B8; --inkt: #141414; --grijs: #5F6368; --labeltekst: #3C4043;
     --haarlijn: #E3E5E8; --wit: #FFFFFF;
-    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --serif: Georgia, "Times New Roman", serif;
+    --sans: "IBM Plex Sans", Arial, sans-serif;
+    --serif: "IBM Plex Serif", Georgia, serif;
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--wit); color: var(--inkt); font-family: var(--serif);
