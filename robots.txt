@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dossierkennis.com/sitemap.xml
