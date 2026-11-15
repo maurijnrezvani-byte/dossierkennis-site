@@ -513,6 +513,37 @@
   @media (max-width: 600px) {
     .gemeentepagina h1 { font-size: 38px; }
   }
+  /* De telefoon met de voorbeeldmail in de opening (telefoon.js). Alleen de telefoon, zonder kader.
+     Hij staat rechtop en wordt afgesneden op de bovenrand van het grijze vlak eronder ("Hoe het werkt").
+     De maat staat hier vast, zodat de pagina niet verspringt als het script laadt. */
+  .gemeentepagina .opening { padding-bottom: 0; }
+  .gemeentepagina .opening .breed { align-items: end; }
+  .gemeentepagina .opening .breed > div:first-child { align-self: center; padding-bottom: 88px; }
+  .gemeentepagina .opening .vb-paneel { animation: none; }
+  .mailtelefoon { --mt-b: 348px; --mt-h: 650px; position: relative; width: var(--mt-b); height: var(--mt-h); margin: 0 auto;
+    clip-path: inset(-60px -160px 0 -160px); }
+  .mailtelefoon::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 22px; pointer-events: none;
+    background: linear-gradient(to bottom, rgba(10,12,24,0), rgba(10,12,24,.20)); }
+  .mt-toestel { position: absolute; left: 0; top: 0; width: 100%; height: calc(var(--mt-b) * 2.1057); }
+  .beweeg .mt-toestel { animation: mt-op 1.1s cubic-bezier(.2,.7,.2,1) .35s both; }
+  @keyframes mt-op { from { opacity: 0; transform: translateY(56px); } }
+  .mt-lift { position: absolute; left: 0; top: 0; width: 100%; height: 100%; will-change: transform; }
+  .mt-stage { position: absolute; left: 0; top: 0; width: 410.6px; height: 864.6px; transform-origin: 0 0; pointer-events: none; }
+  .mt-romp { position: absolute; left: -90px; top: -50px; width: 590.6px; height: 934.6px; }
+  .mt-scherm { position: absolute; left: 10.3px; top: 10.3px; width: 390px; height: 844px; overflow: hidden; border-radius: 47px; background: #050506; }
+  .mt-scherm canvas { position: absolute; left: 0; top: 0; width: 390px; height: 844px; }
+  .mt-mail { position: absolute; left: 0; top: 91px; width: 390px; height: 673px; overflow: hidden; visibility: hidden; }
+  .mt-mail iframe { position: absolute; left: 0; top: 0; width: 390px; height: 900px; border: 0; background: #fff; will-change: transform; }
+  .mt-knop { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 2; margin: 0; padding: 0; border: 0; background: none;
+    cursor: pointer; border-radius: 44px 44px 0 0; -webkit-tap-highlight-color: transparent; }
+  .mt-knop:focus-visible { outline: 2px solid var(--accent, #0008B8); outline-offset: 6px; }
+  @media (max-width: 900px) {
+    .gemeentepagina .opening .breed > div:first-child { padding-bottom: 0; }
+    .mailtelefoon { --mt-b: 300px; --mt-h: 500px; margin-top: 8px; }
+  }
+  @media (max-width: 600px) {
+    .mailtelefoon { --mt-b: 290px; --mt-h: 480px; }
+  }
 </style>
 </head>
 <body class="gemeentepagina">
@@ -539,11 +570,7 @@
         <p class="klein">Geen betaalgegevens nodig. Daarna € 4 per maand of € 40 per jaar; de proef stopt vanzelf. <a href="#voorbeeld">Bekijk eerst een voorbeeld</a></p>
       </div>
       <div class="vb-paneel">
-        <div class="mailkaart">
-          <div class="vb-label">Voorbeeld</div>
-          <div class="mail-binnen"><div class="ed-kop"><p class="ed-merk">Dossierkennis <span>· Emmen</span></p><h3>Veiligheid &amp; Bestuur</h3><p class="ed-datum">Editie maandag 9 november 2026</p></div><div class="ed-blok"><h4>In één oogopslag</h4><ol class="ed-oog"><li><div>Op 19 november bespreekt de commissie drie antwoorden over <strong style="white-space:nowrap;">C&#x27;est la Vie</strong>. Het college gaat uit van <strong style="white-space:nowrap;">één steekincident</strong> met een oppervlakkige verwonding. Het vindt dat de veiligheidsinzet niet tekortschoot. Alle drie de antwoorden kwamen later dan de termijn.</div></li><li><div>Arriva weigert agressieve zwartrijders de toegang tot het openbaar vervoer. Volgens het college zorgt dat voor meer onrust en overlast rond het <strong style="white-space:nowrap;">stationsgebied</strong> en in het centrum, en moeten handhaving en politie daardoor vaker optreden. Het college vindt het <strong style="white-space:nowrap;">niet aanvaardbaar</strong> dat agressie zwartrijden zonder boete oplevert.</div></li><li><div>Het college geeft het aantal <strong style="white-space:nowrap;">winkeldiefstallen</strong> van 2021 tot en met 2025: van 186 naar een piek van 263 in 2023 en daarna 204 in 2025. Cijfers naar <strong style="white-space:nowrap;">nationaliteit</strong> geeft het college niet, omdat daar geen wettelijke grondslag voor is.</div></li></ol></div></div>
-          <p class="mail-voet"><a href="#voorbeeld">Lees de hele editie</a><span aria-hidden="true">&darr;</span></p>
-        </div>
+        <figure class="mailtelefoon" data-mail="voorbeeld/emmen/emmen-veiligheid-bestuur.html"><div class="mt-toestel"></div></figure>
       </div>
     </div>
   </div>
@@ -678,5 +705,6 @@
     });
   })();
 </script>
+<script src="/telefoon.js" defer></script>
 </body>
 </html>
