@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gemeenteraad Nissewaard: elke maandag per dossier · Dossierkennis</title>
-<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Nissewaard gebeurde.">
+<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Nissewaard gebeurde. Binnenkort op de agenda: Tussenrapportage 2026 Syntrophos.">
 <!-- delen:begin -->
 <link rel="canonical" href="https://dossierkennis.com/nissewaard">
 <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:url" content="https://dossierkennis.com/nissewaard">
 <meta property="og:title" content="Gemeenteraad Nissewaard: elke maandag per dossier · Dossierkennis">
-<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Nissewaard gebeurde.">
+<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Nissewaard gebeurde. Binnenkort op de agenda: Tussenrapportage 2026 Syntrophos.">
 <meta property="og:image" content="https://dossierkennis.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -513,6 +513,16 @@
   @media (max-width: 600px) {
     .gemeentepagina h1 { font-size: 38px; }
   }
+  /* Nu in de raad (maak_actueel.py) */
+  .actueel { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 8px; }
+  .actueel h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin: 0 0 4px; padding-bottom: 10px; border-bottom: 1px solid var(--inkt); }
+  .actueel ul { list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+  .actueel li { padding: 11px 0; border-bottom: 1px solid var(--haarlijn); }
+  .actueel li a { color: inherit; text-decoration: none; }
+  .actueel li a:hover { color: var(--accent); text-decoration: underline; }
+  .actueel .wanneer { display: block; font-size: 13px; color: var(--labeltekst); margin-bottom: 2px; }
+  .actueel-noot { font-family: var(--sans); font-size: 13px; color: var(--labeltekst); margin-top: 18px; }
+  @media (max-width: 860px) { .actueel { grid-template-columns: 1fr; gap: 32px; } }
   /* De telefoon met de voorbeeldmail in de opening (telefoon.js). Alleen de telefoon, zonder kader.
      Hij staat rechtop en wordt afgesneden op de bovenrand van het grijze vlak eronder ("Hoe het werkt").
      De maat staat hier vast, zodat de pagina niet verspringt als het script laadt. */
@@ -631,6 +641,18 @@
         <p class="privacy">Je naam, e-mailadres en keuze gebruik ik alleen om je de nieuwsbrief te sturen. Lees in de <a href="privacy.html">privacytekst</a> welke diensten ik gebruik en wat je rechten zijn. Na de gratis periode gelden de <a href="voorwaarden.html">voorwaarden</a>.</p>
       </div>
       <div class="formulier"><iframe data-tally-src="https://tally.so/embed/gbeaWd?gemeente=nissewaard&maat=middel&hideTitle=1&transparentBackground=1&dynamicHeight=1" title="Aanmelden"></iframe></div>
+    </div>
+  </section>
+
+  <section class="blok" id="nu-in-de-raad">
+    <div class="breed">
+      <div class="sectiekop">
+        <p class="bovenregel">Nu in de raad</p>
+        <h2>Dit speelt er in de gemeenteraad van Nissewaard.</h2>
+        <p class="uitleg">Een greep uit de agenda en de stukken van de raad van Nissewaard, rechtstreeks uit het raadsinformatiesysteem van de gemeente. In de nieuwsbrief krijg je dit per dossier, uitgelegd in gewone taal.</p>
+      </div>
+      <div class="actueel"><div><h3>Binnenkort op de agenda</h3><ul><li><span class="wanneer">dinsdag 24 november 2026 · Commissie Bestuur</span><a href="https://nissewaard.raadsinformatie.nl/vergadering/1409180" rel="nofollow noopener" target="_blank">2e Tussenrapportage 2026 (de onderwerpen die de commissie Bestuur betreffen)</a></li><li><span class="wanneer">dinsdag 24 november 2026 · Commissie Bestuur</span><a href="https://nissewaard.raadsinformatie.nl/vergadering/1409180" rel="nofollow noopener" target="_blank">Tussenrapportage 2026 Syntrophos</a></li><li><span class="wanneer">dinsdag 24 november 2026 · Commissie Bestuur</span><a href="https://nissewaard.raadsinformatie.nl/vergadering/1409180" rel="nofollow noopener" target="_blank">Belastingverordeningen 2027</a></li><li><span class="wanneer">dinsdag 24 november 2026 · Commissie Bestuur</span><a href="https://nissewaard.raadsinformatie.nl/vergadering/1409180" rel="nofollow noopener" target="_blank">Vijftiende wijziging parkeer- en parkeerbelastingverordening</a></li><li><span class="wanneer">woensdag 25 november 2026 · Commissie Leefomgeving</span><a href="https://nissewaard.raadsinformatie.nl/vergadering/1409190" rel="nofollow noopener" target="_blank">2e Tussenrapportage 2026 (de onderwerpen die de commissie Leefomgeving betreffen)</a></li><li><span class="wanneer">woensdag 25 november 2026 · Commissie Leefomgeving</span><a href="https://nissewaard.raadsinformatie.nl/vergadering/1409190" rel="nofollow noopener" target="_blank">Rekenkameronderzoek &#x27;Onderzoek naar het beheer en onderhoud van civieltechnische kunstwerken</a></li><li><span class="wanneer">donderdag 26 november 2026 · Commissie Sociaal Domein</span><a href="https://nissewaard.raadsinformatie.nl/vergadering/1409201" rel="nofollow noopener" target="_blank">2e Tussenrapportage 2026 (de onderwerpen die de commissie Sociaal Domein betreffen)</a></li></ul><h3 style="margin-top: 28px">Komende vergaderingen</h3><ul><li><span class="wanneer">maandag 16 november 2026</span><a href="https://nissewaard.raadsinformatie.nl/vergadering/1534864" rel="nofollow noopener" target="_blank">Gemeenteraad voordracht nieuwe burgemeester</a></li><li><span class="wanneer">dinsdag 24 november 2026</span><a href="https://nissewaard.raadsinformatie.nl/vergadering/1409180" rel="nofollow noopener" target="_blank">Commissie Bestuur</a></li><li><span class="wanneer">woensdag 25 november 2026</span><a href="https://nissewaard.raadsinformatie.nl/vergadering/1409190" rel="nofollow noopener" target="_blank">Commissie Leefomgeving</a></li><li><span class="wanneer">donderdag 26 november 2026</span><a href="https://nissewaard.raadsinformatie.nl/vergadering/1409201" rel="nofollow noopener" target="_blank">Commissie Sociaal Domein</a></li></ul></div><div><h3>Net binnengekomen</h3><ul><li><span class="wanneer">11 november 2026</span><a href="https://nissewaard.raadsinformatie.nl/vergadering/1409226" rel="nofollow noopener" target="_blank">Ontslag commissielid mevr. M. Loomans en benoeming dhr. E.J. Franke (SP) als commissielid, niet-zijnde raadslid</a></li><li><span class="wanneer">11 november 2026</span><a href="https://nissewaard.raadsinformatie.nl/vergadering/1409226" rel="nofollow noopener" target="_blank">Verordening gemeentelijke onderscheiding Nissewaard 2026</a></li></ul></div></div>
+      <p class="actueel-noot">Bijgewerkt op 17 november 2026. Elke titel linkt naar het stuk op de site van de gemeente.</p>
     </div>
   </section>
 </main>

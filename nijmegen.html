@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gemeenteraad Nijmegen: elke maandag per dossier · Dossierkennis</title>
-<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Nijmegen gebeurde.">
+<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Nijmegen gebeurde. Binnenkort op de agenda: Voorlopige agenda collegevergadering 10 november 2026.">
 <!-- delen:begin -->
 <link rel="canonical" href="https://dossierkennis.com/nijmegen">
 <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:url" content="https://dossierkennis.com/nijmegen">
 <meta property="og:title" content="Gemeenteraad Nijmegen: elke maandag per dossier · Dossierkennis">
-<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Nijmegen gebeurde.">
+<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Nijmegen gebeurde. Binnenkort op de agenda: Voorlopige agenda collegevergadering 10 november 2026.">
 <meta property="og:image" content="https://dossierkennis.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -513,6 +513,16 @@
   @media (max-width: 600px) {
     .gemeentepagina h1 { font-size: 38px; }
   }
+  /* Nu in de raad (maak_actueel.py) */
+  .actueel { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 8px; }
+  .actueel h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin: 0 0 4px; padding-bottom: 10px; border-bottom: 1px solid var(--inkt); }
+  .actueel ul { list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+  .actueel li { padding: 11px 0; border-bottom: 1px solid var(--haarlijn); }
+  .actueel li a { color: inherit; text-decoration: none; }
+  .actueel li a:hover { color: var(--accent); text-decoration: underline; }
+  .actueel .wanneer { display: block; font-size: 13px; color: var(--labeltekst); margin-bottom: 2px; }
+  .actueel-noot { font-family: var(--sans); font-size: 13px; color: var(--labeltekst); margin-top: 18px; }
+  @media (max-width: 860px) { .actueel { grid-template-columns: 1fr; gap: 32px; } }
   /* De telefoon met de voorbeeldmail in de opening (telefoon.js). Alleen de telefoon, zonder kader.
      Hij staat rechtop en wordt afgesneden op de bovenrand van het grijze vlak eronder ("Hoe het werkt").
      De maat staat hier vast, zodat de pagina niet verspringt als het script laadt. */
@@ -631,6 +641,18 @@
         <p class="privacy">Je naam, e-mailadres en keuze gebruik ik alleen om je de nieuwsbrief te sturen. Lees in de <a href="privacy.html">privacytekst</a> welke diensten ik gebruik en wat je rechten zijn. Na de gratis periode gelden de <a href="voorwaarden.html">voorwaarden</a>.</p>
       </div>
       <div class="formulier"><iframe data-tally-src="https://tally.so/embed/gbeaWd?gemeente=nijmegen&maat=groot&hideTitle=1&transparentBackground=1&dynamicHeight=1" title="Aanmelden"></iframe></div>
+    </div>
+  </section>
+
+  <section class="blok" id="nu-in-de-raad">
+    <div class="breed">
+      <div class="sectiekop">
+        <p class="bovenregel">Nu in de raad</p>
+        <h2>Dit speelt er in de gemeenteraad van Nijmegen.</h2>
+        <p class="uitleg">Een greep uit de agenda en de stukken van de raad van Nijmegen, rechtstreeks uit het raadsinformatiesysteem van de gemeente. In de nieuwsbrief krijg je dit per dossier, uitgelegd in gewone taal.</p>
+      </div>
+      <div class="actueel"><div><h3>Binnenkort op de agenda</h3><ul><li><span class="wanneer">dinsdag 17 november 2026 · B&amp;W Agenda en Besluiten</span><a href="https://nijmegen.bestuurlijkeinformatie.nl/Agenda/Index/59999f15-749f-4787-bdfa-abc15642d4af" rel="nofollow noopener" target="_blank">Voorlopige agenda collegevergadering 10 november 2026</a></li><li><span class="wanneer">woensdag 18 november 2026 · Rekenkamer</span><a href="https://nijmegen.bestuurlijkeinformatie.nl/Agenda/Index/3c101581-d0c0-4d69-8479-3798670de18b" rel="nofollow noopener" target="_blank">Onderzoeksplan 2027 – 2028</a></li><li><span class="wanneer">woensdag 25 november 2026 · Gebr. van Lymborchkamer</span><a href="https://nijmegen.bestuurlijkeinformatie.nl/Agenda/Index/2b82b508-f6a0-443e-922a-69729b27d8a5" rel="nofollow noopener" target="_blank">Inspraak diverse onderwerpen</a></li><li><span class="wanneer">woensdag 25 november 2026 · Raadzaal (gespreksrondes)</span><a href="https://nijmegen.bestuurlijkeinformatie.nl/Agenda/Index/bf1f871c-97ba-46c3-a38b-88a04e81d276" rel="nofollow noopener" target="_blank">Technische toelichting - Raadsvoorstel Verordeningen begraafplaatsen</a></li><li><span class="wanneer">woensdag 25 november 2026 · Raadzaal (gespreksrondes)</span><a href="https://nijmegen.bestuurlijkeinformatie.nl/Agenda/Index/bf1f871c-97ba-46c3-a38b-88a04e81d276" rel="nofollow noopener" target="_blank">Advies besluitvorming</a></li><li><span class="wanneer">woensdag 25 november 2026 · Raadzaal (gespreksrondes)</span><a href="https://nijmegen.bestuurlijkeinformatie.nl/Agenda/Index/bf1f871c-97ba-46c3-a38b-88a04e81d276" rel="nofollow noopener" target="_blank">Advies besluitvorming - Raadsvoorstellen belastingverordeningen en legesverordening</a></li><li><span class="wanneer">woensdag 25 november 2026 · Raadzaal (gespreksrondes)</span><a href="https://nijmegen.bestuurlijkeinformatie.nl/Agenda/Index/bf1f871c-97ba-46c3-a38b-88a04e81d276" rel="nofollow noopener" target="_blank">Raadsvoorstel Legesverordening 2027</a></li></ul><h3 style="margin-top: 28px">Komende vergaderingen</h3><ul><li><span class="wanneer">dinsdag 17 november 2026</span><a href="https://nijmegen.bestuurlijkeinformatie.nl/Agenda/Index/59999f15-749f-4787-bdfa-abc15642d4af" rel="nofollow noopener" target="_blank">B&amp;W Agenda en Besluiten</a></li><li><span class="wanneer">woensdag 18 november 2026</span><a href="https://nijmegen.bestuurlijkeinformatie.nl/Agenda/Index/3c101581-d0c0-4d69-8479-3798670de18b" rel="nofollow noopener" target="_blank">Rekenkamer</a></li><li><span class="wanneer">woensdag 25 november 2026</span><a href="https://nijmegen.bestuurlijkeinformatie.nl/Agenda/Index/2b82b508-f6a0-443e-922a-69729b27d8a5" rel="nofollow noopener" target="_blank">Gebr. van Lymborchkamer</a></li><li><span class="wanneer">woensdag 25 november 2026</span><a href="https://nijmegen.bestuurlijkeinformatie.nl/Agenda/Index/bf1f871c-97ba-46c3-a38b-88a04e81d276" rel="nofollow noopener" target="_blank">Raadzaal (gespreksrondes)</a></li><li><span class="wanneer">woensdag 25 november 2026</span><a href="https://nijmegen.bestuurlijkeinformatie.nl/Agenda/Index/7fb12748-1223-4b07-aa43-aceb94b2eccd" rel="nofollow noopener" target="_blank">Politieke Avond</a></li></ul></div><div><h3>Net binnengekomen</h3><ul><li><span class="wanneer">11 november 2026 · Ingekomen stuk</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Nijmegen&amp;id=2f1de7cb-91ce-4240-a73c-150d92437bd5" rel="nofollow noopener" target="_blank">TOELICHTING Achtergrondinformatie Rekenkamer Nijmegen</a></li><li><span class="wanneer">11 november 2026 · Ingekomen stuk</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Nijmegen&amp;id=24fcf9e1-abf2-44d7-be37-e3449652c25d" rel="nofollow noopener" target="_blank">Nevenfuncties voorzitter en leden Rekenkamer</a></li><li><span class="wanneer">11 november 2026 · Motie</span><a href="https://nijmegen.bestuurlijkeinformatie.nl/Agenda/Index/83b1f69b-30d3-415c-9cea-eded86706b9f" rel="nofollow noopener" target="_blank">M21 Voedseldrukmonitor</a></li><li><span class="wanneer">11 november 2026 · Motie</span><a href="https://nijmegen.bestuurlijkeinformatie.nl/Agenda/Index/83b1f69b-30d3-415c-9cea-eded86706b9f" rel="nofollow noopener" target="_blank">M6 Eén lift is geen lift</a></li><li><span class="wanneer">11 november 2026 · Motie</span><a href="https://nijmegen.bestuurlijkeinformatie.nl/Agenda/Index/83b1f69b-30d3-415c-9cea-eded86706b9f" rel="nofollow noopener" target="_blank">M4 Sport en muziek voor beginners</a></li><li><span class="wanneer">11 november 2026</span><a href="https://nijmegen.bestuurlijkeinformatie.nl/Agenda/Index/83b1f69b-30d3-415c-9cea-eded86706b9f" rel="nofollow noopener" target="_blank">Besluitvorming behandeladviezen van de gespreksrondes</a></li><li><span class="wanneer">11 november 2026</span><a href="https://nijmegen.bestuurlijkeinformatie.nl/Agenda/Index/83b1f69b-30d3-415c-9cea-eded86706b9f" rel="nofollow noopener" target="_blank">Raadsvoorstel Wijziging Algemene plaatselijke verordening gemeente Nijmegen (93/2026)</a></li></ul></div></div>
+      <p class="actueel-noot">Bijgewerkt op 17 november 2026. Elke titel linkt naar het stuk op de site van de gemeente.</p>
     </div>
   </section>
 </main>

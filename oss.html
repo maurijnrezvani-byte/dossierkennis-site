@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gemeenteraad Oss: elke maandag per dossier · Dossierkennis</title>
-<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Oss gebeurde.">
+<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Oss gebeurde. Binnenkort op de agenda: Belastingvoorstel 2027.">
 <!-- delen:begin -->
 <link rel="canonical" href="https://dossierkennis.com/oss">
 <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:url" content="https://dossierkennis.com/oss">
 <meta property="og:title" content="Gemeenteraad Oss: elke maandag per dossier · Dossierkennis">
-<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Oss gebeurde.">
+<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Oss gebeurde. Binnenkort op de agenda: Belastingvoorstel 2027.">
 <meta property="og:image" content="https://dossierkennis.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -513,6 +513,16 @@
   @media (max-width: 600px) {
     .gemeentepagina h1 { font-size: 38px; }
   }
+  /* Nu in de raad (maak_actueel.py) */
+  .actueel { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 8px; }
+  .actueel h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin: 0 0 4px; padding-bottom: 10px; border-bottom: 1px solid var(--inkt); }
+  .actueel ul { list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+  .actueel li { padding: 11px 0; border-bottom: 1px solid var(--haarlijn); }
+  .actueel li a { color: inherit; text-decoration: none; }
+  .actueel li a:hover { color: var(--accent); text-decoration: underline; }
+  .actueel .wanneer { display: block; font-size: 13px; color: var(--labeltekst); margin-bottom: 2px; }
+  .actueel-noot { font-family: var(--sans); font-size: 13px; color: var(--labeltekst); margin-top: 18px; }
+  @media (max-width: 860px) { .actueel { grid-template-columns: 1fr; gap: 32px; } }
   /* De telefoon met de voorbeeldmail in de opening (telefoon.js). Alleen de telefoon, zonder kader.
      Hij staat rechtop en wordt afgesneden op de bovenrand van het grijze vlak eronder ("Hoe het werkt").
      De maat staat hier vast, zodat de pagina niet verspringt als het script laadt. */
@@ -631,6 +641,18 @@
         <p class="privacy">Je naam, e-mailadres en keuze gebruik ik alleen om je de nieuwsbrief te sturen. Lees in de <a href="privacy.html">privacytekst</a> welke diensten ik gebruik en wat je rechten zijn. Na de gratis periode gelden de <a href="voorwaarden.html">voorwaarden</a>.</p>
       </div>
       <div class="formulier"><iframe data-tally-src="https://tally.so/embed/gbeaWd?gemeente=oss&maat=middel&hideTitle=1&transparentBackground=1&dynamicHeight=1" title="Aanmelden"></iframe></div>
+    </div>
+  </section>
+
+  <section class="blok" id="nu-in-de-raad">
+    <div class="breed">
+      <div class="sectiekop">
+        <p class="bovenregel">Nu in de raad</p>
+        <h2>Dit speelt er in de gemeenteraad van Oss.</h2>
+        <p class="uitleg">Een greep uit de agenda en de stukken van de raad van Oss, rechtstreeks uit het raadsinformatiesysteem van de gemeente. In de nieuwsbrief krijg je dit per dossier, uitgelegd in gewone taal.</p>
+      </div>
+      <div class="actueel"><div><h3>Binnenkort op de agenda</h3><ul><li><span class="wanneer">donderdag 19 november 2026 · Adviescommissie Sociaal Bestuurlijk</span><a href="https://oss.bestuurlijkeinformatie.nl/Agenda/Index/8e51477f-ba3d-4487-9950-4e185958e7f0" rel="nofollow noopener" target="_blank">Belastingvoorstel 2027</a></li><li><span class="wanneer">donderdag 19 november 2026 · Adviescommissie Sociaal Bestuurlijk</span><a href="https://oss.bestuurlijkeinformatie.nl/Agenda/Index/8e51477f-ba3d-4487-9950-4e185958e7f0" rel="nofollow noopener" target="_blank">Wensen en bedenkingen verlenging Regionaal Veiligheidsplan</a></li><li><span class="wanneer">donderdag 19 november 2026 · Adviescommissie Sociaal Bestuurlijk</span><a href="https://oss.bestuurlijkeinformatie.nl/Agenda/Index/8e51477f-ba3d-4487-9950-4e185958e7f0" rel="nofollow noopener" target="_blank">Antwoord op de artikel 41 vragen over zorgfraude Bibob</a></li><li><span class="wanneer">donderdag 19 november 2026 · Adviescommissie Sociaal Bestuurlijk</span><a href="https://oss.bestuurlijkeinformatie.nl/Agenda/Index/8e51477f-ba3d-4487-9950-4e185958e7f0" rel="nofollow noopener" target="_blank">Brief over Voortgangsrapportage Regio Deal t Goeie leven</a></li><li><span class="wanneer">donderdag 19 november 2026 · Adviescommissie Sociaal Bestuurlijk</span><a href="https://oss.bestuurlijkeinformatie.nl/Agenda/Index/8e51477f-ba3d-4487-9950-4e185958e7f0" rel="nofollow noopener" target="_blank">Brief over Jaarplan 2027 RNOB</a></li><li><span class="wanneer">woensdag 25 november 2026 · Bijeenkomst · Hoorcommissie Omgevingsplan</span><a href="https://oss.bestuurlijkeinformatie.nl/Agenda/Index/fbf0c965-afcc-4fe5-8f2f-5d61fd735f92" rel="nofollow noopener" target="_blank">Hoorcommissie Omgevingsplan: Ontwerp wijziging omgevingsplan Amsteleind Zuid</a></li><li><span class="wanneer">donderdag 26 november 2026 · Adviescommissie Sociaal Bestuurlijk</span><a href="https://oss.bestuurlijkeinformatie.nl/Agenda/Index/ef6c3736-e113-4357-9847-7afef913fa62" rel="nofollow noopener" target="_blank">Voorgenomen besluit gebiedsontwikkeling recreatieve poort entree Hoessenbosch</a></li></ul><h3 style="margin-top: 28px">Komende vergaderingen</h3><ul><li><span class="wanneer">donderdag 19 november 2026</span><a href="https://oss.bestuurlijkeinformatie.nl/Agenda/Index/1241250f-ecfa-4262-9c62-d0c080002674" rel="nofollow noopener" target="_blank">Politieke avond</a></li><li><span class="wanneer">donderdag 19 november 2026</span><a href="https://oss.bestuurlijkeinformatie.nl/Agenda/Index/8e51477f-ba3d-4487-9950-4e185958e7f0" rel="nofollow noopener" target="_blank">Adviescommissie Sociaal Bestuurlijk</a></li><li><span class="wanneer">woensdag 25 november 2026</span><a href="https://oss.bestuurlijkeinformatie.nl/Agenda/Index/fbf0c965-afcc-4fe5-8f2f-5d61fd735f92" rel="nofollow noopener" target="_blank">Hoorcommissie Omgevingsplan</a></li><li><span class="wanneer">donderdag 26 november 2026</span><a href="https://oss.bestuurlijkeinformatie.nl/Agenda/Index/ef6c3736-e113-4357-9847-7afef913fa62" rel="nofollow noopener" target="_blank">Adviescommissie Sociaal Bestuurlijk</a></li><li><span class="wanneer">donderdag 26 november 2026</span><a href="https://oss.bestuurlijkeinformatie.nl/Agenda/Index/8d64a1cc-a026-4bf0-9bef-e461459d07f9" rel="nofollow noopener" target="_blank">Adviescommissie Ruimte</a></li></ul></div><div><h3>Net binnengekomen</h3><ul><li><span class="wanneer">11 november 2026 · Collegebrief</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Oss&amp;id=d842eb90-db9b-41ea-ac85-72647dddf925" rel="nofollow noopener" target="_blank">RIB Warmtetransitie gebiedsvolgorde in relatie tot capaciteit en middelen</a></li><li><span class="wanneer">11 november 2026 · Collegebrief</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Oss&amp;id=7b9ec5cf-5127-42a9-9200-0a13b0d34067" rel="nofollow noopener" target="_blank">Raadsinformatiebrief Stedelijke landschapsparken</a></li><li><span class="wanneer">11 november 2026 · Collegebrief</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Oss&amp;id=219f0724-3724-4d29-852f-705e2046cc56" rel="nofollow noopener" target="_blank">Raadsinformatiebrief Pilot Afval</a></li><li><span class="wanneer">11 november 2026 · Ingekomen stuk</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Oss&amp;id=d817a5cc-f3c9-4fa8-a855-21711d9a483b" rel="nofollow noopener" target="_blank">Collegevoorstel Warmtetransitie gebiedsvolgorde in relatie tot capaciteit en middelen</a></li><li><span class="wanneer">11 november 2026 · Ingekomen stuk</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Oss&amp;id=6cfd3a9f-968a-4284-8e4f-9b6c2d52f75d" rel="nofollow noopener" target="_blank">Bijlage 1 Samenvatting Voorkeursoplossingen per gebied</a></li><li><span class="wanneer">12 november 2026 · Raadsvragen</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Oss&amp;id=4c7945db-7e54-47b4-9869-6385375f9de2" rel="nofollow noopener" target="_blank">Artikel 41 vragen oveArtikel 41 vragen over het gebruik van kabelmatten of kabelgoten bij gebruik eigen zonnestroom voor opladen autor gebruik eigen zonnestroom voor opladen auto</a></li><li><span class="wanneer">12 november 2026</span><a href="https://oss.bestuurlijkeinformatie.nl/Agenda/Index/ea2bbb63-a5f7-49bb-8781-9f5574c4c088" rel="nofollow noopener" target="_blank">Gewijzigde financiële verordening art 212 en Normenkader 2026</a></li><li><span class="wanneer">12 november 2026</span><a href="https://oss.bestuurlijkeinformatie.nl/Agenda/Index/ea2bbb63-a5f7-49bb-8781-9f5574c4c088" rel="nofollow noopener" target="_blank">Managementletter 2026 Baker Tilly</a></li></ul></div></div>
+      <p class="actueel-noot">Bijgewerkt op 17 november 2026. Elke titel linkt naar het stuk op de site van de gemeente.</p>
     </div>
   </section>
 </main>

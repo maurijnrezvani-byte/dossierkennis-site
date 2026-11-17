@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gemeenteraad Someren: elke maandag per dossier · Dossierkennis</title>
-<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Someren gebeurde.">
+<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Someren gebeurde. Binnenkort op de agenda: Tijdelijk afwijken van omgevingsplan Groeneweg 5 te Someren-Heide.">
 <!-- delen:begin -->
 <link rel="canonical" href="https://dossierkennis.com/someren">
 <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:url" content="https://dossierkennis.com/someren">
 <meta property="og:title" content="Gemeenteraad Someren: elke maandag per dossier · Dossierkennis">
-<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Someren gebeurde.">
+<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Someren gebeurde. Binnenkort op de agenda: Tijdelijk afwijken van omgevingsplan Groeneweg 5 te Someren-Heide.">
 <meta property="og:image" content="https://dossierkennis.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -513,6 +513,16 @@
   @media (max-width: 600px) {
     .gemeentepagina h1 { font-size: 38px; }
   }
+  /* Nu in de raad (maak_actueel.py) */
+  .actueel { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 8px; }
+  .actueel h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin: 0 0 4px; padding-bottom: 10px; border-bottom: 1px solid var(--inkt); }
+  .actueel ul { list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+  .actueel li { padding: 11px 0; border-bottom: 1px solid var(--haarlijn); }
+  .actueel li a { color: inherit; text-decoration: none; }
+  .actueel li a:hover { color: var(--accent); text-decoration: underline; }
+  .actueel .wanneer { display: block; font-size: 13px; color: var(--labeltekst); margin-bottom: 2px; }
+  .actueel-noot { font-family: var(--sans); font-size: 13px; color: var(--labeltekst); margin-top: 18px; }
+  @media (max-width: 860px) { .actueel { grid-template-columns: 1fr; gap: 32px; } }
   /* De telefoon met de voorbeeldmail in de opening (telefoon.js). Alleen de telefoon, zonder kader.
      Hij staat rechtop en wordt afgesneden op de bovenrand van het grijze vlak eronder ("Hoe het werkt").
      De maat staat hier vast, zodat de pagina niet verspringt als het script laadt. */
@@ -631,6 +641,18 @@
         <p class="privacy">Je naam, e-mailadres en keuze gebruik ik alleen om je de nieuwsbrief te sturen. Lees in de <a href="privacy.html">privacytekst</a> welke diensten ik gebruik en wat je rechten zijn. Na de gratis periode gelden de <a href="voorwaarden.html">voorwaarden</a>.</p>
       </div>
       <div class="formulier"><iframe data-tally-src="https://tally.so/embed/gbeaWd?gemeente=someren&maat=klein&hideTitle=1&transparentBackground=1&dynamicHeight=1" title="Aanmelden"></iframe></div>
+    </div>
+  </section>
+
+  <section class="blok" id="nu-in-de-raad">
+    <div class="breed">
+      <div class="sectiekop">
+        <p class="bovenregel">Nu in de raad</p>
+        <h2>Dit speelt er in de gemeenteraad van Someren.</h2>
+        <p class="uitleg">Een greep uit de agenda en de stukken van de raad van Someren, rechtstreeks uit het raadsinformatiesysteem van de gemeente. In de nieuwsbrief krijg je dit per dossier, uitgelegd in gewone taal.</p>
+      </div>
+      <div class="actueel"><div><h3>Binnenkort op de agenda</h3><ul><li><span class="wanneer">woensdag 25 november 2026 · Commissie Ruimte</span><a href="https://someren.raadsinformatie.nl/vergadering/1425079" rel="nofollow noopener" target="_blank">Tijdelijk afwijken van omgevingsplan Groeneweg 5 te Someren-Heide</a></li><li><span class="wanneer">woensdag 25 november 2026 · Commissie Ruimte</span><a href="https://someren.raadsinformatie.nl/vergadering/1425079" rel="nofollow noopener" target="_blank">Vaststellen gewijzigde bebouwde komgrenzen in kader van Wegenverkeerswet</a></li><li><span class="wanneer">woensdag 25 november 2026 · Commissie Ruimte</span><a href="https://someren.raadsinformatie.nl/vergadering/1425079" rel="nofollow noopener" target="_blank">Vaststellen Grondprijzen 2027</a></li><li><span class="wanneer">woensdag 25 november 2026 · Commissie Ruimte</span><a href="https://someren.raadsinformatie.nl/vergadering/1425079" rel="nofollow noopener" target="_blank">Vaststellen zienswijze begrotingswijziging GR Blink 2026</a></li><li><span class="wanneer">woensdag 25 november 2026 · Commissie Ruimte</span><a href="https://someren.raadsinformatie.nl/vergadering/1425079" rel="nofollow noopener" target="_blank">Vaststellen zienswijze investeringsbegroting nieuwbouw Blink</a></li><li><span class="wanneer">donderdag 26 november 2026 · Commissie Burger en Bestuur</span><a href="https://someren.raadsinformatie.nl/vergadering/1425090" rel="nofollow noopener" target="_blank">Vaststellen integraal veiligheidsbeleid 2027-2030 “Samen voor een veilig Peelland”</a></li><li><span class="wanneer">donderdag 26 november 2026 · Commissie Burger en Bestuur</span><a href="https://someren.raadsinformatie.nl/vergadering/1425090" rel="nofollow noopener" target="_blank">Vaststellen Belastingverordeningen 2027</a></li></ul><h3 style="margin-top: 28px">Komende vergaderingen</h3><ul><li><span class="wanneer">maandag 16 november 2026</span><a href="https://someren.raadsinformatie.nl/vergadering/1425127" rel="nofollow noopener" target="_blank">Presidium</a></li><li><span class="wanneer">donderdag 19 november 2026</span><a href="https://someren.raadsinformatie.nl/vergadering/1425137" rel="nofollow noopener" target="_blank">Commissie Beeldvorming en Opinie</a></li><li><span class="wanneer">woensdag 25 november 2026</span><a href="https://someren.raadsinformatie.nl/vergadering/1425079" rel="nofollow noopener" target="_blank">Commissie Ruimte</a></li><li><span class="wanneer">donderdag 26 november 2026</span><a href="https://someren.raadsinformatie.nl/vergadering/1425090" rel="nofollow noopener" target="_blank">Commissie Burger en Bestuur</a></li></ul></div><div><h3>Net binnengekomen</h3><ul><li><span class="wanneer">10 november 2026 · Collegebrief</span><a href="https://someren.raadsinformatie.nl/modules/5/raadsinformatiebrieven/1227543" rel="nofollow noopener" target="_blank">Raadsinformatiebrief Definitief besluit overdracht opvangopgave Asten</a></li><li><span class="wanneer">9 november 2026 · Collegebrief</span><a href="https://someren.raadsinformatie.nl/modules/5/raadsinformatiebrieven/1226758" rel="nofollow noopener" target="_blank">Regionale Raadsinformatiebrief Beoordeling rapportage monitoring robuuste omgevingsdienst op 1 april 2026 - ODZOB</a></li></ul></div></div>
+      <p class="actueel-noot">Bijgewerkt op 17 november 2026. Elke titel linkt naar het stuk op de site van de gemeente.</p>
     </div>
   </section>
 </main>

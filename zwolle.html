@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gemeenteraad Zwolle: elke maandag per dossier · Dossierkennis</title>
-<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Zwolle gebeurde.">
+<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Zwolle gebeurde. Binnenkort op de agenda: Evenement: Informatie.">
 <!-- delen:begin -->
 <link rel="canonical" href="https://dossierkennis.com/zwolle">
 <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:url" content="https://dossierkennis.com/zwolle">
 <meta property="og:title" content="Gemeenteraad Zwolle: elke maandag per dossier · Dossierkennis">
-<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Zwolle gebeurde.">
+<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Zwolle gebeurde. Binnenkort op de agenda: Evenement: Informatie.">
 <meta property="og:image" content="https://dossierkennis.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -513,6 +513,16 @@
   @media (max-width: 600px) {
     .gemeentepagina h1 { font-size: 38px; }
   }
+  /* Nu in de raad (maak_actueel.py) */
+  .actueel { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 8px; }
+  .actueel h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin: 0 0 4px; padding-bottom: 10px; border-bottom: 1px solid var(--inkt); }
+  .actueel ul { list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+  .actueel li { padding: 11px 0; border-bottom: 1px solid var(--haarlijn); }
+  .actueel li a { color: inherit; text-decoration: none; }
+  .actueel li a:hover { color: var(--accent); text-decoration: underline; }
+  .actueel .wanneer { display: block; font-size: 13px; color: var(--labeltekst); margin-bottom: 2px; }
+  .actueel-noot { font-family: var(--sans); font-size: 13px; color: var(--labeltekst); margin-top: 18px; }
+  @media (max-width: 860px) { .actueel { grid-template-columns: 1fr; gap: 32px; } }
   /* De telefoon met de voorbeeldmail in de opening (telefoon.js). Alleen de telefoon, zonder kader.
      Hij staat rechtop en wordt afgesneden op de bovenrand van het grijze vlak eronder ("Hoe het werkt").
      De maat staat hier vast, zodat de pagina niet verspringt als het script laadt. */
@@ -631,6 +641,18 @@
         <p class="privacy">Je naam, e-mailadres en keuze gebruik ik alleen om je de nieuwsbrief te sturen. Lees in de <a href="privacy.html">privacytekst</a> welke diensten ik gebruik en wat je rechten zijn. Na de gratis periode gelden de <a href="voorwaarden.html">voorwaarden</a>.</p>
       </div>
       <div class="formulier"><iframe data-tally-src="https://tally.so/embed/gbeaWd?gemeente=zwolle&maat=groot&hideTitle=1&transparentBackground=1&dynamicHeight=1" title="Aanmelden"></iframe></div>
+    </div>
+  </section>
+
+  <section class="blok" id="nu-in-de-raad">
+    <div class="breed">
+      <div class="sectiekop">
+        <p class="bovenregel">Nu in de raad</p>
+        <h2>Dit speelt er in de gemeenteraad van Zwolle.</h2>
+        <p class="uitleg">Een greep uit de agenda en de stukken van de raad van Zwolle, rechtstreeks uit het raadsinformatiesysteem van de gemeente. In de nieuwsbrief krijg je dit per dossier, uitgelegd in gewone taal.</p>
+      </div>
+      <div class="actueel"><div><h3>Binnenkort op de agenda</h3><ul><li><span class="wanneer">maandag 16 november 2026 · Bijeenkomst · Evenement</span><a href="https://zwolle.bestuurlijkeinformatie.nl/Agenda/Index/3e8b4cdb-1a97-4714-aa8a-66673b98c77d" rel="nofollow noopener" target="_blank">Evenement: Informatie</a></li><li><span class="wanneer">maandag 23 november 2026 · Raad Besluitvormingsronde</span><a href="https://zwolle.bestuurlijkeinformatie.nl/Agenda/Index/2886fde9-3118-453d-8458-b6beb9bd819d" rel="nofollow noopener" target="_blank">Overzicht berichten voor de raad</a></li><li><span class="wanneer">maandag 23 november 2026 · Raad Besluitvormingsronde</span><a href="https://zwolle.bestuurlijkeinformatie.nl/Agenda/Index/2886fde9-3118-453d-8458-b6beb9bd819d" rel="nofollow noopener" target="_blank">Kennisnemen van het bericht</a></li><li><span class="wanneer">maandag 23 november 2026 · Raad Besluitvormingsronde</span><a href="https://zwolle.bestuurlijkeinformatie.nl/Agenda/Index/2886fde9-3118-453d-8458-b6beb9bd819d" rel="nofollow noopener" target="_blank">Het college vragen dit bericht af te handelen</a></li><li><span class="wanneer">maandag 23 november 2026 · Raad Besluitvormingsronde</span><a href="https://zwolle.bestuurlijkeinformatie.nl/Agenda/Index/2886fde9-3118-453d-8458-b6beb9bd819d" rel="nofollow noopener" target="_blank">Toestemming wijziging GR Collectie Overijssel 2026</a></li><li><span class="wanneer">maandag 23 november 2026 · Raad Besluitvormingsronde</span><a href="https://zwolle.bestuurlijkeinformatie.nl/Agenda/Index/2886fde9-3118-453d-8458-b6beb9bd819d" rel="nofollow noopener" target="_blank">Wijzigingen verordeningen</a></li><li><span class="wanneer">maandag 23 november 2026 · Raad Besluitvormingsronde</span><a href="https://zwolle.bestuurlijkeinformatie.nl/Agenda/Index/2886fde9-3118-453d-8458-b6beb9bd819d" rel="nofollow noopener" target="_blank">Bindend advies Händellaan 239A en 239B</a></li></ul><h3 style="margin-top: 28px">Komende vergaderingen</h3><ul><li><span class="wanneer">maandag 16 november 2026</span><a href="https://zwolle.bestuurlijkeinformatie.nl/Agenda/Index/62871d5f-dd92-4df3-b9bc-b982e44a685c" rel="nofollow noopener" target="_blank">Evenement</a></li><li><span class="wanneer">woensdag 18 november 2026</span><a href="https://zwolle.bestuurlijkeinformatie.nl/Agenda/Index/9ffabcf9-b4bb-4ac6-9fd7-bc82ee09552a" rel="nofollow noopener" target="_blank">Evenement</a></li><li><span class="wanneer">donderdag 19 november 2026</span><a href="https://zwolle.bestuurlijkeinformatie.nl/Agenda/Index/2419e3ac-ba41-4b0f-81f8-2452a72a6cb8" rel="nofollow noopener" target="_blank">Evenement</a></li><li><span class="wanneer">vrijdag 20 november 2026</span><a href="https://zwolle.bestuurlijkeinformatie.nl/Agenda/Index/a99a769b-dc8d-42c8-b1e9-c5b2862febad" rel="nofollow noopener" target="_blank">Evenement</a></li><li><span class="wanneer">zaterdag 21 november 2026</span><a href="https://zwolle.bestuurlijkeinformatie.nl/Agenda/Index/7b9b5293-689f-421b-b561-45ebe3bd39e1" rel="nofollow noopener" target="_blank">Evenement</a></li></ul></div><div><h3>Net binnengekomen</h3><ul><li><span class="wanneer">13 november 2026</span><a href="https://zwolle.bestuurlijkeinformatie.nl/Agenda/Index/490601e6-eb7c-4fb7-9504-ecd480779870" rel="nofollow noopener" target="_blank">Amendementen en moties begroting 2027</a></li><li><span class="wanneer">13 november 2026</span><a href="https://zwolle.bestuurlijkeinformatie.nl/Agenda/Index/490601e6-eb7c-4fb7-9504-ecd480779870" rel="nofollow noopener" target="_blank">Beleidsrapportage 2-2026 (P&amp;C Najaarsmoment)</a></li></ul></div></div>
+      <p class="actueel-noot">Bijgewerkt op 17 november 2026. Elke titel linkt naar het stuk op de site van de gemeente.</p>
     </div>
   </section>
 </main>

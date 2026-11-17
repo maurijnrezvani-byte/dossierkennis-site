@@ -513,6 +513,16 @@
   @media (max-width: 600px) {
     .gemeentepagina h1 { font-size: 38px; }
   }
+  /* Nu in de raad (maak_actueel.py) */
+  .actueel { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 8px; }
+  .actueel h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin: 0 0 4px; padding-bottom: 10px; border-bottom: 1px solid var(--inkt); }
+  .actueel ul { list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+  .actueel li { padding: 11px 0; border-bottom: 1px solid var(--haarlijn); }
+  .actueel li a { color: inherit; text-decoration: none; }
+  .actueel li a:hover { color: var(--accent); text-decoration: underline; }
+  .actueel .wanneer { display: block; font-size: 13px; color: var(--labeltekst); margin-bottom: 2px; }
+  .actueel-noot { font-family: var(--sans); font-size: 13px; color: var(--labeltekst); margin-top: 18px; }
+  @media (max-width: 860px) { .actueel { grid-template-columns: 1fr; gap: 32px; } }
   /* De telefoon met de voorbeeldmail in de opening (telefoon.js). Alleen de telefoon, zonder kader.
      Hij staat rechtop en wordt afgesneden op de bovenrand van het grijze vlak eronder ("Hoe het werkt").
      De maat staat hier vast, zodat de pagina niet verspringt als het script laadt. */
@@ -631,6 +641,18 @@
         <p class="privacy">Je naam, e-mailadres en keuze gebruik ik alleen om je de nieuwsbrief te sturen. Lees in de <a href="privacy.html">privacytekst</a> welke diensten ik gebruik en wat je rechten zijn. Na de gratis periode gelden de <a href="voorwaarden.html">voorwaarden</a>.</p>
       </div>
       <div class="formulier"><iframe data-tally-src="https://tally.so/embed/gbeaWd?gemeente=uitgeest&maat=klein&hideTitle=1&transparentBackground=1&dynamicHeight=1" title="Aanmelden"></iframe></div>
+    </div>
+  </section>
+
+  <section class="blok" id="nu-in-de-raad">
+    <div class="breed">
+      <div class="sectiekop">
+        <p class="bovenregel">Nu in de raad</p>
+        <h2>Dit speelt er in de gemeenteraad van Uitgeest.</h2>
+        <p class="uitleg">Een greep uit de agenda en de stukken van de raad van Uitgeest, rechtstreeks uit het raadsinformatiesysteem van de gemeente. In de nieuwsbrief krijg je dit per dossier, uitgelegd in gewone taal.</p>
+      </div>
+      <div class="actueel"><div><h3>Komende vergaderingen</h3><ul><li><span class="wanneer">dinsdag 24 november 2026</span><a href="https://uitgeest.raadsinformatie.nl/vergadering/1422857" rel="nofollow noopener" target="_blank">Presidium</a></li><li><span class="wanneer">donderdag 26 november 2026</span><a href="https://uitgeest.raadsinformatie.nl/vergadering/1422881" rel="nofollow noopener" target="_blank">Raadsvergadering</a></li></ul></div><div><h3>Net binnengekomen</h3><ul><li><span class="wanneer">13 november 2026 · Raadsvragen</span><a href="https://uitgeest.raadsinformatie.nl/modules/4/raadsvragen/1221981" rel="nofollow noopener" target="_blank">Schriftelijke vragen - bestuurlijk overleg inzake AZC</a></li><li><span class="wanneer">12 november 2026 · Motie</span><a href="https://uitgeest.raadsinformatie.nl/modules/6/moties%2C_amendementen_en_toezeggingen/1167407" rel="nofollow noopener" target="_blank">Bestuursovereenkomst en het addendum AZC</a></li><li><span class="wanneer">12 november 2026 · Motie</span><a href="https://uitgeest.raadsinformatie.nl/modules/6/moties%2C_amendementen_en_toezeggingen/1201270" rel="nofollow noopener" target="_blank">Zienswijze begrotingswijziging 1e voortgangsrapportage BUCH</a></li><li><span class="wanneer">12 november 2026 · Motie</span><a href="https://uitgeest.raadsinformatie.nl/modules/6/moties%2C_amendementen_en_toezeggingen/1201672" rel="nofollow noopener" target="_blank">Consultatiebureau Jeugdzorggezondheidszorg (JGZ) Kennemerland</a></li></ul></div></div>
+      <p class="actueel-noot">Bijgewerkt op 17 november 2026. Elke titel linkt naar het stuk op de site van de gemeente.</p>
     </div>
   </section>
 </main>

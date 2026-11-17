@@ -513,6 +513,16 @@
   @media (max-width: 600px) {
     .gemeentepagina h1 { font-size: 38px; }
   }
+  /* Nu in de raad (maak_actueel.py) */
+  .actueel { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 8px; }
+  .actueel h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin: 0 0 4px; padding-bottom: 10px; border-bottom: 1px solid var(--inkt); }
+  .actueel ul { list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+  .actueel li { padding: 11px 0; border-bottom: 1px solid var(--haarlijn); }
+  .actueel li a { color: inherit; text-decoration: none; }
+  .actueel li a:hover { color: var(--accent); text-decoration: underline; }
+  .actueel .wanneer { display: block; font-size: 13px; color: var(--labeltekst); margin-bottom: 2px; }
+  .actueel-noot { font-family: var(--sans); font-size: 13px; color: var(--labeltekst); margin-top: 18px; }
+  @media (max-width: 860px) { .actueel { grid-template-columns: 1fr; gap: 32px; } }
   /* De telefoon met de voorbeeldmail in de opening (telefoon.js). Alleen de telefoon, zonder kader.
      Hij staat rechtop en wordt afgesneden op de bovenrand van het grijze vlak eronder ("Hoe het werkt").
      De maat staat hier vast, zodat de pagina niet verspringt als het script laadt. */
@@ -631,6 +641,18 @@
         <p class="privacy">Je naam, e-mailadres en keuze gebruik ik alleen om je de nieuwsbrief te sturen. Lees in de <a href="privacy.html">privacytekst</a> welke diensten ik gebruik en wat je rechten zijn. Na de gratis periode gelden de <a href="voorwaarden.html">voorwaarden</a>.</p>
       </div>
       <div class="formulier"><iframe data-tally-src="https://tally.so/embed/gbeaWd?gemeente=drimmelen&maat=klein&hideTitle=1&transparentBackground=1&dynamicHeight=1" title="Aanmelden"></iframe></div>
+    </div>
+  </section>
+
+  <section class="blok" id="nu-in-de-raad">
+    <div class="breed">
+      <div class="sectiekop">
+        <p class="bovenregel">Nu in de raad</p>
+        <h2>Dit speelt er in de gemeenteraad van Drimmelen.</h2>
+        <p class="uitleg">Een greep uit de agenda en de stukken van de raad van Drimmelen, rechtstreeks uit het raadsinformatiesysteem van de gemeente. In de nieuwsbrief krijg je dit per dossier, uitgelegd in gewone taal.</p>
+      </div>
+      <div class="actueel"><div><h3>Komende vergaderingen</h3><ul><li><span class="wanneer">donderdag 26 november 2026</span><a href="https://drimmelen.bestuurlijkeinformatie.nl/Agenda/Index/359f471e-b7c7-4f1e-aecf-c4b85e815da4" rel="nofollow noopener" target="_blank">Presidium</a></li></ul></div><div><h3>Net binnengekomen</h3><ul><li><span class="wanneer">13 november 2026 · Collegebrief</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=drimmelen&amp;id=13395e22-6aab-4cdc-a6e6-986971eecf50" rel="nofollow noopener" target="_blank">Raadsbrief vaststelling subsidies 2025 professionele organisaties welzijn, zorg en cultuur</a></li><li><span class="wanneer">11 november 2026 · Collegebrief</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=drimmelen&amp;id=d694c7ac-20ae-40cd-a712-e77d014c0082" rel="nofollow noopener" target="_blank">RIB Gemeente Moerdijk Kamerbrief Powerport en inzet college bij vervolgonderzoek</a></li><li><span class="wanneer">13 november 2026 · Ingekomen stuk</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=drimmelen&amp;id=39403ee1-ba85-4089-ad63-881218572266" rel="nofollow noopener" target="_blank">MEE-Jaarbeeld NMO 2025</a></li><li><span class="wanneer">13 november 2026 · Ingekomen stuk</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=drimmelen&amp;id=52dc5a2d-12b4-44d0-add2-b77e942b4791" rel="nofollow noopener" target="_blank">MEE-Jaarrekening MEE West-Brabant 2025 - vanaf pagina 89</a></li><li><span class="wanneer">12 november 2026</span><a href="https://drimmelen.bestuurlijkeinformatie.nl/Agenda/Index/99d14656-0c24-4978-ae88-d14f4a36c499" rel="nofollow noopener" target="_blank">Vaststellen Kaders Programma Volkshuisvesting</a></li><li><span class="wanneer">12 november 2026</span><a href="https://drimmelen.bestuurlijkeinformatie.nl/Agenda/Index/99d14656-0c24-4978-ae88-d14f4a36c499" rel="nofollow noopener" target="_blank">Instructie en functieprofiel griffier</a></li></ul></div></div>
+      <p class="actueel-noot">Bijgewerkt op 17 november 2026. Elke titel linkt naar het stuk op de site van de gemeente.</p>
     </div>
   </section>
 </main>
