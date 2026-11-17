@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gemeenteraad Rotterdam: elke maandag per dossier · Dossierkennis</title>
-<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Rotterdam gebeurde.">
+<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Rotterdam gebeurde. Binnenkort op de agenda: Technische sessie over Sport- en beweegbeleid.">
 <!-- delen:begin -->
 <link rel="canonical" href="https://dossierkennis.com/rotterdam">
 <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:url" content="https://dossierkennis.com/rotterdam">
 <meta property="og:title" content="Gemeenteraad Rotterdam: elke maandag per dossier · Dossierkennis">
-<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Rotterdam gebeurde.">
+<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Rotterdam gebeurde. Binnenkort op de agenda: Technische sessie over Sport- en beweegbeleid.">
 <meta property="og:image" content="https://dossierkennis.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -513,6 +513,16 @@
   @media (max-width: 600px) {
     .gemeentepagina h1 { font-size: 38px; }
   }
+  /* Nu in de raad (maak_actueel.py) */
+  .actueel { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 8px; }
+  .actueel h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin: 0 0 4px; padding-bottom: 10px; border-bottom: 1px solid var(--inkt); }
+  .actueel ul { list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+  .actueel li { padding: 11px 0; border-bottom: 1px solid var(--haarlijn); }
+  .actueel li a { color: inherit; text-decoration: none; }
+  .actueel li a:hover { color: var(--accent); text-decoration: underline; }
+  .actueel .wanneer { display: block; font-size: 13px; color: var(--labeltekst); margin-bottom: 2px; }
+  .actueel-noot { font-family: var(--sans); font-size: 13px; color: var(--labeltekst); margin-top: 18px; }
+  @media (max-width: 860px) { .actueel { grid-template-columns: 1fr; gap: 32px; } }
   /* De telefoon met de voorbeeldmail in de opening (telefoon.js). Alleen de telefoon, zonder kader.
      Hij staat rechtop en wordt afgesneden op de bovenrand van het grijze vlak eronder ("Hoe het werkt").
      De maat staat hier vast, zodat de pagina niet verspringt als het script laadt. */
@@ -590,12 +600,24 @@
     </div>
   </section>
 
+  <section class="blok" id="nu-in-de-raad">
+    <div class="breed">
+      <div class="sectiekop">
+        <p class="bovenregel">Nu in de raad</p>
+        <h2>Dit speelt er in de gemeenteraad van Rotterdam.</h2>
+        <p class="uitleg">Een greep uit de agenda en de stukken van de raad van Rotterdam, rechtstreeks uit het raadsinformatiesysteem van de gemeente. In de nieuwsbrief krijg je dit per dossier, uitgelegd in gewone taal.</p>
+      </div>
+      <div class="actueel"><div><h3>Binnenkort op de agenda</h3><ul><li><span class="wanneer">woensdag 18 november 2026 · Commissie Zorg &amp; Cultuur</span><a href="https://rotterdamraad.bestuurlijkeinformatie.nl/Agenda/Index/f50173d9-510d-47a4-bea8-5ecd682fe08b" rel="nofollow noopener" target="_blank">Technische sessie over Sport- en beweegbeleid</a></li><li><span class="wanneer">woensdag 18 november 2026 · Commissie Zorg &amp; Cultuur</span><a href="https://rotterdamraad.bestuurlijkeinformatie.nl/Agenda/Index/f50173d9-510d-47a4-bea8-5ecd682fe08b" rel="nofollow noopener" target="_blank">Start van het doelgroepenvervoer/leerlingenvervoer en de overgang naar de nieuwe vervoerder</a></li><li><span class="wanneer">woensdag 18 november 2026 · Commissie Bouwen &amp; Wonen</span><a href="https://rotterdamraad.bestuurlijkeinformatie.nl/Agenda/Index/6e3b0772-f024-4bab-94d0-2d89ced163ab" rel="nofollow noopener" target="_blank">Omgevingsplanwijziging en Welstandsparagraaf Waterkant</a></li><li><span class="wanneer">woensdag 18 november 2026 · Commissie Onderwijs &amp; Samenleven</span><a href="https://rotterdamraad.bestuurlijkeinformatie.nl/Agenda/Index/0ec43c6f-6771-4979-ae30-2cbdb26b1388" rel="nofollow noopener" target="_blank">Betrekken bij Voortgangsrapportage MBO-uitvoeringsagenda</a></li><li><span class="wanneer">woensdag 18 november 2026 · Bijeenkomst · Commissie Leefomgeving &amp; Economie</span><a href="https://rotterdamraad.bestuurlijkeinformatie.nl/Agenda/Index/d430c3af-a07c-402e-b2bb-db8023783592" rel="nofollow noopener" target="_blank">Commissie Leefomgeving &amp; Economie: Vervolgberaad</a></li><li><span class="wanneer">donderdag 19 november 2026 · Commissie Veiligheid, Bestuur &amp; Financiën</span><a href="https://rotterdamraad.bestuurlijkeinformatie.nl/Agenda/Index/6ff5bfd9-aae3-4c5a-bdc5-d9f037c5f8af" rel="nofollow noopener" target="_blank">Veiligheidsagenda Rotterdam 2027-2030</a></li><li><span class="wanneer">dinsdag 24 november 2026 · Bijeenkomst · Commissie tot Onderzoek van de Rekening</span><a href="https://rotterdamraad.bestuurlijkeinformatie.nl/Agenda/Index/6732c903-763c-49a8-9416-f67df57776f5" rel="nofollow noopener" target="_blank">Commissie tot Onderzoek van de Rekening: Presentatie: inschrijvende accountants</a></li></ul><h3 style="margin-top: 28px">Komende vergaderingen</h3><ul><li><span class="wanneer">dinsdag 17 november 2026</span><a href="https://rotterdamraad.bestuurlijkeinformatie.nl/Agenda/Index/f7f979c0-64c1-485f-abc5-3f1bf79a7a40" rel="nofollow noopener" target="_blank">Subcommissie Omgevingswet</a></li><li><span class="wanneer">woensdag 18 november 2026</span><a href="https://rotterdamraad.bestuurlijkeinformatie.nl/Agenda/Index/f50173d9-510d-47a4-bea8-5ecd682fe08b" rel="nofollow noopener" target="_blank">Commissie Zorg &amp; Cultuur</a></li><li><span class="wanneer">woensdag 18 november 2026</span><a href="https://rotterdamraad.bestuurlijkeinformatie.nl/Agenda/Index/6e3b0772-f024-4bab-94d0-2d89ced163ab" rel="nofollow noopener" target="_blank">Commissie Bouwen &amp; Wonen</a></li><li><span class="wanneer">woensdag 18 november 2026</span><a href="https://rotterdamraad.bestuurlijkeinformatie.nl/Agenda/Index/d430c3af-a07c-402e-b2bb-db8023783592" rel="nofollow noopener" target="_blank">Commissie Leefomgeving &amp; Economie</a></li><li><span class="wanneer">woensdag 18 november 2026</span><a href="https://rotterdamraad.bestuurlijkeinformatie.nl/Agenda/Index/0ec43c6f-6771-4979-ae30-2cbdb26b1388" rel="nofollow noopener" target="_blank">Commissie Onderwijs &amp; Samenleven</a></li></ul></div><div><h3>Net binnengekomen</h3><ul><li><span class="wanneer">12 november 2026 · Collegebrief</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=RotterdamRaad&amp;id=17a60828-cef7-4d6c-a91a-4488f7a9dea8" rel="nofollow noopener" target="_blank">Wethoudersbrief Van Dommelen over Renovatie MBVB - Uitkomst Omgevingsvergunning</a></li><li><span class="wanneer">12 november 2026 · Collegebrief</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=RotterdamRaad&amp;id=bcecedaa-5277-4160-9e09-9fa70c1c4f9e" rel="nofollow noopener" target="_blank">Wethoudersbrief Zeegers over tramlijn 7 Kralingse Bos</a></li><li><span class="wanneer">11 november 2026 · Collegebrief</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=RotterdamRaad&amp;id=57251c40-a2ae-459d-8367-310970e14bf6" rel="nofollow noopener" target="_blank">Wethoudersbrief met Rectificatie toezegging over burgerbrief inzake Collegebesluit 1989 Afkoopregeling</a></li><li><span class="wanneer">11 november 2026 · Collegebrief</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=RotterdamRaad&amp;id=91a2ef97-86f1-433e-a390-aa65ee73e4e1" rel="nofollow noopener" target="_blank">Wethoudersbrief Zeegers over MRDH Tarieven en Producten OV 2027</a></li><li><span class="wanneer">16 november 2026 · Ingekomen stuk</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=RotterdamRaad&amp;id=35a17c78-5602-43e5-af2b-7a1490571269" rel="nofollow noopener" target="_blank">Minder kinderen sporten en maken gebruik van gratis sport</a></li><li><span class="wanneer">13 november 2026 · Ingekomen stuk</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=RotterdamRaad&amp;id=f9bda51b-2d10-40ad-a039-eef3579e87bf" rel="nofollow noopener" target="_blank">Waarom stoppen we met het Horeca Alarm Systeem?</a></li><li><span class="wanneer">11 november 2026 · Raadsvragen</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=RotterdamRaad&amp;id=6367d9d5-3e15-437c-a397-e695f847fad4" rel="nofollow noopener" target="_blank">Beantwoording vragen Reitema over Gedwongen overgeleverd aan de markt</a></li><li><span class="wanneer">11 november 2026 · Raadsvragen</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=RotterdamRaad&amp;id=a9aa4c7f-e496-453d-9321-af7e82d884ba" rel="nofollow noopener" target="_blank">Beantwoording vragen Jaspar over Digitale veiligheid begint bij de bron: smartphones</a></li><li><span class="wanneer">10 november 2026 · Raadsvragen</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=RotterdamRaad&amp;id=e1d80030-693f-4561-b079-293cae6fff9f" rel="nofollow noopener" target="_blank">Beantwoording vragen Soytekin over Handhaving onder druk</a></li><li><span class="wanneer">13 november 2026 · Motie</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=RotterdamRaad&amp;id=8f64c2cc-1a60-452b-9840-0d1d3663835d" rel="nofollow noopener" target="_blank">Tussenbericht motie Coşkun ea over Veilig en inclusief naar 2035</a></li></ul></div></div>
+      <p class="actueel-noot">Bijgewerkt op 17 november 2026. Elke titel linkt naar het stuk op de site van de gemeente.</p>
+    </div>
+  </section>
+
   <section class="blok" id="voorbeeld">
     <div class="breed">
       <div class="sectiekop">
         <p class="bovenregel">Een voorbeeld</p>
         <h2>Zo ziet een editie eruit.</h2>
-        <p class="uitleg">Zo zag de editie van maandag 9 november 2026 eruit in Rotterdam. Zo komt hij ook in je mail.</p>
+        <p class="uitleg">Een greep uit de agenda en de stukken van de raad van Rotterdam, rechtstreeks uit het raadsinformatiesysteem van de gemeente. In de nieuwsbrief krijg je dit per dossier, uitgelegd in gewone taal.</p>
       </div>
       <div class="vb-raster" data-voorbeeld="{&quot;map&quot;: &quot;rotterdam&quot;, &quot;bestanden&quot;: [[&quot;rotterdam-mobiliteit-openbare-ruimte&quot;, &quot;rotterdam-mobiliteit-openbare-ruimte.html&quot;, &quot;Mobiliteit &amp; Openbare ruimte&quot;]], &quot;bron&quot;: &quot;Rotterdam&quot;}">
         <ul class="vb-inhoud"><li>In één oogopslag<span>De hoofdpunten van de week</span></li><li>Deze week in de raad<span>Besluiten, moties, brieven en raadsvragen</span></li><li>In het nieuws<span>Lokaal en landelijk</span></li><li>Vooruitblik<span>De komende twee weken</span></li></ul><p class="vb-noot">Hier zie je één dossier. Als lezer kies je er zelf tot 3, of het overzicht van alle dossiers.</p>

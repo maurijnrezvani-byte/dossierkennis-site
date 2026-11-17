@@ -513,6 +513,16 @@
   @media (max-width: 600px) {
     .gemeentepagina h1 { font-size: 38px; }
   }
+  /* Nu in de raad (maak_actueel.py) */
+  .actueel { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 8px; }
+  .actueel h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin: 0 0 4px; padding-bottom: 10px; border-bottom: 1px solid var(--inkt); }
+  .actueel ul { list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+  .actueel li { padding: 11px 0; border-bottom: 1px solid var(--haarlijn); }
+  .actueel li a { color: inherit; text-decoration: none; }
+  .actueel li a:hover { color: var(--accent); text-decoration: underline; }
+  .actueel .wanneer { display: block; font-size: 13px; color: var(--labeltekst); margin-bottom: 2px; }
+  .actueel-noot { font-family: var(--sans); font-size: 13px; color: var(--labeltekst); margin-top: 18px; }
+  @media (max-width: 860px) { .actueel { grid-template-columns: 1fr; gap: 32px; } }
   /* De telefoon met de voorbeeldmail in de opening (telefoon.js). Alleen de telefoon, zonder kader.
      Hij staat rechtop en wordt afgesneden op de bovenrand van het grijze vlak eronder ("Hoe het werkt").
      De maat staat hier vast, zodat de pagina niet verspringt als het script laadt. */
@@ -590,12 +600,24 @@
     </div>
   </section>
 
+  <section class="blok" id="nu-in-de-raad">
+    <div class="breed">
+      <div class="sectiekop">
+        <p class="bovenregel">Nu in de raad</p>
+        <h2>Dit speelt er in de gemeenteraad van Alkmaar.</h2>
+        <p class="uitleg">Een greep uit de agenda en de stukken van de raad van Alkmaar, rechtstreeks uit het raadsinformatiesysteem van de gemeente. In de nieuwsbrief krijg je dit per dossier, uitgelegd in gewone taal.</p>
+      </div>
+      <div class="actueel"><div><h3>Komende vergaderingen</h3><ul><li><span class="wanneer">donderdag 19 november 2026</span><a href="https://alkmaar.raadsinformatie.nl/vergadering/1342344" rel="nofollow noopener" target="_blank">Gemeenteraad</a></li><li><span class="wanneer">dinsdag 24 november 2026</span><a href="https://alkmaar.raadsinformatie.nl/vergadering/1342206" rel="nofollow noopener" target="_blank">Commissie Ruimte</a></li><li><span class="wanneer">donderdag 26 november 2026</span><a href="https://alkmaar.raadsinformatie.nl/vergadering/1342218" rel="nofollow noopener" target="_blank">Commissie Sociaal</a></li></ul></div><div><h3>Net binnengekomen</h3><ul><li><span class="wanneer">10 november 2026 · Collegebrief</span><a href="https://alkmaar.bestuurlijkeinformatie.nl/Agenda/Index/d8a8b9b0-d4f7-4b40-bd69-8939700e04b6" rel="nofollow noopener" target="_blank">Energiebesparingsakkoord 2027-2030</a></li><li><span class="wanneer">10 november 2026 · Collegebrief</span><a href="https://alkmaar.bestuurlijkeinformatie.nl/Agenda/Index/d8a8b9b0-d4f7-4b40-bd69-8939700e04b6" rel="nofollow noopener" target="_blank">Pilot winteropvang</a></li><li><span class="wanneer">10 november 2026 · Collegebrief</span><a href="https://alkmaar.bestuurlijkeinformatie.nl/Agenda/Index/d8a8b9b0-d4f7-4b40-bd69-8939700e04b6" rel="nofollow noopener" target="_blank">Beantwoording raadsvragen van VVD over Steekincident Robonsbosweg</a></li><li><span class="wanneer">10 november 2026 · Collegebrief</span><a href="https://alkmaar.bestuurlijkeinformatie.nl/Agenda/Index/d8a8b9b0-d4f7-4b40-bd69-8939700e04b6" rel="nofollow noopener" target="_blank">Raadsinformatiebrief Evaluatie COA en aanvullende maatregelen n.a.v. incident</a></li><li><span class="wanneer">13 november 2026 · Raadsvragen</span><a href="https://alkmaar.raadsinformatie.nl/modules/4/Raadsvragen/1228350" rel="nofollow noopener" target="_blank">Aanvullende vragen Steekincident AZC Alkmaar (VVD)</a></li><li><span class="wanneer">12 november 2026 · Raadsvragen</span><a href="https://alkmaar.raadsinformatie.nl/modules/4/Raadsvragen/1208254" rel="nofollow noopener" target="_blank">Steekincident AZC Robonsbosweg (VVD)</a></li><li><span class="wanneer">11 november 2026 · Raadsvragen</span><a href="https://alkmaar.raadsinformatie.nl/modules/4/Raadsvragen/1226652" rel="nofollow noopener" target="_blank">Extra inschrijfkosten bij huurwoningen via SVNK (BAS)</a></li><li><span class="wanneer">12 november 2026</span><a href="https://alkmaar.raadsinformatie.nl/vergadering/1438377" rel="nofollow noopener" target="_blank">Brief Rekenkamer aan auditcie 213a en 185a GW</a></li><li><span class="wanneer">12 november 2026</span><a href="https://alkmaar.raadsinformatie.nl/vergadering/1438377" rel="nofollow noopener" target="_blank">Opzet opdracht 213a-onderzoek</a></li></ul></div></div>
+      <p class="actueel-noot">Bijgewerkt op 17 november 2026. Elke titel linkt naar het stuk op de site van de gemeente.</p>
+    </div>
+  </section>
+
   <section class="blok" id="voorbeeld">
     <div class="breed">
       <div class="sectiekop">
         <p class="bovenregel">Een voorbeeld</p>
         <h2>Zo ziet een editie eruit.</h2>
-        <p class="uitleg">Zo ziet het eruit: een echte editie uit Amsterdam, van maandag 9 november 2026. De editie voor Alkmaar heeft dezelfde opbouw, met de stukken en het nieuws van Alkmaar.</p>
+        <p class="uitleg">Een greep uit de agenda en de stukken van de raad van Alkmaar, rechtstreeks uit het raadsinformatiesysteem van de gemeente. In de nieuwsbrief krijg je dit per dossier, uitgelegd in gewone taal.</p>
       </div>
       <div class="vb-raster" data-voorbeeld="{&quot;map&quot;: &quot;gedeeld&quot;, &quot;bestanden&quot;: [[&quot;overzicht&quot;, &quot;overzicht.html&quot;, &quot;Alle dossiers&quot;], [&quot;wonen&quot;, &quot;wonen.html&quot;, &quot;Wonen &amp; Opvang&quot;], [&quot;armoede-werk-inkomen&quot;, &quot;armoede-werk-inkomen.html&quot;, &quot;Armoede, Werk &amp; Inkomen&quot;], [&quot;mobiliteit-openbare-ruimte&quot;, &quot;mobiliteit-openbare-ruimte.html&quot;, &quot;Mobiliteit &amp; Openbare ruimte&quot;]], &quot;bron&quot;: &quot;Amsterdam&quot;}">
         <div class="vb-keuze" role="tablist" aria-label="Kies een dossier"><button type="button" role="tab" aria-selected="true" data-src="voorbeeld/gedeeld/wonen.html">Wonen &amp; Opvang</button><button type="button" role="tab" aria-selected="false" data-src="voorbeeld/gedeeld/armoede-werk-inkomen.html">Armoede, Werk &amp; Inkomen</button><button type="button" role="tab" aria-selected="false" data-src="voorbeeld/gedeeld/mobiliteit-openbare-ruimte.html">Mobiliteit &amp; Openbare ruimte</button><button type="button" role="tab" aria-selected="false" data-src="voorbeeld/gedeeld/overzicht.html" class="alles">Alle dossiers in één overzicht</button></div><p class="vb-noot">Als lezer kies je zelf tot 3 dossiers, of het overzicht met alles in één mail.</p>
