@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gemeenteraad Land van Cuijk: elke maandag per dossier · Dossierkennis</title>
-<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Land van Cuijk gebeurde.">
+<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Land van Cuijk gebeurde. Binnenkort op de agenda: Vaststellen advieslijst d.d. 8 oktober 2026.">
 <!-- delen:begin -->
 <link rel="canonical" href="https://dossierkennis.com/land-van-cuijk">
 <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:url" content="https://dossierkennis.com/land-van-cuijk">
 <meta property="og:title" content="Gemeenteraad Land van Cuijk: elke maandag per dossier · Dossierkennis">
-<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Land van Cuijk gebeurde.">
+<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Land van Cuijk gebeurde. Binnenkort op de agenda: Vaststellen advieslijst d.d. 8 oktober 2026.">
 <meta property="og:image" content="https://dossierkennis.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -513,6 +513,16 @@
   @media (max-width: 600px) {
     .gemeentepagina h1 { font-size: 38px; }
   }
+  /* Nu in de raad (maak_actueel.py) */
+  .actueel { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 8px; }
+  .actueel h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin: 0 0 4px; padding-bottom: 10px; border-bottom: 1px solid var(--inkt); }
+  .actueel ul { list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+  .actueel li { padding: 11px 0; border-bottom: 1px solid var(--haarlijn); }
+  .actueel li a { color: inherit; text-decoration: none; }
+  .actueel li a:hover { color: var(--accent); text-decoration: underline; }
+  .actueel .wanneer { display: block; font-size: 13px; color: var(--labeltekst); margin-bottom: 2px; }
+  .actueel-noot { font-family: var(--sans); font-size: 13px; color: var(--labeltekst); margin-top: 18px; }
+  @media (max-width: 860px) { .actueel { grid-template-columns: 1fr; gap: 32px; } }
   /* De telefoon met de voorbeeldmail in de opening (telefoon.js). Alleen de telefoon, zonder kader.
      Hij staat rechtop en wordt afgesneden op de bovenrand van het grijze vlak eronder ("Hoe het werkt").
      De maat staat hier vast, zodat de pagina niet verspringt als het script laadt. */
@@ -631,6 +641,18 @@
         <p class="privacy">Je naam, e-mailadres en keuze gebruik ik alleen om je de nieuwsbrief te sturen. Lees in de <a href="privacy.html">privacytekst</a> welke diensten ik gebruik en wat je rechten zijn. Na de gratis periode gelden de <a href="voorwaarden.html">voorwaarden</a>.</p>
       </div>
       <div class="formulier"><iframe data-tally-src="https://tally.so/embed/gbeaWd?gemeente=land-van-cuijk&maat=middel&hideTitle=1&transparentBackground=1&dynamicHeight=1" title="Aanmelden"></iframe></div>
+    </div>
+  </section>
+
+  <section class="blok" id="nu-in-de-raad">
+    <div class="breed">
+      <div class="sectiekop">
+        <p class="bovenregel">Nu in de raad</p>
+        <h2>Dit speelt er in de gemeenteraad van Land van Cuijk.</h2>
+        <p class="uitleg">Een greep uit de agenda en de stukken van de raad van Land van Cuijk, rechtstreeks uit het raadsinformatiesysteem van de gemeente. In de nieuwsbrief krijg je dit per dossier, uitgelegd in gewone taal.</p>
+      </div>
+      <div class="actueel"><div><h3>Binnenkort op de agenda</h3><ul><li><span class="wanneer">donderdag 26 november 2026 · Commissie Omgeving</span><a href="https://lvc.bestuurlijkeinformatie.nl/Agenda/Index/a8ec488c-6f82-4bdd-ae12-1d2d80364402" rel="nofollow noopener" target="_blank">Vaststellen advieslijst d.d. 8 oktober 2026</a></li><li><span class="wanneer">donderdag 26 november 2026 · Commissie Omgeving</span><a href="https://lvc.bestuurlijkeinformatie.nl/Agenda/Index/a8ec488c-6f82-4bdd-ae12-1d2d80364402" rel="nofollow noopener" target="_blank">RIS 2026-V-100 Beantwoording schriftelijke vragen FVD Weigering thema-avond Stikstof AERIUS met prof.dr. Jaap Hanekamp</a></li><li><span class="wanneer">donderdag 26 november 2026 · Commissie Omgeving</span><a href="https://lvc.bestuurlijkeinformatie.nl/Agenda/Index/a8ec488c-6f82-4bdd-ae12-1d2d80364402" rel="nofollow noopener" target="_blank">Vaststellen Nota Uiterlijk van Bouwwerken Land van Cuijk 2027</a></li><li><span class="wanneer">donderdag 26 november 2026 · Commissie Omgeving</span><a href="https://lvc.bestuurlijkeinformatie.nl/Agenda/Index/a8ec488c-6f82-4bdd-ae12-1d2d80364402" rel="nofollow noopener" target="_blank">Vaststellen Omgevingsvisie Land van Cuijk - Land van Pionieren</a></li><li><span class="wanneer">donderdag 26 november 2026 · Commissie Omgeving</span><a href="https://lvc.bestuurlijkeinformatie.nl/Agenda/Index/a8ec488c-6f82-4bdd-ae12-1d2d80364402" rel="nofollow noopener" target="_blank">Vaststellen Water- en rioolplan 2027-2032</a></li><li><span class="wanneer">donderdag 26 november 2026 · Commissie Inwoners</span><a href="https://lvc.bestuurlijkeinformatie.nl/Agenda/Index/03e7f6da-4bf7-4f46-bd53-cd1c39fe324a" rel="nofollow noopener" target="_blank">Vaststellen Participatiebeleid Gemeente Land van Cuijk 2027 en Participatieverordening Land van Cuijk 2027</a></li></ul><h3 style="margin-top: 28px">Komende vergaderingen</h3><ul><li><span class="wanneer">donderdag 19 november 2026</span><a href="https://lvc.bestuurlijkeinformatie.nl/Agenda/Index/b3b9b2c0-102a-4b0c-96b0-d0f3e3cc5c5f" rel="nofollow noopener" target="_blank">Thema-avond 1 - Kennisvergaring kernenergie en Small Modulair Reactors</a></li><li><span class="wanneer">donderdag 19 november 2026</span><a href="https://lvc.bestuurlijkeinformatie.nl/Agenda/Index/88612d74-3b34-41e6-bd6c-68e4cdc88545" rel="nofollow noopener" target="_blank">Thema-avond 2 - Visie sociaal domein</a></li><li><span class="wanneer">donderdag 26 november 2026</span><a href="https://lvc.bestuurlijkeinformatie.nl/Agenda/Index/a8ec488c-6f82-4bdd-ae12-1d2d80364402" rel="nofollow noopener" target="_blank">Commissie Omgeving</a></li><li><span class="wanneer">donderdag 26 november 2026</span><a href="https://lvc.bestuurlijkeinformatie.nl/Agenda/Index/03e7f6da-4bf7-4f46-bd53-cd1c39fe324a" rel="nofollow noopener" target="_blank">Commissie Inwoners</a></li></ul></div><div><h3>Net binnengekomen</h3><ul><li><span class="wanneer">10 november 2026 · Collegebrief</span><a href="https://lvc.bestuurlijkeinformatie.nl/Reports/Item/d94f9de6-bb99-43cd-aa09-1435e300dfeb" rel="nofollow noopener" target="_blank">2026-RIB-203 Regionale urgentieregeling woningzoekenden</a></li><li><span class="wanneer">10 november 2026 · Collegebrief</span><a href="https://lvc.bestuurlijkeinformatie.nl/Reports/Item/7f77c754-45e2-4754-9526-3780a3716491" rel="nofollow noopener" target="_blank">2026-RIB-202 Reactie toezegging Scenario&#x27;s vermindering percentage toetsing Plantoetsende commissie (2026-TZ-13)</a></li><li><span class="wanneer">10 november 2026 · Collegebrief</span><a href="https://lvc.bestuurlijkeinformatie.nl/Reports/Item/b23b9007-2260-45c5-9986-4e7c4a00171c" rel="nofollow noopener" target="_blank">2026-RIB-204 WVG en bod BECC</a></li><li><span class="wanneer">12 november 2026 · Raadsvragen</span><a href="https://lvc.bestuurlijkeinformatie.nl/Reports/Item/2648f69f-a9b5-4cfd-a456-4d1c510b24af" rel="nofollow noopener" target="_blank">2026-V-141 Ontheffingsverlening vuurwerk</a></li><li><span class="wanneer">10 november 2026 · Raadsvragen</span><a href="https://lvc.bestuurlijkeinformatie.nl/Reports/Item/d6018a95-f51b-439e-812c-1f6c769aabb1" rel="nofollow noopener" target="_blank">2026-V-140 Spoorwegovergang de Galberg-Potbeker</a></li><li><span class="wanneer">10 november 2026 · Raadsvragen</span><a href="https://lvc.bestuurlijkeinformatie.nl/Reports/Item/4b807120-3172-46a3-be09-a7cccee930b2" rel="nofollow noopener" target="_blank">2026-V-139 Personeelskosten, externe inhuur en ontwikkeling gemeentelijke organisatie</a></li></ul></div></div>
+      <p class="actueel-noot">Bijgewerkt op 17 november 2026. Elke titel linkt naar het stuk op de site van de gemeente.</p>
     </div>
   </section>
 </main>

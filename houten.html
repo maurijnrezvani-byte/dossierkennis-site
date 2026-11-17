@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gemeenteraad Houten: elke maandag per dossier · Dossierkennis</title>
-<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Houten gebeurde.">
+<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Houten gebeurde. Binnenkort op de agenda: Instellen Gebiedsfonds Centrum.">
 <!-- delen:begin -->
 <link rel="canonical" href="https://dossierkennis.com/houten">
 <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:url" content="https://dossierkennis.com/houten">
 <meta property="og:title" content="Gemeenteraad Houten: elke maandag per dossier · Dossierkennis">
-<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Houten gebeurde.">
+<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Houten gebeurde. Binnenkort op de agenda: Instellen Gebiedsfonds Centrum.">
 <meta property="og:image" content="https://dossierkennis.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -513,6 +513,16 @@
   @media (max-width: 600px) {
     .gemeentepagina h1 { font-size: 38px; }
   }
+  /* Nu in de raad (maak_actueel.py) */
+  .actueel { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 8px; }
+  .actueel h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin: 0 0 4px; padding-bottom: 10px; border-bottom: 1px solid var(--inkt); }
+  .actueel ul { list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+  .actueel li { padding: 11px 0; border-bottom: 1px solid var(--haarlijn); }
+  .actueel li a { color: inherit; text-decoration: none; }
+  .actueel li a:hover { color: var(--accent); text-decoration: underline; }
+  .actueel .wanneer { display: block; font-size: 13px; color: var(--labeltekst); margin-bottom: 2px; }
+  .actueel-noot { font-family: var(--sans); font-size: 13px; color: var(--labeltekst); margin-top: 18px; }
+  @media (max-width: 860px) { .actueel { grid-template-columns: 1fr; gap: 32px; } }
   /* De telefoon met de voorbeeldmail in de opening (telefoon.js). Alleen de telefoon, zonder kader.
      Hij staat rechtop en wordt afgesneden op de bovenrand van het grijze vlak eronder ("Hoe het werkt").
      De maat staat hier vast, zodat de pagina niet verspringt als het script laadt. */
@@ -631,6 +641,18 @@
         <p class="privacy">Je naam, e-mailadres en keuze gebruik ik alleen om je de nieuwsbrief te sturen. Lees in de <a href="privacy.html">privacytekst</a> welke diensten ik gebruik en wat je rechten zijn. Na de gratis periode gelden de <a href="voorwaarden.html">voorwaarden</a>.</p>
       </div>
       <div class="formulier"><iframe data-tally-src="https://tally.so/embed/gbeaWd?gemeente=houten&maat=middel&hideTitle=1&transparentBackground=1&dynamicHeight=1" title="Aanmelden"></iframe></div>
+    </div>
+  </section>
+
+  <section class="blok" id="nu-in-de-raad">
+    <div class="breed">
+      <div class="sectiekop">
+        <p class="bovenregel">Nu in de raad</p>
+        <h2>Dit speelt er in de gemeenteraad van Houten.</h2>
+        <p class="uitleg">Een greep uit de agenda en de stukken van de raad van Houten, rechtstreeks uit het raadsinformatiesysteem van de gemeente. In de nieuwsbrief krijg je dit per dossier, uitgelegd in gewone taal.</p>
+      </div>
+      <div class="actueel"><div><h3>Binnenkort op de agenda</h3><ul><li><span class="wanneer">dinsdag 24 november 2026 · RTG 2</span><a href="https://houten.bestuurlijkeinformatie.nl/Agenda/Index/4b2e1d38-624e-4d4a-9124-84db14e13917" rel="nofollow noopener" target="_blank">Afzien toepassing van het bindend adviesrecht tijdelijke noodstroomvoorziening nabij de Schonauwenseweg in Houten</a></li><li><span class="wanneer">dinsdag 24 november 2026 · RTG 2</span><a href="https://houten.bestuurlijkeinformatie.nl/Agenda/Index/4b2e1d38-624e-4d4a-9124-84db14e13917" rel="nofollow noopener" target="_blank">Instellen Gebiedsfonds Centrum</a></li><li><span class="wanneer">dinsdag 24 november 2026 · RTG 2</span><a href="https://houten.bestuurlijkeinformatie.nl/Agenda/Index/4b2e1d38-624e-4d4a-9124-84db14e13917" rel="nofollow noopener" target="_blank">Instellen Gebiedsfonds De Koppeling</a></li><li><span class="wanneer">dinsdag 24 november 2026 · RTG 1</span><a href="https://houten.bestuurlijkeinformatie.nl/Agenda/Index/6223930d-6bce-4c0a-9401-5ed3acd84a33" rel="nofollow noopener" target="_blank">Instandhouding school Het Mozaïek in Tull en &#x27;t Waal</a></li><li><span class="wanneer">dinsdag 24 november 2026 · RTG 1</span><a href="https://houten.bestuurlijkeinformatie.nl/Agenda/Index/6223930d-6bce-4c0a-9401-5ed3acd84a33" rel="nofollow noopener" target="_blank">Verordening Adviesraad Sociaal Domein</a></li><li><span class="wanneer">dinsdag 24 november 2026 · RTG 1</span><a href="https://houten.bestuurlijkeinformatie.nl/Agenda/Index/6223930d-6bce-4c0a-9401-5ed3acd84a33" rel="nofollow noopener" target="_blank">Kredietaanvraag doorfietsroute Houten Utrecht Lage Weide</a></li></ul></div><div><h3>Net binnengekomen</h3><ul><li><span class="wanneer">13 november 2026 · Collegebrief</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Houten&amp;id=2383c3ae-e174-43b7-b2d3-9669f15dd59f" rel="nofollow noopener" target="_blank">Raadsinformatiebrief Jaarverslag 2025 vragen signalen klachten ombudsfunctionaris</a></li><li><span class="wanneer">13 november 2026 · Ingekomen stuk</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Houten&amp;id=ef43fa81-e797-49f8-a101-118c91747732" rel="nofollow noopener" target="_blank">2026-10-05 Schriftelijke vragen VVD en ITH over onduidelijke regels en handhaving rond honden</a></li><li><span class="wanneer">11 november 2026 · Ingekomen stuk</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Houten&amp;id=2a1391ed-fa10-4aef-87de-91d16b161dea" rel="nofollow noopener" target="_blank">Openbare Weekagenda College - Week 46</a></li><li><span class="wanneer">13 november 2026 · Raadsvragen</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Houten&amp;id=84bd9ecf-8cbd-492b-8dd5-4abd076c3e1e" rel="nofollow noopener" target="_blank">Beantwoording schriftelijke vragen over onduidelijke regels en handhaving rond honden</a></li><li><span class="wanneer">12 november 2026</span><a href="https://houten.bestuurlijkeinformatie.nl/Agenda/Index/922c21c7-85db-4f67-a720-6598056d9535" rel="nofollow noopener" target="_blank">Aanwijzen plv. griffier/raadsadviseur</a></li><li><span class="wanneer">12 november 2026</span><a href="https://houten.bestuurlijkeinformatie.nl/Agenda/Index/922c21c7-85db-4f67-a720-6598056d9535" rel="nofollow noopener" target="_blank">Ontwikkelkader Albert Heijn Oude Dorp</a></li></ul></div></div>
+      <p class="actueel-noot">Bijgewerkt op 17 november 2026. Elke titel linkt naar het stuk op de site van de gemeente.</p>
     </div>
   </section>
 </main>

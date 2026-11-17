@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gemeenteraad Lansingerland: elke maandag per dossier · Dossierkennis</title>
-<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Lansingerland gebeurde.">
+<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Lansingerland gebeurde. Binnenkort op de agenda: 20:00-22:00 uur-Proces basisomgevingsprogramma&#x27;s-CIE Ruimte.">
 <!-- delen:begin -->
 <link rel="canonical" href="https://dossierkennis.com/lansingerland">
 <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:url" content="https://dossierkennis.com/lansingerland">
 <meta property="og:title" content="Gemeenteraad Lansingerland: elke maandag per dossier · Dossierkennis">
-<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Lansingerland gebeurde.">
+<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Lansingerland gebeurde. Binnenkort op de agenda: 20:00-22:00 uur-Proces basisomgevingsprogramma&#x27;s-CIE Ruimte.">
 <meta property="og:image" content="https://dossierkennis.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -513,6 +513,16 @@
   @media (max-width: 600px) {
     .gemeentepagina h1 { font-size: 38px; }
   }
+  /* Nu in de raad (maak_actueel.py) */
+  .actueel { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 8px; }
+  .actueel h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin: 0 0 4px; padding-bottom: 10px; border-bottom: 1px solid var(--inkt); }
+  .actueel ul { list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+  .actueel li { padding: 11px 0; border-bottom: 1px solid var(--haarlijn); }
+  .actueel li a { color: inherit; text-decoration: none; }
+  .actueel li a:hover { color: var(--accent); text-decoration: underline; }
+  .actueel .wanneer { display: block; font-size: 13px; color: var(--labeltekst); margin-bottom: 2px; }
+  .actueel-noot { font-family: var(--sans); font-size: 13px; color: var(--labeltekst); margin-top: 18px; }
+  @media (max-width: 860px) { .actueel { grid-template-columns: 1fr; gap: 32px; } }
   /* De telefoon met de voorbeeldmail in de opening (telefoon.js). Alleen de telefoon, zonder kader.
      Hij staat rechtop en wordt afgesneden op de bovenrand van het grijze vlak eronder ("Hoe het werkt").
      De maat staat hier vast, zodat de pagina niet verspringt als het script laadt. */
@@ -631,6 +641,18 @@
         <p class="privacy">Je naam, e-mailadres en keuze gebruik ik alleen om je de nieuwsbrief te sturen. Lees in de <a href="privacy.html">privacytekst</a> welke diensten ik gebruik en wat je rechten zijn. Na de gratis periode gelden de <a href="voorwaarden.html">voorwaarden</a>.</p>
       </div>
       <div class="formulier"><iframe data-tally-src="https://tally.so/embed/gbeaWd?gemeente=lansingerland&maat=middel&hideTitle=1&transparentBackground=1&dynamicHeight=1" title="Aanmelden"></iframe></div>
+    </div>
+  </section>
+
+  <section class="blok" id="nu-in-de-raad">
+    <div class="breed">
+      <div class="sectiekop">
+        <p class="bovenregel">Nu in de raad</p>
+        <h2>Dit speelt er in de gemeenteraad van Lansingerland.</h2>
+        <p class="uitleg">Een greep uit de agenda en de stukken van de raad van Lansingerland, rechtstreeks uit het raadsinformatiesysteem van de gemeente. In de nieuwsbrief krijg je dit per dossier, uitgelegd in gewone taal.</p>
+      </div>
+      <div class="actueel"><div><h3>Binnenkort op de agenda</h3><ul><li><span class="wanneer">woensdag 18 november 2026 · Beeldvorming</span><a href="https://lansingerland.bestuurlijkeinformatie.nl/Agenda/Index/089f26ac-7623-49b6-9aef-9ae6621239ce" rel="nofollow noopener" target="_blank">20:00-22:00 uur-Proces basisomgevingsprogramma&#x27;s-CIE Ruimte</a></li><li><span class="wanneer">woensdag 18 november 2026 · Bijeenkomst · Beeldvorming</span><a href="https://lansingerland.bestuurlijkeinformatie.nl/Agenda/Index/23cb5664-2db2-494d-9dc6-4695e43c78aa" rel="nofollow noopener" target="_blank">Beeldvorming: 20:00-21:00 uur-Vereenvoudiging P&amp;C-cyclus-CIE AB</a></li><li><span class="wanneer">woensdag 25 november 2026 · BAC - Begeleidingscommissie Accountant Controle</span><a href="https://lansingerland.bestuurlijkeinformatie.nl/Agenda/Index/d06be26e-afb9-4850-a8b9-213e871d5603" rel="nofollow noopener" target="_blank">Resultaat interimcontrole 2026 door accountant BDO</a></li><li><span class="wanneer">woensdag 25 november 2026 · BAC - Begeleidingscommissie Accountant Controle</span><a href="https://lansingerland.bestuurlijkeinformatie.nl/Agenda/Index/d06be26e-afb9-4850-a8b9-213e871d5603" rel="nofollow noopener" target="_blank">Normen- en toetsingskader rechtmatigheid 2026</a></li></ul><h3 style="margin-top: 28px">Komende vergaderingen</h3><ul><li><span class="wanneer">woensdag 18 november 2026</span><a href="https://lansingerland.bestuurlijkeinformatie.nl/Agenda/Index/ab2fcada-7b3b-4cbe-9c0f-5ddf76647188" rel="nofollow noopener" target="_blank">Kindervragenuur</a></li><li><span class="wanneer">woensdag 18 november 2026</span><a href="https://lansingerland.bestuurlijkeinformatie.nl/Agenda/Index/23cb5664-2db2-494d-9dc6-4695e43c78aa" rel="nofollow noopener" target="_blank">Beeldvorming</a></li><li><span class="wanneer">woensdag 25 november 2026</span><a href="https://lansingerland.bestuurlijkeinformatie.nl/Agenda/Index/d06be26e-afb9-4850-a8b9-213e871d5603" rel="nofollow noopener" target="_blank">BAC - Begeleidingscommissie Accountant Controle</a></li><li><span class="wanneer">donderdag 26 november 2026</span><a href="https://lansingerland.bestuurlijkeinformatie.nl/Agenda/Index/6904b8a0-fe64-4492-b15b-c306d56a4210" rel="nofollow noopener" target="_blank">Gemeenteraad</a></li></ul></div><div><h3>Net binnengekomen</h3><ul><li><span class="wanneer">12 november 2026 · Ingekomen stuk</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Lansingerland&amp;id=c60df73a-dc18-4cfe-8fdb-514110feeea7" rel="nofollow noopener" target="_blank">BS2600031 Raadsvragen van CU en CDA over Mogelijke verbetermaatregelen voetpad Berkelse Zoom</a></li><li><span class="wanneer">12 november 2026 · Ingekomen stuk</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Lansingerland&amp;id=9e38bd11-4250-4784-a37a-df1c9740de38" rel="nofollow noopener" target="_blank">U26.04617 Beantwoording Raadsvragen m.b.t. VNG Jaarcongres 2026 Zwartgemaakt</a></li><li><span class="wanneer">5 november 2026 · Raadsvragen</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Lansingerland&amp;id=3aeebff0-7049-4b4b-88ea-a1297c00d33f" rel="nofollow noopener" target="_blank">Raadsvragen van WIJ LSL over Veiligheid, onderhoud, aansprakelijkheid en financiële risico&#x27;s kunstgrasvelden</a></li><li><span class="wanneer">12 november 2026</span><a href="https://lansingerland.bestuurlijkeinformatie.nl/Agenda/Index/70aec1bb-a216-4815-81fc-1291d1fdcc08" rel="nofollow noopener" target="_blank">Bespreekpunt Concept Werkprogramma Sport en Bewegen 2026-2030</a></li><li><span class="wanneer">12 november 2026</span><a href="https://lansingerland.bestuurlijkeinformatie.nl/Agenda/Index/70aec1bb-a216-4815-81fc-1291d1fdcc08" rel="nofollow noopener" target="_blank">Bespreekpunt D66 Antoni van Leeuwenhoek en het ontstaan van de microbiologie vastleggen in het erfgoed van Lansingerland</a></li></ul></div></div>
+      <p class="actueel-noot">Bijgewerkt op 17 november 2026. Elke titel linkt naar het stuk op de site van de gemeente.</p>
     </div>
   </section>
 </main>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gemeenteraad Nieuwegein: elke maandag per dossier · Dossierkennis</title>
-<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Nieuwegein gebeurde.">
+<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Nieuwegein gebeurde. Binnenkort op de agenda: Raadsvoorbereidend: Aanpassing APV.">
 <!-- delen:begin -->
 <link rel="canonical" href="https://dossierkennis.com/nieuwegein">
 <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:url" content="https://dossierkennis.com/nieuwegein">
 <meta property="og:title" content="Gemeenteraad Nieuwegein: elke maandag per dossier · Dossierkennis">
-<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Nieuwegein gebeurde.">
+<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Nieuwegein gebeurde. Binnenkort op de agenda: Raadsvoorbereidend: Aanpassing APV.">
 <meta property="og:image" content="https://dossierkennis.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -513,6 +513,16 @@
   @media (max-width: 600px) {
     .gemeentepagina h1 { font-size: 38px; }
   }
+  /* Nu in de raad (maak_actueel.py) */
+  .actueel { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 8px; }
+  .actueel h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin: 0 0 4px; padding-bottom: 10px; border-bottom: 1px solid var(--inkt); }
+  .actueel ul { list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+  .actueel li { padding: 11px 0; border-bottom: 1px solid var(--haarlijn); }
+  .actueel li a { color: inherit; text-decoration: none; }
+  .actueel li a:hover { color: var(--accent); text-decoration: underline; }
+  .actueel .wanneer { display: block; font-size: 13px; color: var(--labeltekst); margin-bottom: 2px; }
+  .actueel-noot { font-family: var(--sans); font-size: 13px; color: var(--labeltekst); margin-top: 18px; }
+  @media (max-width: 860px) { .actueel { grid-template-columns: 1fr; gap: 32px; } }
   /* De telefoon met de voorbeeldmail in de opening (telefoon.js). Alleen de telefoon, zonder kader.
      Hij staat rechtop en wordt afgesneden op de bovenrand van het grijze vlak eronder ("Hoe het werkt").
      De maat staat hier vast, zodat de pagina niet verspringt als het script laadt. */
@@ -631,6 +641,18 @@
         <p class="privacy">Je naam, e-mailadres en keuze gebruik ik alleen om je de nieuwsbrief te sturen. Lees in de <a href="privacy.html">privacytekst</a> welke diensten ik gebruik en wat je rechten zijn. Na de gratis periode gelden de <a href="voorwaarden.html">voorwaarden</a>.</p>
       </div>
       <div class="formulier"><iframe data-tally-src="https://tally.so/embed/gbeaWd?gemeente=nieuwegein&maat=middel&hideTitle=1&transparentBackground=1&dynamicHeight=1" title="Aanmelden"></iframe></div>
+    </div>
+  </section>
+
+  <section class="blok" id="nu-in-de-raad">
+    <div class="breed">
+      <div class="sectiekop">
+        <p class="bovenregel">Nu in de raad</p>
+        <h2>Dit speelt er in de gemeenteraad van Nieuwegein.</h2>
+        <p class="uitleg">Een greep uit de agenda en de stukken van de raad van Nieuwegein, rechtstreeks uit het raadsinformatiesysteem van de gemeente. In de nieuwsbrief krijg je dit per dossier, uitgelegd in gewone taal.</p>
+      </div>
+      <div class="actueel"><div><h3>Binnenkort op de agenda</h3><ul><li><span class="wanneer">donderdag 19 november 2026 · Avond voor de Stad - Gildenborchzaal | 2026</span><a href="https://nieuwegein.bestuurlijkeinformatie.nl/Agenda/Index/6c0fa86b-4f27-4349-a7e4-ad5e79d8d152" rel="nofollow noopener" target="_blank">Raadsvoorbereidend: Rekenkamerrapport communicatie en informatievoorziening</a></li><li><span class="wanneer">donderdag 19 november 2026 · Avond voor de Stad - Gildenborchzaal | 2026</span><a href="https://nieuwegein.bestuurlijkeinformatie.nl/Agenda/Index/6c0fa86b-4f27-4349-a7e4-ad5e79d8d152" rel="nofollow noopener" target="_blank">Raadsvoorbereidend: Aanpassing APV</a></li><li><span class="wanneer">donderdag 19 november 2026 · Avond voor de Stad - Gildenborchzaal | 2026</span><a href="https://nieuwegein.bestuurlijkeinformatie.nl/Agenda/Index/6c0fa86b-4f27-4349-a7e4-ad5e79d8d152" rel="nofollow noopener" target="_blank">Raadsvoorbereidend: VRU Risicoprofiel</a></li><li><span class="wanneer">donderdag 19 november 2026 · Avond voor de Stad - Gildenborchzaal | 2026</span><a href="https://nieuwegein.bestuurlijkeinformatie.nl/Agenda/Index/6c0fa86b-4f27-4349-a7e4-ad5e79d8d152" rel="nofollow noopener" target="_blank">Informatief: Uitvoeringsprogramma bestaanszekerheid</a></li><li><span class="wanneer">donderdag 19 november 2026 · Avond voor de Stad - Raadzaal | 2026</span><a href="https://nieuwegein.bestuurlijkeinformatie.nl/Agenda/Index/b9ee6dfd-9a51-40bd-bd0c-4427a32f165c" rel="nofollow noopener" target="_blank">Raadsvoorbereidend: Extra krediet artillerieloods</a></li><li><span class="wanneer">donderdag 19 november 2026 · Avond voor de Stad - Raadzaal | 2026</span><a href="https://nieuwegein.bestuurlijkeinformatie.nl/Agenda/Index/b9ee6dfd-9a51-40bd-bd0c-4427a32f165c" rel="nofollow noopener" target="_blank">Raadsvoorbereidend: Voorbereidingskrediet Sport + Landschap Galecopperzoom-West Groot Merwede</a></li><li><span class="wanneer">donderdag 19 november 2026 · Avond voor de Stad - Raadzaal | 2026</span><a href="https://nieuwegein.bestuurlijkeinformatie.nl/Agenda/Index/b9ee6dfd-9a51-40bd-bd0c-4427a32f165c" rel="nofollow noopener" target="_blank">Raadsvoorbereidend: Fiscale beleidsnota 2026-2030</a></li></ul><h3 style="margin-top: 28px">Komende vergaderingen</h3><ul><li><span class="wanneer">donderdag 19 november 2026</span><a href="https://nieuwegein.bestuurlijkeinformatie.nl/Agenda/Index/6c0fa86b-4f27-4349-a7e4-ad5e79d8d152" rel="nofollow noopener" target="_blank">Avond voor de Stad - Gildenborchzaal | 2026</a></li><li><span class="wanneer">donderdag 19 november 2026</span><a href="https://nieuwegein.bestuurlijkeinformatie.nl/Agenda/Index/b9ee6dfd-9a51-40bd-bd0c-4427a32f165c" rel="nofollow noopener" target="_blank">Avond voor de Stad - Raadzaal | 2026</a></li><li><span class="wanneer">donderdag 26 november 2026</span><a href="https://nieuwegein.bestuurlijkeinformatie.nl/Agenda/Index/d3cf983d-bdb2-49e4-99dd-ee45e3103b9d" rel="nofollow noopener" target="_blank">Raadsvergadering | 2026</a></li></ul></div><div><h3>Net binnengekomen</h3><ul><li><span class="wanneer">11 november 2026 · Ingekomen stuk</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Nieuwegein&amp;id=dabc771d-1cdb-451e-b127-eb28b69eadfc" rel="nofollow noopener" target="_blank">2026-363 Br. College aan raad over uitkomsten BO MIRT</a></li><li><span class="wanneer">11 november 2026 · Ingekomen stuk</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Nieuwegein&amp;id=f7e42c47-2a88-4175-9e02-639c364e8c6d" rel="nofollow noopener" target="_blank">2026-364 Br. College aan raad over Beleidskader Gezondheid 2027-2030</a></li><li><span class="wanneer">12 november 2026 · Motie</span><a href="https://nieuwegein.bestuurlijkeinformatie.nl/Agenda/Index/e445f99f-c79d-4f4b-be42-f16b5eee0497" rel="nofollow noopener" target="_blank">M26 Motie terugdringen fietsendiefstal in Nieuwegein</a></li><li><span class="wanneer">12 november 2026 · Motie</span><a href="https://nieuwegein.bestuurlijkeinformatie.nl/Agenda/Index/e445f99f-c79d-4f4b-be42-f16b5eee0497" rel="nofollow noopener" target="_blank">M23 Motie Bevrijdingsdagviering Nieuwegein</a></li><li><span class="wanneer">12 november 2026 · Motie</span><a href="https://nieuwegein.bestuurlijkeinformatie.nl/Agenda/Index/e445f99f-c79d-4f4b-be42-f16b5eee0497" rel="nofollow noopener" target="_blank">M13 Motie Zondagopenstelling Bibliotheek Nieuwegein</a></li><li><span class="wanneer">12 november 2026</span><a href="https://nieuwegein.bestuurlijkeinformatie.nl/Agenda/Index/e445f99f-c79d-4f4b-be42-f16b5eee0497" rel="nofollow noopener" target="_blank">Programmabegroting 2027-2030</a></li><li><span class="wanneer">11 november 2026</span><a href="https://nieuwegein.bestuurlijkeinformatie.nl/Agenda/Index/857bca56-0fa3-4917-beff-cd57edab5816" rel="nofollow noopener" target="_blank">2e technische begrotingswijziging</a></li></ul></div></div>
+      <p class="actueel-noot">Bijgewerkt op 17 november 2026. Elke titel linkt naar het stuk op de site van de gemeente.</p>
     </div>
   </section>
 </main>

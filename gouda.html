@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gemeenteraad Gouda: elke maandag per dossier · Dossierkennis</title>
-<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Gouda gebeurde.">
+<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Gouda gebeurde. Binnenkort op de agenda: B Re-integratieverordening.">
 <!-- delen:begin -->
 <link rel="canonical" href="https://dossierkennis.com/gouda">
 <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:url" content="https://dossierkennis.com/gouda">
 <meta property="og:title" content="Gemeenteraad Gouda: elke maandag per dossier · Dossierkennis">
-<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Gouda gebeurde.">
+<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Gouda gebeurde. Binnenkort op de agenda: B Re-integratieverordening.">
 <meta property="og:image" content="https://dossierkennis.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -513,6 +513,16 @@
   @media (max-width: 600px) {
     .gemeentepagina h1 { font-size: 38px; }
   }
+  /* Nu in de raad (maak_actueel.py) */
+  .actueel { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 8px; }
+  .actueel h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin: 0 0 4px; padding-bottom: 10px; border-bottom: 1px solid var(--inkt); }
+  .actueel ul { list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+  .actueel li { padding: 11px 0; border-bottom: 1px solid var(--haarlijn); }
+  .actueel li a { color: inherit; text-decoration: none; }
+  .actueel li a:hover { color: var(--accent); text-decoration: underline; }
+  .actueel .wanneer { display: block; font-size: 13px; color: var(--labeltekst); margin-bottom: 2px; }
+  .actueel-noot { font-family: var(--sans); font-size: 13px; color: var(--labeltekst); margin-top: 18px; }
+  @media (max-width: 860px) { .actueel { grid-template-columns: 1fr; gap: 32px; } }
   /* De telefoon met de voorbeeldmail in de opening (telefoon.js). Alleen de telefoon, zonder kader.
      Hij staat rechtop en wordt afgesneden op de bovenrand van het grijze vlak eronder ("Hoe het werkt").
      De maat staat hier vast, zodat de pagina niet verspringt als het script laadt. */
@@ -631,6 +641,18 @@
         <p class="privacy">Je naam, e-mailadres en keuze gebruik ik alleen om je de nieuwsbrief te sturen. Lees in de <a href="privacy.html">privacytekst</a> welke diensten ik gebruik en wat je rechten zijn. Na de gratis periode gelden de <a href="voorwaarden.html">voorwaarden</a>.</p>
       </div>
       <div class="formulier"><iframe data-tally-src="https://tally.so/embed/gbeaWd?gemeente=gouda&maat=middel&hideTitle=1&transparentBackground=1&dynamicHeight=1" title="Aanmelden"></iframe></div>
+    </div>
+  </section>
+
+  <section class="blok" id="nu-in-de-raad">
+    <div class="breed">
+      <div class="sectiekop">
+        <p class="bovenregel">Nu in de raad</p>
+        <h2>Dit speelt er in de gemeenteraad van Gouda.</h2>
+        <p class="uitleg">Een greep uit de agenda en de stukken van de raad van Gouda, rechtstreeks uit het raadsinformatiesysteem van de gemeente. In de nieuwsbrief krijg je dit per dossier, uitgelegd in gewone taal.</p>
+      </div>
+      <div class="actueel"><div><h3>Binnenkort op de agenda</h3><ul><li><span class="wanneer">woensdag 18 november 2026 · Commissie Samenleving</span><a href="https://gouda.bestuurlijkeinformatie.nl/Agenda/Index/6464b5d0-8dce-4ce5-b1c0-d4597e049d13" rel="nofollow noopener" target="_blank">B Re-integratieverordening</a></li><li><span class="wanneer">woensdag 18 november 2026 · Commissie Fysieke leefomgeving</span><a href="https://gouda.bestuurlijkeinformatie.nl/Agenda/Index/698955fd-7e47-4754-b584-6dbfd0a9bfdf" rel="nofollow noopener" target="_blank">B Groenhovenbad verduurzaming</a></li><li><span class="wanneer">woensdag 18 november 2026 · Commissie Fysieke leefomgeving</span><a href="https://gouda.bestuurlijkeinformatie.nl/Agenda/Index/698955fd-7e47-4754-b584-6dbfd0a9bfdf" rel="nofollow noopener" target="_blank">@ B&amp;O Groenalliantie begrotingswijziging</a></li><li><span class="wanneer">woensdag 18 november 2026 · Commissie Fysieke leefomgeving</span><a href="https://gouda.bestuurlijkeinformatie.nl/Agenda/Index/698955fd-7e47-4754-b584-6dbfd0a9bfdf" rel="nofollow noopener" target="_blank">@ B&amp;O AOK benoeming lid</a></li><li><span class="wanneer">woensdag 25 november 2026 · Commissie Bestuur</span><a href="https://gouda.bestuurlijkeinformatie.nl/Agenda/Index/2bb8514d-3393-4b67-8efc-5e4dee95fa65" rel="nofollow noopener" target="_blank">@ B&amp;O Apv Gouda 2026</a></li><li><span class="wanneer">woensdag 25 november 2026 · Commissie Bestuur</span><a href="https://gouda.bestuurlijkeinformatie.nl/Agenda/Index/2bb8514d-3393-4b67-8efc-5e4dee95fa65" rel="nofollow noopener" target="_blank">@ B&amp;O Subsidieverordening decentrale politieke partijen</a></li><li><span class="wanneer">woensdag 25 november 2026 · Commissie Bestuur</span><a href="https://gouda.bestuurlijkeinformatie.nl/Agenda/Index/2bb8514d-3393-4b67-8efc-5e4dee95fa65" rel="nofollow noopener" target="_blank">@ B&amp;O Technische begrotingswijziging 2026</a></li></ul><h3 style="margin-top: 28px">Komende vergaderingen</h3><ul><li><span class="wanneer">woensdag 18 november 2026</span><a href="https://gouda.bestuurlijkeinformatie.nl/Agenda/Index/6464b5d0-8dce-4ce5-b1c0-d4597e049d13" rel="nofollow noopener" target="_blank">Commissie Samenleving</a></li><li><span class="wanneer">woensdag 18 november 2026</span><a href="https://gouda.bestuurlijkeinformatie.nl/Agenda/Index/698955fd-7e47-4754-b584-6dbfd0a9bfdf" rel="nofollow noopener" target="_blank">Commissie Fysieke leefomgeving</a></li><li><span class="wanneer">woensdag 25 november 2026</span><a href="https://gouda.bestuurlijkeinformatie.nl/Agenda/Index/2bb8514d-3393-4b67-8efc-5e4dee95fa65" rel="nofollow noopener" target="_blank">Commissie Bestuur</a></li><li><span class="wanneer">woensdag 25 november 2026</span><a href="https://gouda.bestuurlijkeinformatie.nl/Agenda/Index/d333b299-6762-4e69-a049-cf4e411d3811" rel="nofollow noopener" target="_blank">Commissie Samenleving</a></li></ul></div><div><h3>Net binnengekomen</h3><ul><li><span class="wanneer">12 november 2026 · Collegebrief</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Gouda&amp;id=0f7780af-cb03-4005-af9d-f3b562d560b2" rel="nofollow noopener" target="_blank">Raadsmemo gemeentelijk bod 2e cyclus Spreidingswet en regionale uitruil</a></li><li><span class="wanneer">11 november 2026 · Collegebrief</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Gouda&amp;id=1f60e082-3447-4341-8677-9c1f9a2e1163" rel="nofollow noopener" target="_blank">Raadsmemo Leegstandsschouw najaar 2026</a></li><li><span class="wanneer">11 november 2026 · Collegebrief</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Gouda&amp;id=b3d2bbc9-6599-472d-94bc-956c2cb2e6ed" rel="nofollow noopener" target="_blank">Raadsmemo Memo Cijfers Toerisme 2025</a></li><li><span class="wanneer">11 november 2026 · Collegebrief</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Gouda&amp;id=ee6490bc-3479-4c1b-ac9e-deb793d7a9e7" rel="nofollow noopener" target="_blank">Raadsmemo fietsenstalling Nieuwe Markt</a></li><li><span class="wanneer">14 november 2026 · Ingekomen stuk</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Gouda&amp;id=279d1eae-0cc0-4ba7-aaa1-385b91443c02" rel="nofollow noopener" target="_blank">Flyer Conferentie 14 november 2026</a></li><li><span class="wanneer">13 november 2026 · Ingekomen stuk</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Gouda&amp;id=178a17a7-9d06-4151-bd99-7823dbf7e591" rel="nofollow noopener" target="_blank">26-099 Schriftelijke vragen CDA inzake Afsluitingen Kort Haarlem</a></li><li><span class="wanneer">11 november 2026</span><a href="https://gouda.bestuurlijkeinformatie.nl/Agenda/Index/c2290013-cc4e-45fd-8dd8-a7b07fa6c1e1" rel="nofollow noopener" target="_blank">Herstelbesluit bestemmingsplan partiële herziening Binnenstad (Hamerpunt)</a></li><li><span class="wanneer">11 november 2026</span><a href="https://gouda.bestuurlijkeinformatie.nl/Agenda/Index/c2290013-cc4e-45fd-8dd8-a7b07fa6c1e1" rel="nofollow noopener" target="_blank">Besluit: 2e Bestuursrapportage 2026 (Hamerpunt)</a></li></ul></div></div>
+      <p class="actueel-noot">Bijgewerkt op 17 november 2026. Elke titel linkt naar het stuk op de site van de gemeente.</p>
     </div>
   </section>
 </main>

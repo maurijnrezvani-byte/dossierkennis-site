@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gemeenteraad Amstelveen: elke maandag per dossier · Dossierkennis</title>
-<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Amstelveen gebeurde.">
+<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Amstelveen gebeurde. Binnenkort op de agenda: Raadsdebat Projectnota Augustinuspark.">
 <!-- delen:begin -->
 <link rel="canonical" href="https://dossierkennis.com/amstelveen">
 <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:url" content="https://dossierkennis.com/amstelveen">
 <meta property="og:title" content="Gemeenteraad Amstelveen: elke maandag per dossier · Dossierkennis">
-<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Amstelveen gebeurde.">
+<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Amstelveen gebeurde. Binnenkort op de agenda: Raadsdebat Projectnota Augustinuspark.">
 <meta property="og:image" content="https://dossierkennis.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -513,6 +513,16 @@
   @media (max-width: 600px) {
     .gemeentepagina h1 { font-size: 38px; }
   }
+  /* Nu in de raad (maak_actueel.py) */
+  .actueel { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 8px; }
+  .actueel h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin: 0 0 4px; padding-bottom: 10px; border-bottom: 1px solid var(--inkt); }
+  .actueel ul { list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+  .actueel li { padding: 11px 0; border-bottom: 1px solid var(--haarlijn); }
+  .actueel li a { color: inherit; text-decoration: none; }
+  .actueel li a:hover { color: var(--accent); text-decoration: underline; }
+  .actueel .wanneer { display: block; font-size: 13px; color: var(--labeltekst); margin-bottom: 2px; }
+  .actueel-noot { font-family: var(--sans); font-size: 13px; color: var(--labeltekst); margin-top: 18px; }
+  @media (max-width: 860px) { .actueel { grid-template-columns: 1fr; gap: 32px; } }
   /* De telefoon met de voorbeeldmail in de opening (telefoon.js). Alleen de telefoon, zonder kader.
      Hij staat rechtop en wordt afgesneden op de bovenrand van het grijze vlak eronder ("Hoe het werkt").
      De maat staat hier vast, zodat de pagina niet verspringt als het script laadt. */
@@ -631,6 +641,18 @@
         <p class="privacy">Je naam, e-mailadres en keuze gebruik ik alleen om je de nieuwsbrief te sturen. Lees in de <a href="privacy.html">privacytekst</a> welke diensten ik gebruik en wat je rechten zijn. Na de gratis periode gelden de <a href="voorwaarden.html">voorwaarden</a>.</p>
       </div>
       <div class="formulier"><iframe data-tally-src="https://tally.so/embed/gbeaWd?gemeente=amstelveen&maat=middel&hideTitle=1&transparentBackground=1&dynamicHeight=1" title="Aanmelden"></iframe></div>
+    </div>
+  </section>
+
+  <section class="blok" id="nu-in-de-raad">
+    <div class="breed">
+      <div class="sectiekop">
+        <p class="bovenregel">Nu in de raad</p>
+        <h2>Dit speelt er in de gemeenteraad van Amstelveen.</h2>
+        <p class="uitleg">Een greep uit de agenda en de stukken van de raad van Amstelveen, rechtstreeks uit het raadsinformatiesysteem van de gemeente. In de nieuwsbrief krijg je dit per dossier, uitgelegd in gewone taal.</p>
+      </div>
+      <div class="actueel"><div><h3>Binnenkort op de agenda</h3><ul><li><span class="wanneer">woensdag 25 november 2026 · Raadsdebat Amstelveenzaal</span><a href="https://amstelveen.bestuurlijkeinformatie.nl/Agenda/Index/85f55c54-1ad2-4edb-aa69-1fa5f59861d2" rel="nofollow noopener" target="_blank">Raadsdebat Projectnota Augustinuspark</a></li><li><span class="wanneer">woensdag 25 november 2026 · Raadsdebat Raadzaal</span><a href="https://amstelveen.bestuurlijkeinformatie.nl/Agenda/Index/f4ebb1d5-c36a-4e79-9dbe-564c3c44914d" rel="nofollow noopener" target="_blank">Wijzigingen Algemene Plaatselijke Verordening van de gemeente Amstelveen</a></li><li><span class="wanneer">woensdag 25 november 2026 · Gemeenteraad</span><a href="https://amstelveen.bestuurlijkeinformatie.nl/Agenda/Index/aed4b211-6208-4683-bffd-b787d7bad72f" rel="nofollow noopener" target="_blank">Grondstoffenplan 2026 - 2030</a></li><li><span class="wanneer">woensdag 25 november 2026 · Gemeenteraad</span><a href="https://amstelveen.bestuurlijkeinformatie.nl/Agenda/Index/aed4b211-6208-4683-bffd-b787d7bad72f" rel="nofollow noopener" target="_blank">Begrotingsrechtmatigheid en budgetoverheveling 2026</a></li><li><span class="wanneer">woensdag 25 november 2026 · Gemeenteraad</span><a href="https://amstelveen.bestuurlijkeinformatie.nl/Agenda/Index/aed4b211-6208-4683-bffd-b787d7bad72f" rel="nofollow noopener" target="_blank">Definitieve vaststelling tarieven OZB, grafrechten Zorgvlied en begrotingswijziging 2027</a></li><li><span class="wanneer">woensdag 25 november 2026 · Gemeenteraad</span><a href="https://amstelveen.bestuurlijkeinformatie.nl/Agenda/Index/aed4b211-6208-4683-bffd-b787d7bad72f" rel="nofollow noopener" target="_blank">Intrekking verordening kwaliteitsregels peuterspeelzaalwerk Amstelveen 2006</a></li><li><span class="wanneer">woensdag 25 november 2026 · Gemeenteraad</span><a href="https://amstelveen.bestuurlijkeinformatie.nl/Agenda/Index/aed4b211-6208-4683-bffd-b787d7bad72f" rel="nofollow noopener" target="_blank">Subsidieverordeningen Bedrijveninvesteringszones 2027–2031</a></li></ul><h3 style="margin-top: 28px">Komende vergaderingen</h3><ul><li><span class="wanneer">dinsdag 17 november 2026</span><a href="https://amstelveen.bestuurlijkeinformatie.nl/Agenda/Index/65fe134d-cfca-42ca-9a26-62e17b990dde" rel="nofollow noopener" target="_blank">Raadsgesprek Raadzaal</a></li><li><span class="wanneer">woensdag 18 november 2026</span><a href="https://amstelveen.bestuurlijkeinformatie.nl/Agenda/Index/48b26606-e0e9-4870-ac55-dba6e559f01e" rel="nofollow noopener" target="_blank">Vergadering Agendacommissie</a></li><li><span class="wanneer">woensdag 18 november 2026</span><a href="https://amstelveen.bestuurlijkeinformatie.nl/Agenda/Index/42e07d35-73c2-4511-903b-58b9c7253872" rel="nofollow noopener" target="_blank">Raadsgesprek Amstelveenzaal</a></li><li><span class="wanneer">woensdag 18 november 2026</span><a href="https://amstelveen.bestuurlijkeinformatie.nl/Agenda/Index/63f72c1e-e3a5-4bb1-a39d-13d3c509be90" rel="nofollow noopener" target="_blank">Raadsgesprek</a></li><li><span class="wanneer">woensdag 18 november 2026</span><a href="https://amstelveen.bestuurlijkeinformatie.nl/Agenda/Index/803d3810-7af6-4f39-8a74-001fb4f51806" rel="nofollow noopener" target="_blank">Raadsgesprek Raadzaal</a></li></ul></div><div><h3>Net binnengekomen</h3><ul><li><span class="wanneer">11 november 2026 · Collegebrief</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=amstelveen&amp;id=0a806d62-6bfd-4dd8-b3e4-769064b4b2d3" rel="nofollow noopener" target="_blank">Raadsbrief Nadere toelichting op de uitwerking Motie ‘ondergrens reservepositie in kaart’</a></li><li><span class="wanneer">11 november 2026 · Collegebrief</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=amstelveen&amp;id=38b66047-8c63-4a16-8650-c089f9c660d2" rel="nofollow noopener" target="_blank">Raadsbrief stand van zaken gebiedsontwikkeling Kronenburg</a></li><li><span class="wanneer">11 november 2026 · Collegebrief</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=amstelveen&amp;id=190e0e98-6212-418b-9a92-d21268d7278b" rel="nofollow noopener" target="_blank">Raadsbrief Update motie op zoek naar bezoek</a></li><li><span class="wanneer">11 november 2026 · Ingekomen stuk</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=amstelveen&amp;id=4853d30a-eacb-46cc-9360-0a326932fb28" rel="nofollow noopener" target="_blank">Bijlage - Reactie gemeente Amstelveen internetconsultatie wetsvoorstel passende huurcontracten</a></li><li><span class="wanneer">12 november 2026 · Raadsvragen</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=amstelveen&amp;id=5db0c9ea-7591-4f93-a594-62a7caab41f8" rel="nofollow noopener" target="_blank">Schriftelijke vragen raadslid Stokvis (VVD) over raadsbrief Reclameverboden</a></li><li><span class="wanneer">12 november 2026 · Raadsvragen</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=amstelveen&amp;id=30f8234a-4971-4437-8ece-1d2c6200525b" rel="nofollow noopener" target="_blank">Beantwoording Schriftelijke vragen van raadsleden mevrouw Höcker van GvA en mevrouw Lagerveld van de VVD over Doorlooptijd, toeg</a></li><li><span class="wanneer">11 november 2026 · Raadsvragen</span><a href="https://api1.ibabs.eu/publicdownload.aspx?site=amstelveen&amp;id=20bc1a3a-5eed-4ede-97ca-eef864c7c5b4" rel="nofollow noopener" target="_blank">Beantwoording schriftelijke vragen raadslid Van Rietschoten (Actief voor Amstelveen) over verandering woonprogramma Augustinuspark</a></li><li><span class="wanneer">11 november 2026 · Motie</span><a href="https://amstelveen.bestuurlijkeinformatie.nl/Agenda/Index/3a81b924-4b6b-46a9-89a2-5943c044d56f" rel="nofollow noopener" target="_blank">Motie D66. Cultuur in zicht</a></li><li><span class="wanneer">11 november 2026 · Motie</span><a href="https://amstelveen.bestuurlijkeinformatie.nl/Agenda/Index/3a81b924-4b6b-46a9-89a2-5943c044d56f" rel="nofollow noopener" target="_blank">Motie Burgerbelangen Amstelveen. Melden onveilige plekken duidelijk en snel gefiXt</a></li><li><span class="wanneer">11 november 2026 · Motie</span><a href="https://amstelveen.bestuurlijkeinformatie.nl/Agenda/Index/3a81b924-4b6b-46a9-89a2-5943c044d56f" rel="nofollow noopener" target="_blank">Motie CDA. Een breed palet van leerkrachten</a></li></ul></div></div>
+      <p class="actueel-noot">Bijgewerkt op 17 november 2026. Elke titel linkt naar het stuk op de site van de gemeente.</p>
     </div>
   </section>
 </main>

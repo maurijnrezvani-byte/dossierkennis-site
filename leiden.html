@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gemeenteraad Leiden: elke maandag per dossier · Dossierkennis</title>
-<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Leiden gebeurde.">
+<meta name="description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Leiden gebeurde. Binnenkort op de agenda: Planningsoptimisme.">
 <!-- delen:begin -->
 <link rel="canonical" href="https://dossierkennis.com/leiden">
 <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:url" content="https://dossierkennis.com/leiden">
 <meta property="og:title" content="Gemeenteraad Leiden: elke maandag per dossier · Dossierkennis">
-<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Leiden gebeurde.">
+<meta property="og:description" content="Elke maandag een overzicht per dossier van wat er in de gemeenteraad van Leiden gebeurde. Binnenkort op de agenda: Planningsoptimisme.">
 <meta property="og:image" content="https://dossierkennis.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -513,6 +513,16 @@
   @media (max-width: 600px) {
     .gemeentepagina h1 { font-size: 38px; }
   }
+  /* Nu in de raad (maak_actueel.py) */
+  .actueel { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 8px; }
+  .actueel h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin: 0 0 4px; padding-bottom: 10px; border-bottom: 1px solid var(--inkt); }
+  .actueel ul { list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+  .actueel li { padding: 11px 0; border-bottom: 1px solid var(--haarlijn); }
+  .actueel li a { color: inherit; text-decoration: none; }
+  .actueel li a:hover { color: var(--accent); text-decoration: underline; }
+  .actueel .wanneer { display: block; font-size: 13px; color: var(--labeltekst); margin-bottom: 2px; }
+  .actueel-noot { font-family: var(--sans); font-size: 13px; color: var(--labeltekst); margin-top: 18px; }
+  @media (max-width: 860px) { .actueel { grid-template-columns: 1fr; gap: 32px; } }
   /* De telefoon met de voorbeeldmail in de opening (telefoon.js). Alleen de telefoon, zonder kader.
      Hij staat rechtop en wordt afgesneden op de bovenrand van het grijze vlak eronder ("Hoe het werkt").
      De maat staat hier vast, zodat de pagina niet verspringt als het script laadt. */
@@ -631,6 +641,18 @@
         <p class="privacy">Je naam, e-mailadres en keuze gebruik ik alleen om je de nieuwsbrief te sturen. Lees in de <a href="privacy.html">privacytekst</a> welke diensten ik gebruik en wat je rechten zijn. Na de gratis periode gelden de <a href="voorwaarden.html">voorwaarden</a>.</p>
       </div>
       <div class="formulier"><iframe data-tally-src="https://tally.so/embed/gbeaWd?gemeente=leiden&maat=groot&hideTitle=1&transparentBackground=1&dynamicHeight=1" title="Aanmelden"></iframe></div>
+    </div>
+  </section>
+
+  <section class="blok" id="nu-in-de-raad">
+    <div class="breed">
+      <div class="sectiekop">
+        <p class="bovenregel">Nu in de raad</p>
+        <h2>Dit speelt er in de gemeenteraad van Leiden.</h2>
+        <p class="uitleg">Een greep uit de agenda en de stukken van de raad van Leiden, rechtstreeks uit het raadsinformatiesysteem van de gemeente. In de nieuwsbrief krijg je dit per dossier, uitgelegd in gewone taal.</p>
+      </div>
+      <div class="actueel"><div><h3>Binnenkort op de agenda</h3><ul><li><span class="wanneer">dinsdag 17 november 2026 · Commissie voor de Rekeningen</span><a href="https://leiden.parlaeus.nl/user/agenda/action=view/ag=2a82808aa088000a0282a000264ae743" rel="nofollow noopener" target="_blank">Planningsoptimisme</a></li><li><span class="wanneer">dinsdag 17 november 2026 · Commissie voor de Rekeningen</span><a href="https://leiden.parlaeus.nl/user/agenda/action=view/ag=2a82808aa088000a0282a000264ae743" rel="nofollow noopener" target="_blank">Interim Management Letter 2026</a></li><li><span class="wanneer">dinsdag 17 november 2026 · Commissie voor de Rekeningen</span><a href="https://leiden.parlaeus.nl/user/agenda/action=view/ag=2a82808aa088000a0282a000264ae743" rel="nofollow noopener" target="_blank">Jaarplan Commissie voor de Rekeningen en groslijst</a></li><li><span class="wanneer">donderdag 19 november 2026 · Bijeenkomst · Raadsinformatieavond: Rondetafelgesprek</span><a href="https://leiden.parlaeus.nl/user/agenda/action=view/ag=82008aaaa282a20a0282a08a86caeea6" rel="nofollow noopener" target="_blank">Raadsinformatieavond: Rondetafelgesprek</a></li><li><span class="wanneer">donderdag 19 november 2026 · Bijeenkomst · Raadsinformatieavond: Informatieve bijeenkomst over de werking van het adviesrecht (vervolg)</span><a href="https://leiden.parlaeus.nl/user/agenda/action=view/ag=2aaaa028aa80aa0a0282a0aa06ea6d0f" rel="nofollow noopener" target="_blank">Raadsinformatieavond: Informatieve bijeenkomst over de werking van het adviesrecht (vervolg)</a></li><li><span class="wanneer">donderdag 26 november 2026 · Commissie Leefbaarheid en Bereikbaarheid</span><a href="https://leiden.parlaeus.nl/user/agenda/action=view/ag=2aa08a0288aaa0080282200aae62c5b6" rel="nofollow noopener" target="_blank">RV 26.0073 Slotwijziging 2026</a></li><li><span class="wanneer">donderdag 26 november 2026 · Commissie Leefbaarheid en Bereikbaarheid</span><a href="https://leiden.parlaeus.nl/user/agenda/action=view/ag=2aa08a0288aaa0080282200aae62c5b6" rel="nofollow noopener" target="_blank">RV 26.0074 Aanbevelingen Rekenkamer Leiden &amp; Leiderdorp over fietsveiligheid in Leiden</a></li></ul><h3 style="margin-top: 28px">Komende vergaderingen</h3><ul><li><span class="wanneer">dinsdag 17 november 2026</span><a href="https://leiden.parlaeus.nl/user/agenda/action=view/ag=2a82808aa088000a0282a000264ae743" rel="nofollow noopener" target="_blank">Commissie voor de Rekeningen</a></li><li><span class="wanneer">donderdag 19 november 2026</span><a href="https://leiden.parlaeus.nl/user/agenda/action=view/ag=82008aaaa282a20a0282a08a86caeea6" rel="nofollow noopener" target="_blank">Raadsinformatieavond: Rondetafelgesprek</a></li><li><span class="wanneer">donderdag 19 november 2026</span><a href="https://leiden.parlaeus.nl/user/agenda/action=view/ag=2aaaa028aa80aa0a0282a0aa06ea6d0f" rel="nofollow noopener" target="_blank">Raadsinformatieavond: Informatieve bijeenkomst over de werking van het adviesrecht (vervolg)</a></li><li><span class="wanneer">dinsdag 24 november 2026</span><a href="https://leiden.parlaeus.nl/user/agenda/action=view/ag=aaa228082a282808028220282ce82539" rel="nofollow noopener" target="_blank">Subcommissie Vastgoed</a></li><li><span class="wanneer">donderdag 26 november 2026</span><a href="https://leiden.parlaeus.nl/user/agenda/action=view/ag=2aa08a0288aaa0080282200aae62c5b6" rel="nofollow noopener" target="_blank">Commissie Leefbaarheid en Bereikbaarheid</a></li></ul></div><div><h3>Net binnengekomen</h3><ul><li><span class="wanneer">10 november 2026 · Collegebrief</span><a href="https://leiden.parlaeus.nl/user/agenda/action=view/ag=a8828a802aa222a802822a888ee812e3" rel="nofollow noopener" target="_blank">T.kn. Burgemeestersvoorstel Tijdelijke sluiting 6 mnd. coffeeshop De Eerste Kamer B.V.- 20 juli 2026</a></li><li><span class="wanneer">10 november 2026 · Collegebrief</span><a href="https://leiden.parlaeus.nl/user/agenda/action=view/ag=a8828a802aa222a802822a888ee812e3" rel="nofollow noopener" target="_blank">T.kn. Burgemeestervoorstel Gewijzigde tijdelijke sluiting 3 mnd. coffeeshop De Eerste Kamer B.V. - 15 september 2026</a></li><li><span class="wanneer">10 november 2026 · Collegebrief</span><a href="https://leiden.parlaeus.nl/user/agenda/action=view/ag=a8828a802aa222a802822a888ee812e3" rel="nofollow noopener" target="_blank">Raadsvoorstel Verordening afvalstoffenheffing 2027 + Brief aan de raad</a></li><li><span class="wanneer">10 november 2026 · Collegebrief</span><a href="https://leiden.parlaeus.nl/user/agenda/action=view/ag=a8828a802aa222a802822a888ee812e3" rel="nofollow noopener" target="_blank">Raadsvoorstel Verordening binnenhavengeld 2027</a></li><li><span class="wanneer">12 november 2026</span><a href="https://leiden.parlaeus.nl/user/agenda/action=view/ag=80a880880028a2280282288a2c406612" rel="nofollow noopener" target="_blank">Programmabegroting 2027 en andere Planning &amp; Control stukken</a></li><li><span class="wanneer">12 november 2026</span><a href="https://leiden.parlaeus.nl/user/agenda/action=view/ag=80a880880028a2280282288a2c406612" rel="nofollow noopener" target="_blank">RV 26.0052 Programmabegroting 2027</a></li></ul></div></div>
+      <p class="actueel-noot">Bijgewerkt op 17 november 2026. Elke titel linkt naar het stuk op de site van de gemeente.</p>
     </div>
   </section>
 </main>
